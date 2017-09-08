@@ -10,4 +10,10 @@ Les modifications doivent être les plus limitées possible.
 
 Langage : Java
 
-POO à venir
+POO à venir.
+
+La notion de COO est liée à la gestion de projet, on va forcément bosser à plusieurs (3).
+
+PRETTE
+MOINEAU
+Le VILIN GABAR
