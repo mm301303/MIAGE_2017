@@ -87,5 +87,6 @@ Note : Cette classe ***Console*** pourra etre substituée par un ***Controleur**
 
 # On va garder celle la de conception :
 
-Rectangle : calcule sa surface, contient l et L, et un tableau statique d'instances de rectangle 
-IHM : contient main() et les saisies/resultats
+***Rectangle*** : calcule sa surface, contient l et L, et un tableau statique d'instances de rectangle 
+
+***IHM*** : contient main() et les saisies/resultats
