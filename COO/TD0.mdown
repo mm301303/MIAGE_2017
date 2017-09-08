@@ -1,6 +1,10 @@
 TD 0
+
+vendredi 8 septembre 2017
+
 Objectif : fournir un logiciel permettant de gérer des rectangles
 
+Ce n'est pas un cours d'UML mais de COO, générique à l'Objet
 
 # Méthodologie 
 
@@ -54,7 +58,11 @@ Le langage est un langage objet pour faciliter la maintenabilité, on choisira d
 
 ### Structuration du logiciel
 
-(en vrai on a pas besoin de repere, mais dans le but de faire une IHM graphique...)
+(en vrai on a pas besoin de repere, mais dans le but de faire une IHM graphique... Ici on a pas explicitement besoin au vu des specs de repérer les rectangles dans un espace, la notion de point est donc inutile dans cette interprétation)
+
+Le but de l'exercice est entre autre de ne pas dépasser les specs, afin de ne pas amener la conception vers des idées éloignées de celle du client.
+
+Si on voulait représenter les rectangles dans l'espace par la suite, on ferait sans doute :
 
 * Package ***geometrie_logique***
 
@@ -66,7 +74,7 @@ Le ***Repere*** est un Point de coordonnee (0.;0.)
 
 Le ***Point*** est un emplacement variable. On le construit ***Point***(x, y) avec x et y des doubles, afin de permettre des nombres plus grands.
 
-Le ***Rectangle*** est une composition de 4 Points. Le ***Rectangle*** est responsable de sa propre cohérence, il est construit Rectangle(Point1, Point2, Point3, Point4), et vérifiera sa propriété de 3 angles droit et 4 Points distincts.
+Le ***Rectangle*** est une composition de 4 Points. Le ***Rectangle*** est responsable de sa propre cohérence, il est construit Rectangle(Point1, Point2, Point3, Point4), et vérifiera sa propriété de 3 angles droits (produit salaire, on a besoin de rien d'autre que les coordonées des points) et 4 Points distincts.
 
 Le ***Rectangle*** calcule sa surface.
 
@@ -74,4 +82,4 @@ Le ***Rectangle*** calcule sa surface.
 
 Le package view contient une classe ***Console*** chargée de l'affichage et du séquencage des saisies
 
-Note : Cette classe ***console*** pourra etre substituée par un ***Controleur*** d'entrée qui porterait la responsabilité du séquencage des actions, et une classe ***Console***
+Note : Cette classe ***Console*** pourra etre substituée par un ***Controleur*** d'entrée qui porterait la responsabilité du séquencage des actions, et une classe ***Console***
