@@ -6,7 +6,7 @@ Qualité logcielle
 
 On applique donc la COO afin de favoriser la séparation des tâches en unités de code (voir responsabilité c'est l'art de structurer le programme), la limitation des dépendances (voir couplage), cohérence de l'ensemble.
 
-Les modifications doivent être les plus limitées possible.
+Les modifications de code doivent être les plus limitées en terme de temps possible.
 
 Langage : Java
 
@@ -14,6 +14,22 @@ POO à venir.
 
 La notion de COO est liée à la gestion de projet, on va forcément bosser à plusieurs (3).
 
-PRETTE
-MOINEAU
-Le VILIN GABAR
+The team : 
+
+* PRETTE
+* MOINEAU
+* Le VILIN GABAR
+
+# Etude de cas 
+
+On va modéliser un ascenceur en JAVA en analyse/conception.
+
+# Méthodologie
+
+La méthodologie est un ensemble de tâche d'ingénierie logicielle comprenant :
+
+* Spécification des exigences
+* Conception
+* Codage 
+
+et gestion de projet, même si un cours y sera dédié dans la formation.
