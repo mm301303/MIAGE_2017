@@ -63,7 +63,7 @@ Pour materialiser ce ***Repere***, on a besoin de la notion de ***Point***.
 Le ***Repere*** est un Point de coordonnee (0.;0.)
 Le ***Point*** est un emplacement variable. On le construit ***Point***(x, y) avec x et y des doubles, afin de permettre des nombres plus grands.
 
-Le Rectangle est une composition de 4 ***Point***s. Le rectangle est responsable de sa propre cohérence, il est construit Rectangle(***Point***1, ***Point***2, ***Point***3, ***Point***4), et vérifiera sa propriété de 3 angles droit et 4 ***Point***s distincts
+Le Rectangle est une composition de 4 Points. Le rectangle est responsable de sa propre cohérence, il est construit Rectangle(Point1, Point2, Point3, Point4), et vérifiera sa propriété de 3 angles droit et 4 Points distincts
 
 Package ***IHM***
 
