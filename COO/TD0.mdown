@@ -6,15 +6,61 @@ Objectif : fournir un logiciel permettant de gérer des rectangles
 
 ## 1. Specs 
 
-Il vaut pouvoir créer deux rectangles 
-Saisir les dimensions l1 et L1, l2 et L2
-Afficher les surfaces S1 et S2
-Modifier l1 du premier
-Afficher S1 du premier
+* Il vaut pouvoir créer deux rectangles 
+
+* Saisir les dimensions l1 et L1, l2 et L2
+* Afficher les surfaces S1 et S2
+* Modifier l1 du premier
+* Afficher S1 du premier
 
 Le logiciel devra pouvoir etre retranscrit graphiquement 
+
 Le logiciel devra pouvoir afficher n rectangles
 
 ## 2. Conception
 
+### Critères de qualité
 
+
+* Utilisabilité : affichage console
+
+* Robustesse : Peut planter en cas de saisie incorrecte (on va quand meme eviter...)
+
+* Performances : Aucune exigence de temps de réponse
+
+Le logiciel doit en revanche être ***maintenable*** et ***évolutif***
+
+
+### Description de l'IHM 
+
+Les saisies se font en console sous la forme
+
+```
+
+Donner la largeur du [premier/deuxieme] rectangle 
+
+```
+Les résultats sont envoyés sous la forme 
+
+```
+
+La surface du [premier/deuxième] rectangle est : [valeur]
+
+
+```
+### Langage
+
+Le langage est un langage objet pour faciliter la maintenabilité, on choisira d'utiliser JAVA cas les membres du groupe connaissent la techno.
+
+### Structuration du logiciel
+
+Package geometrie_logique
+
+On a besoin d'un endroit ou dessiner, qui doit pour permettre les n rectangles être le moins délimité possible, on utilisera un objet Repere. 
+
+Pour materialiser ce repere, on a besoin de la notion de Point.
+
+Le Repere est un Point de coordonnee (0.;0.)
+Le Point est un emplacement variable. On le construit Point(x, y) avec x et y des doubles, afin de permettre des nombres plus grands.
+
+Le Rectangle est une composition de 4 points. Le rectangle est responsable de sa propre cohérence, il est construit Rectangle(Point1, Point2, Point3, Point4), et vérifiera sa propriété de 3 angles droit et 4 points distincts
