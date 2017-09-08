@@ -10,7 +10,8 @@ git add COO/*.mdown SIMULATION\ DE\ GESTION/*.mdown;
 git add COO/*.pdf SIMULATION\ DE\ GESTION/*.pdf;
 
 #crtl c ctrl v for sh
-git add COO/*.sh SIMULATION\ DE\ GESTION/*.sh;
+git add COO/*.sh SIMULATION\ DE\ GESTION/*.sh COO/EntrepriseArchitect script/*.sh;
+
 
 
 echo "Update classes :";
