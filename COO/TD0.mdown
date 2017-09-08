@@ -53,7 +53,7 @@ La surface du [premier/deuxième] rectangle est : [valeur]
 Le langage est un langage objet pour faciliter la maintenabilité, on choisira d'utiliser JAVA cas les membres du groupe connaissent la techno.
 
 ### Structuration du logiciel
-
+(en vrai on a pas besoin de repere, mais dans le but de faire une IHM graphique...)
 Package ***geometrie_logique***
 
 On a besoin d'un endroit ou dessiner, qui doit pour permettre les n rectangles être le moins délimité possible, on utilisera un objet ***Repere***. 
@@ -63,8 +63,11 @@ Pour materialiser ce ***Repere***, on a besoin de la notion de ***Point***.
 Le ***Repere*** est un Point de coordonnee (0.;0.)
 Le ***Point*** est un emplacement variable. On le construit ***Point***(x, y) avec x et y des doubles, afin de permettre des nombres plus grands.
 
-Le ***Rectangle*** est une composition de 4 Points. Le ***rectangle*** est responsable de sa propre cohérence, il est construit Rectangle(Point1, Point2, Point3, Point4), et vérifiera sa propriété de 3 angles droit et 4 Points distincts
+Le ***Rectangle*** est une composition de 4 Points. Le ***Rectangle*** est responsable de sa propre cohérence, il est construit Rectangle(Point1, Point2, Point3, Point4), et vérifiera sa propriété de 3 angles droit et 4 Points distincts.
+Le ***Rectangle*** calcule sa surface.
 
-Package ***IHM***
+Package ***view***
 
-Le package IHM contient une classe Console chargée de l'affichage et du séquencage des saisies
+Le package view contient une classe ***Console*** chargée de l'affichage et du séquencage des saisies
+
+Note : Cette classe ***console*** pourra etre substituée par un ***Controleur*** d'entrée qui porterait la responsabilité du séquencage des actions, et une classe ***Console***
