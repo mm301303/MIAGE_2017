@@ -83,3 +83,9 @@ Le ***Rectangle*** calcule sa surface.
 Le package view contient une classe ***Console*** chargée de l'affichage et du séquencage des saisies
 
 Note : Cette classe ***Console*** pourra etre substituée par un ***Controleur*** d'entrée qui porterait la responsabilité du séquencage des actions, et une classe ***Console***
+
+
+# On va garder celle la de conception :
+
+Rectangle : calcule sa surface, contient l et L, et un tableau statique d'instances de rectangle 
+IHM : contient main() et les saisies/resultats
