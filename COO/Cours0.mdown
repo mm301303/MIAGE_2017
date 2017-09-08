@@ -33,3 +33,39 @@ La méthodologie est un ensemble de tâche d'ingénierie logicielle comprenant :
 * Codage 
 
 et gestion de projet, même si un cours y sera dédié dans la formation.
+
+La communication intraéquipe et avec le client est au cour de la coo.
+
+# Définitions
+
+ANALYSE : Le quoi "externe", du point de vue client, ce sont les fonctionnalités
+
+CONCEPTION : Le quoi "interne", du point de vue développeur, le comment on fait 
+
+
+Le test de qualification valide la cohérence entre analyse et conception
+Les tests de qualification sont définis en analyse 
+
+Le test d'intégration permet de s'assurer du bon fonctionnement du produit et valide la conception.
+
+Ces définitions ont 20 ans et sont indépendante de la technologie utilisée.
+
+Rappel du cycle en v
+
+```
+
+Dans cette partie on a pas besoin de connaitre Le codage
+
+	\ 						/
+Specs				Test de qualification
+  	  \					  /
+-----------------------------------------
+Dans cette partie on a besoin de connaitre le code
+	 	\				/
+	conception 	Test d'intégration
+			\		/
+			  Codage
+
+
+```
+

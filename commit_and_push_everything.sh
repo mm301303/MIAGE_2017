@@ -14,6 +14,7 @@ echo "Update classes :";
 
 git status;
 git commit -m "update classes  $d";
+git pull;
 git push -u origin master;
 
 echo "done";
