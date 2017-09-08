@@ -56,15 +56,17 @@ Rappel du cycle en v
 
 Dans cette partie on a pas besoin de connaitre Le codage
 
-	\ 						/
-Specs				Test de qualification
-  	  \					  /
+     \                             /
+Specs                    Test de qualification
+        \                      /
 -----------------------------------------
 Dans cette partie on a besoin de connaitre le code
-	 	\				/
-	conception 	Test d'intégration
-			\		/
-			  Codage
+           \                /
+            \              /
+     conception      Test d'intégration
+              \          /
+                \       /
+                 Codage
 
 
 ```
