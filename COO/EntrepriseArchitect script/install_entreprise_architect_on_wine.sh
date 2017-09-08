@@ -1,7 +1,10 @@
 #!/bin/bash
 #Installator for Entreprise Architect registered edition 
 #according to https://www.sparxsystems.com.au/support/faq/enterprise-architect-WINE.html#point1
-install_path = $(pwd);
+
+#Installation of and on wine for debian64
+
+install_path=$(pwd);
 echo "installation path : $install_path"
 echo '*******************************************************'
 echo 'Install Wine and Winetricks'
@@ -11,12 +14,12 @@ sudo dpkg --add-architecture i386
 sudo add-apt-repository ppa:wine/wine-builds
 sudo apt-get update
 sudo apt-get install --install-recommends winehq-devel
-sudo apt-get install winetricks
+sudo apt-get install -y winetricks
 
 echo ' '
 echo '*******************************************************'
 echo 'dependancies : text in diagrams appears as it does in a native Windows installation '
-sudo apt-get install fonts-crosextra-carlito
+sudo apt-get install -y fonts-crosextra-carlito
 
 echo ' '
 echo '*******************************************************'
