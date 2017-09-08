@@ -1,0 +1,13 @@
+# Objectif du cours
+
+Qualité logcielle 
+* qualité externe - du point de vue utilisateur
+* qualité interne - du point de vue de la maintenabilité et de l'évolutivité 
+
+On applique donc la COO afin de favoriser la séparation des tâches en unités de code (voir responsabilité c'est l'art de structurer le programme), la limitation des dépendances (voir couplage), cohérence de l'ensemble.
+
+Les modifications doivent être les plus limitées possible.
+
+Langage : Java
+
+POO à venir
