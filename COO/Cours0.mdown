@@ -50,20 +50,20 @@ Le test d'intégration permet de s'assurer du bon fonctionnement du produit et v
 
 Ces définitions ont 20 ans et sont indépendante de la technologie utilisée.
 
-Rappel du cycle en v
+Rappel du cycle en V qui mappe la correspondance entre les taches d'ingélog mais plus une méthodologie de production, on travaille en agile.
 
 ```
 
 Dans cette partie on a pas besoin de connaitre Le codage
 
      \                             /
-Specs                    Test de qualification
+   Specs                    Test de qualification
         \                      /
 -----------------------------------------
 Dans cette partie on a besoin de connaitre le code
            \                /
             \              /
-     conception      Test d'intégration
+       Conception      Test d'intégration
               \          /
                 \       /
                  Codage
