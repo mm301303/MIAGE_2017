@@ -1,0 +1,57 @@
+# Scenarios
+
+## Entreprises partenaires
+
+Les entreprises partenaires ne sont pas des utilisateurs de l'application, mais jouent un rôle indirect dans leur 4utilisation
+
+En tant que groupe commercial je souhaite :
+
+* Développer ma communication en disposant d'un nouveau moyen de visibilité afin de toucher un public plus large 
+
+* Développer une image plus écologique aux yeux du public
+
+* Toucher une clientèle plus large
+
+
+
+## Passager
+
+En tant que passager, je souhaite :
+
+* disposer d'une solution de transport à courte et moyenne échelle, régulière ou occasionnelle à bas prix
+
+* agir pour l'écologie et le désengorgement des métropoles en partageant un véhicule plutôt qu'en possédant le sien
+
+* avoir de la compagnie lors de mes trajets
+
+Pour ce faire, je veux :
+
+* disposer d'une application simple afin de planifier mes trajets
+
+* utiliser l'application gratuitement pour les trajets occasionnels
+
+* payer via l'application pour des trajets réguliers et planifier plusieurs trajets à l'avance
+
+* blacklister des conducteurs dont je n'ai pas été satisfait
+
+* récompenser les conducteurs avec lesquels le trajet est agréable
+
+## Conducteur
+
+En tant que conducteur, je souhaite :
+
+* agir pour l'écologie et le désengorgement des métropoles en partageant mon véhicule avec d'autres personnes lors de mes trajets récurrents
+
+* ne pas perdre de temps sur mes trajets récurrents
+
+* obtenir une contrepartie de mon choix de la part des passagers que je transporte et fonction de la distance parcourue
+
+* avoir de la compagnie lors de mes trajets
+
+Pour ce faire, je veux :
+
+* disposer d'une application simple afin de planifier mes trajets
+
+* obtenir rémunération de la part de l'application sous plusieurs formes permises par les partenaires commerciaux de l'application
+
+* blacklister les passagers avec lesquels le trajet n'a pas été agréable
