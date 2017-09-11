@@ -20,7 +20,7 @@ En tant que passager, je souhaite :
 
 * disposer d'une solution de transport à courte et moyenne échelle, régulière ou occasionnelle à bas prix
 
-* agir pour l'écologie et le désengorgement des métropoles en partageant un véhicule plutôt qu'en possédant le sien
+* agir pour l'écologie et le désengorgement des métropoles et la pollution sonore en partageant un véhicule plutôt qu'en possédant le sien
 
 * avoir de la compagnie lors de mes trajets
 
@@ -32,9 +32,11 @@ Pour ce faire, je veux :
 
 * payer via l'application pour des trajets réguliers et planifier plusieurs trajets à l'avance
 
-* blacklister des conducteurs dont je n'ai pas été satisfait
+* blacklister avec commentaire à destination d'éconav des conducteurs dont je n'ai pas été satisfait
 
 * récompenser les conducteurs avec lesquels le trajet est agréable
+
+* pouvoir me rétracter peu avant le trajet
 
 ## Conducteur
 
@@ -54,4 +56,6 @@ Pour ce faire, je veux :
 
 * obtenir rémunération de la part de l'application sous plusieurs formes permises par les partenaires commerciaux de l'application
 
-* blacklister les passagers avec lesquels le trajet n'a pas été agréable
+* blacklister avec commentaire à destination d'éconav les passagers avec lesquels le trajet n'a pas été agréable
+
+* pouvoir annuler un trajet à l'avance
