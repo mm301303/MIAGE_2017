@@ -4,7 +4,7 @@ d=$(date +%Y-%m-%d)
 
 #add classes here
 git add $0;
-git add COO/*.mdown SIMULATION\ DE\ GESTION/*.mdown HACKATON-SKEMA/*.mdown;
+git add COO/*.mdown SIMULATION\ DE\ GESTION/*.mdown HACKATON-SKEMA/*.mdown HACKATON-SKEMA/Maquette /*.zip;
 
 #crtl c ctrl v for pdf
 git add COO/*.pdf SIMULATION\ DE\ GESTION/*.pdf;
