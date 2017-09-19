@@ -5,7 +5,7 @@
 #ifndef RAND_MAX
 #define RAND_MAX 32767
 #endif
-
+//on observe la proportion de points qui tombent aléatoirement dans [0;pi] pour x et y entre 0 et 1
 double PIbyRandom(int all)
 {	
 	double x=0.0, y=0.0;
