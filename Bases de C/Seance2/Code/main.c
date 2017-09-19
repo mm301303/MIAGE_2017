@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
 	if(delta > 1.){
 		printf("\nsyntax ./main.exe precision\n");
 		printf("precision is a very small number like 0.000001\n");
-
+		return -1;
 	}
 
 	double sum=0.0;
