@@ -1,0 +1,27 @@
+
+Cas d'utilisation : 
+	(nom du cas d'utilisation)
+Acteur : 
+	(acteur(s) principaux, déclencheurs du cas)
+Evénement déclencheur
+Parties prenantes et leurs intérêts : 
+	(sous forme de liste)
+Niveau : 
+	(Stratégique, Objectif utilisateur ou Sous-fonctionnalité)
+Portée : 
+	(Délimite le périmètre d'action du cas)
+Pré-conditions : 
+	(conditions requises pour que le cas soit applicable)
+Post-conditions : 
+	( conséquences du succès de l'application du système)
+Scénario nominal : 
+	(Liste des différentes actions en cas de succès du système)
+Extensions : 
+	(Liste de tous les scénarios différents du nominal, suivis de leurs conditions de réalisations ainsi que de leurs action et éventuellement sous-cas d'utilisation)
+Contraintes : 
+	(Par exemple la confidentialité, réactivité des acteurs...
+Questions ouvertes : 
+	(permettent l'amélioration du cas en appuyant sur les zones d'ombres du projet)
+Annexes
+
+
