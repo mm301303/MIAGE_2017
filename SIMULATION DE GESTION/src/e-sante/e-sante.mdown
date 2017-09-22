@@ -29,7 +29,7 @@ Notre produit est une application ***Google Home***, elle est a commande ***voca
 
 ***Lire une ordonnance*** au système afin d'etre notifié au cours de la journée des différents medicaments à prendre et leur posologie, et de mémoiser les contreindications des traitements.
 
-***Obtenir des informations*** détaillées sur des médicaments (posologie, effets secondaires
+***Obtenir des informations*** détaillées sur des médicaments (posologie, effets secondaires)
 
 ***Permettre l'enregistrement des résultats*** de prises de sang pour les ***diabétiques***.
 
