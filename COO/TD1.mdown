@@ -1,0 +1,21 @@
+# Intro
+
+On peut voir les méthodes agiles comme un ensemble de procédures qui permettent de planifier un projet de manière plus "souple" que traditionnellement. L'objectif est double, la qualité du produit final et le fait d'obtenir un prototype très tôt dans le processus de développement de la solution.
+
+# Diagramme de séquence
+
+"Ici on a des appel asynchrones parce que c'est entre le hardware et le logiciel"
+
+dans la machine a état ce qui fait changer d'état (les évènements/signaux) sont asynchrones, les méthodes synchrones sont celles de chaque état.
+
+"Subtilité" de la conception de l'étude ascenceur : 
+
+le message nouvel étage x avec A < x < B pour un trajet entre A et B ne déclanche pas d'action du logiciel, ainsi le moteur continue de fonctionner. quand x=b, le message "arret" est envoyé
+
+# Sprint 1 
+
+Microscopique, sert à dérouler la démarche entière sur peu de doc.
+
+## Contraintes
+
+Le HW est imposé, les indices des éléments physiques et le format des requetes aussi

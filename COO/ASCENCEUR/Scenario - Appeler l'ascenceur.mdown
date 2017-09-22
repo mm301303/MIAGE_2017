@@ -1,14 +1,13 @@
 # Scenario - Appeler l'ascenceur
 
 ## Cas d'utilisation : 
-	Appeler l'ascenceur
+	Appeler l'ascenceur 
 ## Acteur : 
-	 
+	 Usager
 ## Evénement déclencheur :
-
+	Un usager appelle l'ascenceur
 ## Pré-conditions : 
-	L'étage est accessible
-
+	
 ## Post-conditions : 
 	La porte s'ouvre
 
