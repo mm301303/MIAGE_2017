@@ -13,11 +13,11 @@ https://app.box.com/s/s6c4gzpg2wvybuyx97nvpyikxfujwnnc
 vendredi 22 septembre 2017
 
 # Présentation brève
-## Definition du projet 
+## Définition du projet 
 
 ### cible 
 
-Les cibles sont des personnes confinées chez eux pour raison médicales, les personnes agées en manque d'autonomie et les malades de pathologies courantes comme le diabète.
+Les cibles sont des ***personnes confinées chez eux pour raison médicales***, les personnes ***agées*** en ***manque d'autonomie*** et les malades de ***pathologies courantes*** comme le diabète.
 
 ### Support
 
@@ -27,16 +27,17 @@ Notre produit est une application ***Google Home***, elle est a commande ***voca
 
 * Médicales
 
-Lire une ordonnance au système afin d'etre notifié au cours de la journée des différents medicaments a prendre et leur posologie, et de mémoiser les contreindications des traitements.
+***Lire une ordonnance*** au système afin d'etre notifié au cours de la journée des différents medicaments à prendre et leur posologie, et de mémoiser les contreindications des traitements.
 
-Obtenir des informations détaillées sur des médicaments (posologie, effets secondaires
--Permettre l'enregistrement des résultats de prises de sang pour les diabétiques.
+***Obtenir des informations*** détaillées sur des médicaments (posologie, effets secondaires
 
-* Bien etre
+***Permettre l'enregistrement des résultats*** de prises de sang pour les ***diabétiques***.
 
-Obtenir des idées de repas diversifiés composés d'ingrédients correspondants aux contraintes médicales des utilisateurs
+* Bien-être
 
-Permettre de contacter des services de secours en leur transmettant les informations nécessaires en cas d'accident domestique
+***Obtenir des idées de repas*** diversifiés composés d'ingrédients ***correspondants aux contraintes médicales*** des utilisateurs.
+
+***Permettre de contacter des services de secours*** en leur transmettant les informations nécessaires en cas d'***accident domestique***.
 
 <hr>
 <hr>
@@ -45,20 +46,24 @@ Permettre de contacter des services de secours en leur transmettant les informat
 
 ## Executive summary
 
-Une application google home permettant à une personne sous traitement, chez elle, d'obtenir oralement des informations médicales et sur ses médicaments : 
-proposition de plat en fonction d’un suivi alimentaire qui conviendrait à chaque patient par rapport à leurs maladies.
-Des informations à partir d’une base de données et d’information locales sur la posologie des médicaments.
-La personne peut lire son ordonnance à l'application et être avertie par notification orale des médicaments à prendre et de leur posologie à différents moments de la journée.
-L'application propose un suivi diabétique exportable par mail. 
+Une application google home permettant à une personne sous traitement, chez elle, d'obtenir oralement :
+
+* proposition de plat en fonction d’un suivi alimentaire qui conviendrait à chaque patient par rapport à leurs maladies.
+
+* Des informations à partir d’une base de données et d’information locales sur la posologie des médicaments.
+
+* La personne peut lire son ordonnance à l'application et être avertie par notification orale des médicaments à prendre et de leur posologie à différents moments de la journée.
+
+* L'application propose un suivi diabétique exportable par mail. 
 La personne peut appeler oralement des secours à l’adresse de la personne, ainsi que commander des services prédéfinis à domicile.
 
 ## l’entreprise et son offre
 
-Un abonnement permet à la personne de disposer de l’intégralité des services pour une durée définie 
+Un ***abonnement*** permet à la personne de disposer de l’intégralité des services pour une durée définie 
 
 ## le marché visé
 
-Notre projet vise à apporter une aide/un soutien médical aux personnes ayant besoins d’une assistance au quotidien. En effet, notre application a pour but de simplifier la prise de médicament et la compréhension d'un traitement médical, de l'aide pour la conception des repas et une sécurité vis à vis des accidents domestiques.
+Notre projet vise à apporter une aide/un soutien médical aux personnes ayant besoins d’une assistance au quotidien. En effet, notre application a pour but de ***simplifier la prise de médicament*** et la ***compréhension d'un traitement médical***, de l'***aide pour la conception des repas*** et une ***sécurité*** vis à vis des accidents domestiques.
 
 Nous nous intéressons spécialement aux ***personnes âgées***, les personnes ayant des ***handicaps physiques/neurologique*** mais également les personnes en ***manque d’autonomie***. Par exemple, les personnes qui doivent rester à leurs ***domiciles***.
 
@@ -69,7 +74,7 @@ Voir également les fournisseurs d’alarmes pour personnes âgées (permettant 
 
 ## la stratégie
 
-Le service doit être sécurisant et simple pour les clients, ce doit être un objet de bien être et d’assistance médicale
+Le service doit être ***sécurisant et simple*** pour les clients, ce doit être un produit de ***bien-être et d’assistance médicale***
 
 ## les plans marketing et vente
 
@@ -80,7 +85,7 @@ Le service doit être sécurisant et simple pour les clients, ce doit être un o
 
 ## le portefeuille technologique
 
-Google home API, moyen technique de communiquer avec des secours, envoi de formulaire à des pages web pour les services
+***Google home API***, moyen technique de communiquer avec des secours, envoi de formulaire à des pages web pour les services
 
 ## l’équipe et l’organisation
 
