@@ -1,6 +1,8 @@
 # Google doc
 
-https://unice-my.sharepoint.com/personal/habiba_bouajla_etu_unice_fr/_layouts/15/WopiFrame.aspx?docid=16adad661758844c0b5ac949937143112&authkey=Ad5E7OYM6Nuj350l-XWVYwI&action=view&slrid=d7a61b9e-60fe-4000-824a-70b51f90fd39
+https://docs.google.com/document/d/1whJO7SZpnkI08fiFNbQyNZxRALlnxJUHgnIpIcT9e-I/edit#heading=h.9uskyitofl8
+
+(Ca ne marche sans doute pas sans invitation)
 
 # Ressources 
 
@@ -8,58 +10,84 @@ https://app.box.com/s/s6c4gzpg2wvybuyx97nvpyikxfujwnnc
 
 vendredi 22 septembre 2017
 
-# Presentation
+# Présentation brève
 ## Definition du projet 
 
 ### cible 
 
-On cible des personnes confinnées chez eux pour raison médicales, les personnes agées en manque d'autonomie et les malades de pathologies courantes comme le diabète
+Les cibles sont des personnes confinées chez eux pour raison médicales, les personnes agées en manque d'autonomie et les malades de pathologies courantes comme le diabète.
 
 ### Support
 
-Notre produit est une application google home, elle est a commande vocale et à emplacament "fixe" : au domicile de la personne, le support est un assistant domotique.
+Notre produit est une application ***Google Home***, elle est a commande ***vocale*** et à emplacement "fixe" : au domicile de la personne, le support est un ***assistant domotique***.
 
 ### Fonctionnalités
 
 * Médicales
 
--Lire une ordonnance au systeme afin d'etre notifié au cours de la journée des différents medicaments a prendre et leur posologie, et de mémoiser les contreindications des traitements.
--Obtenir des informations détaillées sur des médicaments (posologie, effets secondaires
+Lire une ordonnance au système afin d'etre notifié au cours de la journée des différents medicaments a prendre et leur posologie, et de mémoiser les contreindications des traitements.
+
+Obtenir des informations détaillées sur des médicaments (posologie, effets secondaires
 -Permettre l'enregistrement des résultats de prises de sang pour les diabétiques.
 
 * Bien etre
 
--Obtenir des idées de repas diversifiés composés d'ingrédients correspondants aux contraintes médicales des utilisateurs
--Permettre de contacter des services de secours en leur transmettant les informations nécessaires en cas d'accident domestique
+Obtenir des idées de repas diversifiés composés d'ingrédients correspondants aux contraintes médicales des utilisateurs
 
-# Buisness plan 
+Permettre de contacter des services de secours en leur transmettant les informations nécessaires en cas d'accident domestique
 
-### le résumé 
-Une application google home permettant à une persone sous traitement, chez elle, d'obtenir oralement des informations médicales et sur ses médicaments.	  
+## Business plan
+
+### Executive summary
+
+Une application google home permettant à une personne sous traitement, chez elle, d'obtenir oralement des informations médicales et sur ses médicaments : 
+proposition de plat en fonction d’un suivi alimentaire qui conviendrait à chaque patient par rapport à leurs maladies.
+Des informations à partir d’une base de données et d’information locales sur la posologie des médicaments.
 La personne peut lire son ordonnance à l'application et être avertie par notification orale des médicaments à prendre et de leur posologie à différents moments de la journée.
-La personne peut appeler oralement des secours, ainsi que commander des services prédéfinis à domicile.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+L'application propose un suivi diabétique exportable par mail. 
+La personne peut appeler oralement des secours à l’adresse de la personne, ainsi que commander des services prédéfinis à domicile.
+
 ### l’entreprise et son offre
+
+Un abonnement permet à la personne de disposer de l’intégralité des services pour une durée définie 
 
 ### le marché visé
 
-Les personnes sous traitement, les personnes ayant des handicaps physiques qui les poussent à rester chez elles, les vielles personnes chez elles.
+Notre projet vise à apporter une aide/un soutien médical aux personnes ayant besoins d’une assistance au quotidien. En effet, notre application a pour but de simplifier la prise de médicament et la compréhension d'un traitement médical, de l'aide pour la conception des repas et une sécurité vis à vis des accidents domestiques.
+
+Nous nous intéressons spécialement aux ***personnes âgées***, les personnes ayant des ***handicaps physiques/neurologique*** mais également les personnes en ***manque d’autonomie***. Par exemple, les personnes qui doivent rester à leurs ***domiciles***.
 
 ### la concurrence
 
-Inconnue à ce jour
+Voir Alexia, SIRI, 
+Voir également les fournisseurs d’alarmes pour personnes âgées (permettant de contacter un proche grâce à un bracelet/collier)
 
 ### la stratégie
 
+Le service doit être sécurisant et simple pour les clients, ce doit être un objet de bien être et d’assistance médicale
+
 ### les plans marketing et vente
+
+	Application google home ? ça implique quoi ?
 
 ### la mise en œuvre, les jalons
 
+
 ### le portefeuille technologique
+
+Google home API, moyen technique de communiquer avec des secours, envoi de formulaire à des pages web pour les services
 
 ### l’équipe et l’organisation
 
-### les aspects financiers
+* L'équipe
 
-### les annexes. 
+Habiba 
+Chris 
+Prette 
+Gabin
+David
+Maxime 
 
---
+* L'organisation
+
+[NullPointerException]
