@@ -6,9 +6,33 @@ https://unice-my.sharepoint.com/personal/habiba_bouajla_etu_unice_fr/_layouts/15
 
 https://app.box.com/s/s6c4gzpg2wvybuyx97nvpyikxfujwnnc
 
-# vendredi 22 septembre 2017
+vendredi 22 septembre 2017
 
-## Buisness plan 
+# Presentation
+## Definition du projet 
+
+### cible 
+
+On cible des personnes confinnées chez eux pour raison médicales, les personnes agées en manque d'autonomie et les malades de pathologies courantes comme le diabète
+
+### Support
+
+Notre produit est une application google home, elle est a commande vocale et à emplacament "fixe" : au domicile de la personne, le support est un assistant domotique.
+
+### Fonctionnalités
+
+* Médicales
+
+-Lire une ordonnance au systeme afin d'etre notifié au cours de la journée des différents medicaments a prendre et leur posologie, et de mémoiser les contreindications des traitements.
+-Obtenir des informations détaillées sur des médicaments (posologie, effets secondaires
+-Permettre l'enregistrement des résultats de prises de sang pour les diabétiques.
+
+* Bien etre
+
+-Obtenir des idées de repas diversifiés composés d'ingrédients correspondants aux contraintes médicales des utilisateurs
+-Permettre de contacter des services de secours en leur transmettant les informations nécessaires en cas d'accident domestique
+
+# Buisness plan 
 
 ### le résumé 
 Une application google home permettant à une persone sous traitement, chez elle, d'obtenir oralement des informations médicales et sur ses médicaments.	  
@@ -37,3 +61,5 @@ Inconnue à ce jour
 ### les aspects financiers
 
 ### les annexes. 
+
+--
