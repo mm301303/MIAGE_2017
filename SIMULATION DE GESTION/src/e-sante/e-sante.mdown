@@ -36,6 +36,8 @@ Obtenir des idées de repas diversifiés composés d'ingrédients correspondants
 
 Permettre de contacter des services de secours en leur transmettant les informations nécessaires en cas d'accident domestique
 
+<hr>
+
 # Business plan
 
 ## Executive summary
