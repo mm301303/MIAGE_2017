@@ -11,7 +11,8 @@ https://app.box.com/s/s6c4gzpg2wvybuyx97nvpyikxfujwnnc
 ## Buisness plan 
 
 ### le résumé 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+	Une application google home permettant à une persone sous traitement, chez elle, d'obtenir oralement des informations médicales et sur ses médicaments.	  
+	La personne peut lire son ordonnance à l'application et être avertie par notification orale des médicaments à prendre et de leur posologie à différents moments de la journée                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 ### l’entreprise et son offre
 
 ### le marché visé
