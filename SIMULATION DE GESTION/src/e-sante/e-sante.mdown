@@ -11,13 +11,18 @@ https://app.box.com/s/s6c4gzpg2wvybuyx97nvpyikxfujwnnc
 ## Buisness plan 
 
 ### le résumé 
-	Une application google home permettant à une persone sous traitement, chez elle, d'obtenir oralement des informations médicales et sur ses médicaments.	  
-	La personne peut lire son ordonnance à l'application et être avertie par notification orale des médicaments à prendre et de leur posologie à différents moments de la journée                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+Une application google home permettant à une persone sous traitement, chez elle, d'obtenir oralement des informations médicales et sur ses médicaments.	  
+La personne peut lire son ordonnance à l'application et être avertie par notification orale des médicaments à prendre et de leur posologie à différents moments de la journée.
+La personne peut appeler oralement des secours, ainsi que commander des services prédéfinis à domicile.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 ### l’entreprise et son offre
 
 ### le marché visé
 
+Les personnes sous traitement, les personnes ayant des handicaps physiques qui les poussent à rester chez elles, les vielles personnes chez elles.
+
 ### la concurrence
+
+Inconnue à ce jour
 
 ### la stratégie
 
