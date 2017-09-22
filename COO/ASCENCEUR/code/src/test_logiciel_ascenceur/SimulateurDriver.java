@@ -1,12 +1,12 @@
 package test_logiciel_ascenceur;
-import logiciel_ascenseur.mock.PhysicalMock;
+import logiciel_ascenseur.mock.PhysicalMockFactory;
 
 public class SimulateurDriver {
 
     public static void main(String[] args) {
         // Initialisation: Ascenseur a 4 etages, dont le RDC
         // Cabine porte fermee, arretee a l'etage 1
-        PhysicalMock p = new PhysicalMock();
+        PhysicalMockFactory p = new PhysicalMockFactory();
         // Creation des boutons
         // Pour chaque bouton: creerBouton(int numBouton, int numEtage)
         p.creerBouton(0,0);

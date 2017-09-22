@@ -1,4 +1,4 @@
-package logiciel_ascenseur.mock.Doors;
+package logiciel_ascenseur.mock.doors;
 
 public class DoorMock {
     private int num;

@@ -1,6 +1,6 @@
 package logiciel_ascenseur.mock;
 
-import logiciel_ascenseur.mock.Doors.DoorManager;
+import logiciel_ascenseur.mock.doors.DoorManager;
 import logiciel_ascenseur.mock.cabin.CabinMock;
 import logiciel_ascenseur.mock.cabin.CabinState;
 import logiciel_ascenseur.mock.cabin.EngineMock;
@@ -9,8 +9,8 @@ import logiciel_ascenseur.mock.stage.StageMock;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-
-public class PhysicalMock {
+//TODO : explode in managers for packages
+public class PhysicalMockFactory {
     //Sorry for the french
 
     private ArrayList<StageMock> stages;
@@ -18,7 +18,7 @@ public class PhysicalMock {
     private ArrayList<EngineMock> engine;
     private ArrayList<ButtonMock> buttons;
     private DoorManager doorManager;
-    public PhysicalMock() {
+    public PhysicalMockFactory() {
         this.buttons = new ArrayList<>();
         this.stages = new ArrayList<>();
         this.cabinMocks = new ArrayList<>();
