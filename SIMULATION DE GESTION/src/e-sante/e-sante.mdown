@@ -36,9 +36,9 @@ Obtenir des idées de repas diversifiés composés d'ingrédients correspondants
 
 Permettre de contacter des services de secours en leur transmettant les informations nécessaires en cas d'accident domestique
 
-## Business plan
+# Business plan
 
-### Executive summary
+## Executive summary
 
 Une application google home permettant à une personne sous traitement, chez elle, d'obtenir oralement des informations médicales et sur ses médicaments : 
 proposition de plat en fonction d’un suivi alimentaire qui conviendrait à chaque patient par rapport à leurs maladies.
@@ -47,37 +47,37 @@ La personne peut lire son ordonnance à l'application et être avertie par notif
 L'application propose un suivi diabétique exportable par mail. 
 La personne peut appeler oralement des secours à l’adresse de la personne, ainsi que commander des services prédéfinis à domicile.
 
-### l’entreprise et son offre
+## l’entreprise et son offre
 
 Un abonnement permet à la personne de disposer de l’intégralité des services pour une durée définie 
 
-### le marché visé
+## le marché visé
 
 Notre projet vise à apporter une aide/un soutien médical aux personnes ayant besoins d’une assistance au quotidien. En effet, notre application a pour but de simplifier la prise de médicament et la compréhension d'un traitement médical, de l'aide pour la conception des repas et une sécurité vis à vis des accidents domestiques.
 
 Nous nous intéressons spécialement aux ***personnes âgées***, les personnes ayant des ***handicaps physiques/neurologique*** mais également les personnes en ***manque d’autonomie***. Par exemple, les personnes qui doivent rester à leurs ***domiciles***.
 
-### la concurrence
+## la concurrence
 
 Voir Alexia, SIRI, 
 Voir également les fournisseurs d’alarmes pour personnes âgées (permettant de contacter un proche grâce à un bracelet/collier)
 
-### la stratégie
+## la stratégie
 
 Le service doit être sécurisant et simple pour les clients, ce doit être un objet de bien être et d’assistance médicale
 
-### les plans marketing et vente
+## les plans marketing et vente
 
 	Application google home ? ça implique quoi ?
 
-### la mise en œuvre, les jalons
+## la mise en œuvre, les jalons
 
 
-### le portefeuille technologique
+## le portefeuille technologique
 
 Google home API, moyen technique de communiquer avec des secours, envoi de formulaire à des pages web pour les services
 
-### l’équipe et l’organisation
+## l’équipe et l’organisation
 
 * L'équipe
 
