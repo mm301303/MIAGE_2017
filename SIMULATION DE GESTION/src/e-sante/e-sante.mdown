@@ -79,6 +79,57 @@ Notre offre correspond à un créneau nouveau et a un besoin mal résolu par les
 
 ### Positionnement 
 
+	Le positionnement est un choix stratégique qui, dans l’esprit de ses clients, donne à une offre (produit ou service) une position attractive sur un marché. L’offre doit donc être perçue comme meilleure que celle de la concurrence. Il convient de présenter la stratégie de positionnement définie par l’entreprise sur son ou ses marchés.
+
+** Quels sont les produits et services qu’offre l’entreprise ?
+
+** Précisez-en les caractéristiques techniques.
+
+<hr>
+
+* Décrivez clairement les éléments de différenciation.
+
+** Quelle est la cohérence (technologique et commerciale) de la gamme ?
+
+** Quelle programmation faut-il prévoir pour le développement et/ou la mise sur le marché compte tenu des caractéristiques du produit et/ou service ?
+
+<hr>
+
+	Il s’agit de définir le couple produit/marché, c’est à dire la façon dont le produit répond au mieux au(x) besoin(s) du marché.
+
+* Le couple produit/marché
+
+** Qui sera l’utilisateur final ? A qui est destiné le produit ?
+
+** A quel besoin précis le produit va-t-il répondre ?
+
+** Comment ce besoin est-il satisfait actuellement ?
+
+** Par quel produit et de quelle manière ?
+
+** Quels sont les produits identiques ? Quels sont ceux basés sur une autre technologie ?
+
+** Quels sont les principaux critères de choix de l’utilisateur ?
+
+** Comment le produit satisfait-il à ces attentes ?
+
+<hr>
+
+	Il s’agit d’expliquer aux non spécialistes (financiers, administrations) comment le produit se situe dans son contexte technologique (sont surtout concernés les produits innovants).
+
+
+* Le positionnement dans l’environnement technologique
+
+** Quels sont les principaux termes du vocabulaire technique ?
+
+** Quel est « l’état de l’art » dans ce domaine ?
+
+** Au niveau technologique, comment le projet se positionne-t-il par rapport :
+
+** A ce qui est encore au stade du laboratoire ?
+
+** Aux perspectives à long terme ?
+
 ### Développement
 
 ### Risque
