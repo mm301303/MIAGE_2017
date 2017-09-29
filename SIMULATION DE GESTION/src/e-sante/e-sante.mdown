@@ -100,4 +100,4 @@ Maxime
 
 * L'organisation
 
-[NullPointerException]
+Type de structure (SAS imposé)
