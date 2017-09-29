@@ -31,7 +31,11 @@ Notre produit est une application ***Google Home***, elle est a commande ***voca
 
 ***Obtenir des informations*** détaillées sur des médicaments (posologie, effets secondaires)
 
+Lister ses ***contacts médicaux***. 
+
 ***Permettre l'enregistrement des résultats*** de prises de sang pour les ***diabétiques***.
+
+
 
 * Bien-être
 
@@ -77,6 +81,8 @@ Voir également les fournisseurs d’alarmes pour personnes âgées (permettant 
 Le service doit être ***sécurisant et simple*** pour les clients, ce doit être un produit de ***bien-être et d’assistance médicale***.
 Notre offre correspond à un créneau nouveau et a un besoin mal résolu par les acteurs du moment (Google, Amazon).
 
+## le financement
+
 ### Positionnement 
 
 ### Développement
@@ -87,6 +93,8 @@ Notre offre correspond à un créneau nouveau et a un besoin mal résolu par les
 	
 
 ## la mise en œuvre, les jalons
+
+
 
 
 ## le portefeuille technologique
@@ -107,3 +115,10 @@ Maxime
 * L'organisation
 
 Type de structure (SAS imposé)
+
+* Annexes
+
+Concurrence : 
+
+https://play.google.com/store/apps/details?id=com.medisafe.android.client&hl=fr
+http://www.biogaran.fr/presse/le-bon-traitement-au-bon-moment-avec-medirappel-de-biogaran/
