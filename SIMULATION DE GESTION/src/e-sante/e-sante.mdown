@@ -74,11 +74,17 @@ Voir également les fournisseurs d’alarmes pour personnes âgées (permettant 
 
 ## la stratégie
 
-Le service doit être ***sécurisant et simple*** pour les clients, ce doit être un produit de ***bien-être et d’assistance médicale***
+Le service doit être ***sécurisant et simple*** pour les clients, ce doit être un produit de ***bien-être et d’assistance médicale***.
+Notre offre correspond à un créneau nouveau et a un besoin mal résolu par les acteurs du moment (Google, Amazon).
+
+### Positionnement 
+
+### Développement
+
+### Risque
 
 ## les plans marketing et vente
-
-	Application google home ? ça implique quoi ?
+	
 
 ## la mise en œuvre, les jalons
 
