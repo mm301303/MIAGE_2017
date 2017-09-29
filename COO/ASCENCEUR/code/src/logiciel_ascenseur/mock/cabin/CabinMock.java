@@ -25,4 +25,11 @@ public class CabinMock {
         this.stage = stage;
     }
 
+    public void setDescendingState() {
+        state = CabinState.EN_DESCENTE;
+    }
+
+    public void setRisingState() {
+        state = CabinState.EN_MONTEE;
+    }
 }
