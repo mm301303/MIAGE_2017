@@ -7,6 +7,7 @@ import logiciel_ascenseur.mock.cabin.EngineMock;
 import logiciel_ascenseur.mock.stage.ButtonMock;
 import logiciel_ascenseur.mock.stage.StageMock;
 
+import java.time.temporal.TemporalAmount;
 import java.util.ArrayList;
 import java.util.Comparator;
 //TODO : explode in managers for packages
@@ -15,6 +16,27 @@ public class PhysicalMockFactory {
 
     private ArrayList<StageMock> stages;
     private ArrayList<CabinMock> cabinMocks;
+
+    public ArrayList<StageMock> getStages() {
+        return stages;
+    }
+
+    public ArrayList<CabinMock> getCabinMocks() {
+        return cabinMocks;
+    }
+
+    public ArrayList<EngineMock> getEngine() {
+        return engine;
+    }
+
+    public ArrayList<ButtonMock> getButtons() {
+        return buttons;
+    }
+
+    public DoorManager getDoorManager() {
+        return doorManager;
+    }
+
     private ArrayList<EngineMock> engine;
     private ArrayList<ButtonMock> buttons;
     private DoorManager doorManager;
@@ -56,7 +78,7 @@ public class PhysicalMockFactory {
         //numEntrainement ne me sert à rien
         if(engine.size()>numCabine)//car engine.size = cabins.size +1, l'engine doit etre créé avant
         {
-            cabinMocks.add(new CabinMock(numCabine,numEtageCourant));
+            cabinMocks.add(new CabinMock(numCabine,numEtageCourant,engine.get(0)));
             cabinMocks.get(numCabine).setStage(numEtageCourant);
         }
     }
@@ -88,7 +110,7 @@ public class PhysicalMockFactory {
             System.out.println("report john for toxicity");
         }
     }
-
+    //end of sorry
     private void descend(int indiceCabine) {
         engine.get(indiceCabine).goDown();
         //cabinMocks.get(indiceCabine).setStage(currentCabinStage-1);
@@ -102,7 +124,11 @@ public class PhysicalMockFactory {
         cabinMocks.get(indiceCabine).setRisingState();
     }
 
-    //end of sorry
+    public ArrayList<CabinMock> getCabins() {
+        return cabinMocks;
+    }
+
+
 
 
 }

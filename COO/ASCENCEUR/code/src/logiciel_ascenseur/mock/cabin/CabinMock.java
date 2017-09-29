@@ -1,16 +1,21 @@
 package logiciel_ascenseur.mock.cabin;
 
+import logiciel_ascenseur.console.Display;
+
 public class CabinMock {
     private CabinState state;
     private int innerDoor;
     private StageSelectorMock stageSelector;
     private int stage;
+    private EngineMock engine;
 
-    public CabinMock(int innerDoor, int stage) {
+    public CabinMock(int innerDoor, int stage, EngineMock engine) {
         this.innerDoor = innerDoor;
         this.stage = stage;
         this.stageSelector = new StageSelectorMock();
         this.state = CabinState.ARRET_OUVERT;//ready
+        //this is awful
+        this.engine = engine; //we cannot have several cabins...
     }
 
     public CabinState getState() {
@@ -27,9 +32,48 @@ public class CabinMock {
 
     public void setDescendingState() {
         state = CabinState.EN_DESCENTE;
+        engine.isGoingDown();
+
     }
 
     public void setRisingState() {
         state = CabinState.EN_MONTEE;
+        engine.isGoingUp();
+
+    }
+
+    public void setStoppedState() {
+        this.state = CabinState.ARRET_OUVERT;
+        engine.stop();
+    }
+
+    public void notifyNewStage(int i){
+        if(!state.equals(CabinState.ARRET_OUVERT)){
+            //engine is moving
+            if(engine.isGoingUp){
+
+                stage++;
+            }
+            if(engine.isGoingDown){
+
+                stage--;
+            }
+
+            if(stage==stageSelector.getUserSelection()){
+               setStoppedState();
+            }
+
+        }
+
+        Display.print("\n*\ncurrent stage" + stage);
+        Display.print("current state" + state);
+    }
+
+    public StageSelectorMock getStageSelector() {
+        return stageSelector;
+    }
+
+    public void setSelection(int selection) {
+        this.stageSelector.setSelection(selection);
     }
 }
