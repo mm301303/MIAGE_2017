@@ -87,17 +87,17 @@ Notre offre correspond à un créneau nouveau et a un besoin mal résolu par les
 
 	Le positionnement est un choix stratégique qui, dans l’esprit de ses clients, donne à une offre (produit ou service) une position attractive sur un marché. L’offre doit donc être perçue comme meilleure que celle de la concurrence. Il convient de présenter la stratégie de positionnement définie par l’entreprise sur son ou ses marchés.
 
-** Quels sont les produits et services qu’offre l’entreprise ?
+* * Quels sont les produits et services qu’offre l’entreprise ?
 
-** Précisez-en les caractéristiques techniques.
+* * Précisez-en les caractéristiques techniques.
 
 <hr>
 
 * Décrivez clairement les éléments de différenciation.
 
-** Quelle est la cohérence (technologique et commerciale) de la gamme ?
+* * Quelle est la cohérence (technologique et commerciale) de la gamme ?
 
-** Quelle programmation faut-il prévoir pour le développement et/ou la mise sur le marché compte tenu des caractéristiques du produit et/ou service ?
+* * Quelle programmation faut-il prévoir pour le développement et/ou la mise sur le marché compte tenu des caractéristiques du produit et/ou service ?
 
 <hr>
 
@@ -105,19 +105,19 @@ Notre offre correspond à un créneau nouveau et a un besoin mal résolu par les
 
 * Le couple produit/marché
 
-** Qui sera l’utilisateur final ? A qui est destiné le produit ?
+* * Qui sera l’utilisateur final ? A qui est destiné le produit ?
 
-** A quel besoin précis le produit va-t-il répondre ?
+* * A quel besoin précis le produit va-t-il répondre ?
 
-** Comment ce besoin est-il satisfait actuellement ?
+* * Comment ce besoin est-il satisfait actuellement ?
 
-** Par quel produit et de quelle manière ?
+* * Par quel produit et de quelle manière ?
 
-** Quels sont les produits identiques ? Quels sont ceux basés sur une autre technologie ?
+* * Quels sont les produits identiques ? Quels sont ceux basés sur une autre technologie ?
 
-** Quels sont les principaux critères de choix de l’utilisateur ?
+* * Quels sont les principaux critères de choix de l’utilisateur ?
 
-** Comment le produit satisfait-il à ces attentes ?
+* * Comment le produit satisfait-il à ces attentes ?
 
 <hr>
 
@@ -126,15 +126,27 @@ Notre offre correspond à un créneau nouveau et a un besoin mal résolu par les
 
 * Le positionnement dans l’environnement technologique
 
-** Quels sont les principaux termes du vocabulaire technique ?
+* * Quels sont les principaux termes du vocabulaire technique ?
 
-** Quel est « l’état de l’art » dans ce domaine ?
+* * Quel est « l’état de l’art » dans ce domaine ?
 
-** Au niveau technologique, comment le projet se positionne-t-il par rapport :
+<hr>
 
-** A ce qui est encore au stade du laboratoire ?
+* Au niveau technologique, comment le projet se positionne-t-il par rapport :
 
-** Aux perspectives à long terme ?
+* * A ce qui est encore au stade du laboratoire ?
+
+* * Aux perspectives à long terme ?
+
+* * Aux projets connus ou aux développements technologiques en cours, concurrencer le projet existant ?
+
+* * Comment le projet devra-t-il évoluer dans le futur pour rester concurrentiel au niveau technologique (tendance) ?
+
+<hr>
+
+* Quelles sont les technologies concurrentes permettant de répondre aux mêmes besoins
+
+* * actuellement, dans le futur immédiat ou proche, à moyen ou long terme ?
 
 ### Développement
 
