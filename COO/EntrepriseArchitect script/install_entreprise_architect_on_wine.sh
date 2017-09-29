@@ -32,7 +32,7 @@ winetricks mdac28
 echo '*******************************************************'
 echo 'downloading installer'
 cd /tmp;
-wget http://sparxsystems.com/registered/reg_ea_down.html#RegInstaller
+wget http://ea1017:cacieiif@sparxsystems.com/registered/reg_ea_down.html#RegInstaller
 wine msiexec /i easetupfull.msi
 
 cd $install_path;
