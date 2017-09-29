@@ -154,6 +154,17 @@ Notre offre correspond à un créneau nouveau et a un besoin mal résolu par les
 
 ## les plans marketing et vente
 	
+### Le business model
+
+	Dans son sens le plus courant, le business model est la manière, affichée ou non, dont une entreprise réalise ses affaires. Le business model décrit comment une entreprise gagne de l’argent en précisant où (et comment) elle se positionne dans son ou ses marchés. 
+
+* Les revenus de l’entreprise sont-ils issus de multiples sources ?
+
+* Précisez les différentes sources.
+
+* Décrivez de manière détaillée comment chacune des sources de revenus contribue au revenu global.
+
+* Précisez comment chacun de ces sources évoluera dans le temps.
 
 ## la mise en œuvre, les jalons
 
