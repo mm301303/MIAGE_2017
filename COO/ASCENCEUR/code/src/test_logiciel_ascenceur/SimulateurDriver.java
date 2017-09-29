@@ -58,7 +58,7 @@ public class SimulateurDriver {
         for(int i=1; i<numBouton;i++){
             c.notifyNewStage(i);
         }
-        Display.print("retour au rdc");
+        Display.print("\n**********\nretour au rdc");
         int newSelection =0;
         c.setSelection(newSelection);//retour au rdc
         for(int j=3; j>=newSelection;j--){

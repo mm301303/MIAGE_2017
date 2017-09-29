@@ -48,24 +48,22 @@ public class CabinMock {
     }
 
     public void notifyNewStage(int i){
+        this.setStage(i);
         if(!state.equals(CabinState.ARRET_OUVERT)){
             //engine is moving
             if(engine.isGoingUp){
-
-                stage++;
+                setRisingState();
             }
             if(engine.isGoingDown){
+                setDescendingState();
 
-                stage--;
             }
-
-            if(stage==stageSelector.getUserSelection()){
-               setStoppedState();
-            }
-
+        }
+        if(stage==stageSelector.getUserSelection()){
+            setStoppedState();
         }
 
-        Display.print("\n*\ncurrent stage" + stage);
+        Display.print("\n--------\ncurrent stage" + stage);
         Display.print("current state" + state);
     }
 
@@ -74,6 +72,9 @@ public class CabinMock {
     }
 
     public void setSelection(int selection) {
+        if(selection<stage) setDescendingState();
+        if(selection>stage) setRisingState();
+        if(selection==stage) setStoppedState();
         this.stageSelector.setSelection(selection);
     }
 }
