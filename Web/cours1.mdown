@@ -3,3 +3,5 @@ mercredi 20 septembre 2017, 09:16:25
 # Web
 corr : https://jsbin.com/zizewor/edit?html,css,js,console,output
 https://jsbin.com/qoyagil/edit?html,css,js,console,output
+
+tp : http://www.i3s.unice.fr/~mirbel/enseign/tp1-l3-miage-web-1718.html
