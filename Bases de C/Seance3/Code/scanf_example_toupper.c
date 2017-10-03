@@ -16,10 +16,9 @@ char mytoupper(char c){
 
 
 int main(void){
-	char lettre, lettreupper1, lettreupper2, lettreupper3, lettre4, ok;
+	char lettre, lettreupper1, lettreupper2, lettreupper3, lettre4;
 		
 	while(true){
-		lettre='0', lettreupper1='0', lettreupper2='0', lettreupper3='0',lettre4='0', ok='0';
 		printf("* entrez une lettre : \n");
 		scanf("%c*", &lettre);		
 		if(lettre>96 && lettre<123 ){
@@ -29,7 +28,6 @@ int main(void){
 			lettre4 = mytoupper(lettre);
 			printf("1 : %c, 2 : %c, 3 : %c , 4 (mytoupper) : %c\n", lettreupper1, lettreupper2, lettreupper3, lettre4);
 		}else{
-			printf("%c", lettre);
 		}	
 	}
 }
