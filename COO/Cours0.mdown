@@ -70,4 +70,18 @@ Dans cette partie on a besoin de connaitre le code
 
 
 ```
+## Douze recommandations d'écritures par Alistair Cockburn
+    
+* Partir des grandes fonctions et se maintenir le plus possible au niveau objectif utilisateur.
+* Centrer son attention sur le cas nominal.
+* Préciser toujours les parties prenantes et leurs intérêts.
+* Utiliser le présent de l’indicatif.
+* Utiliser la voie active pour décrire les sous-objectifs en cours de satisfaction.
+* Le sujet doit être clairement localisable.
+* Rester concis et pertinent ; éviter les longs documents.
+* Éviter le conditionnel, et placer les comportements alternatifs dans les extensions.
+* Signaler les sous-cas d’utilisation, représentés par la relation d’inclusion « include ».
+* Identifier le bon objectif.
+* Signaler la portée.
+* Laisser de côté l’interface utilisateur.
 

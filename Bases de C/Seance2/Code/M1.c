@@ -4,7 +4,7 @@
 #include "M1.h"
 
 /*
-Calcule la formule au cran n et retourne un double
+Calcule la formule Somme(((-1)^n)/2n+1)) au cran n et retourne un double
 */
 
 double computeForN(int n)

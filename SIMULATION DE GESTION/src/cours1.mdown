@@ -37,9 +37,10 @@ CV et carte de visite coseillés
 
 PRETTE
 MOINEAU
-[...]
-[...]
-[...] <- Une fille obligatoire 
+VILLARD
+PIMIENTA
+HABIBA
+TRAMIER 
 
 * Contrainte :
 
@@ -77,3 +78,8 @@ Plan de financement
 Identification des partenaires potentiels
 
 Difficultés rencontrées et avantages du projet
+
+## Objets connectés 
+
+Chaîne d'économie "Xerfi"
+Le smartphone est vu comme la télécommande des objets connectés
