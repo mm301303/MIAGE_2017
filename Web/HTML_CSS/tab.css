@@ -1,0 +1,101 @@
+
+body{
+	font: sans-serif 14px black;
+	text-align: center;
+}
+table{
+	caption-side:bottom;
+	font-weight: bold;
+}
+table,th, tr, td{
+	border:none;
+	padding: 1em;
+}
+
+table, tr, td{
+	border: collapse;
+}
+tr{
+	height: 2.4em;
+}
+th{
+	vertical-align: top;
+	background-color: rgb(79,129,189);
+	border: 2px rgb(59,97,142) solid;
+}
+th:empty{
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+}
+td:empty{
+	box-shadow: none !important;
+}
+td{
+	box-shadow: 1px 1px black;
+	min-width: 10em;
+}
+
+.blue{
+	color:white;
+	background-color: rgb(79,129,189);
+	border-radius: 5em;
+	/* offset-x | offset-y | color */
+	
+}
+.purple{
+	color: white;
+	background-color: purple;
+	border-radius:  0.5em;
+}
+.green{
+	color: white;
+	background-color: rgb(147,178,84);
+	border-radius: 5em;
+
+}
+td:empty{
+	border: dashed black 1px !important;
+}
+
+.bac-plus-cinq>td{
+	border: 2px rgb(155,187,89) solid;
+}
+.bac-plus-trois>td{
+	border: 2px rgb(59,97,142) solid;
+}
+.doctorat>td{
+	border: 2px rgb(128,100,162) solid;
+
+}
+
+.transparent{
+	opacity: 0.5;
+}
+
+.no-left-top-border{
+
+	border-left: none !important;
+	border-top-left-radius: 0em !important;
+}
+.no-right-border{
+
+	border-right: none !important;
+	border-top-right-radius: 0em !important;
+	border-bottom-right-radius: 0em !important;
+	position: relative;
+}
+
+
+
+@-moz-keyframes mymove {
+    from   {top:2em; left:2em; background: red;}
+    25%  {top:0em; left: 2em; background: blue;}
+    50%  {top: -2em; left:0em; background: yellow;}
+    75%  {top: 0em; left: -2em; background: green;}
+    to {top:0em; left:0em; background: red;}
+}
+#etoile{
+	position: absolute;
+	animation: mymove 5s infinite;
+}
