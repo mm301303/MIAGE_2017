@@ -1,0 +1,101 @@
+# CSS
+
+## Priorités CSS
+
+Selecteur > Précision/spécificité > Dernier CSS appliqué
+
+note : les balises style dans le HTML sont considérées comme survenant en dernier
+
+la spécificité peut se calculer par un indice chelou 
+
+Soit a = le nombre d'attribut de type id
+b = le nombre d'attribut des pseudo classes
+c = le nombre de de nom des éléments 
+
+[a;b;c] est une représentation de la spécificité d'une règle
+
+## Balises CSS
+
+li.red = li[class="red"]
+
+les [] permettent de spécifier une condition sur un attribut
+
+note : 
+
+ * .red[title] { //selectionne les éléments de classe red ayant un titl défini }
+
+ * la balise 
+
+```
+<style>
+
+```
+
+n'a pas de sélecteur
+
+## Responsive
+
+On utilise la balise @media pour spécifier le support visé 
+
+```
+@media type_de_media {
+	/*
+	style défini pour ce media
+	*/
+}
+```
+
+comme type de media on a nottement screen qui nous sert à faire du responsive
+
+## Valeurs 
+
+### Absolue
+
+ex : 2mm
+
+### Relative
+
+ex : 2em, 12%
+
+## Héritage
+
+Chaque propriété des balises contenante peut ou pas être héritée par les balises contenues : go ***documentation*** pour le vérifier
+
+
+## Color
+e 
+La couleur s'hérite
+color designe la couleur du texte
+
+## background
+
+...color, image, attachement
+
+background-color: 
+Ne s'hérite pas, transparente par défaut 
+
+note : on a des shortcut avec le mot 'background'
+```
+body {
+	background: gray url("img.jpg") 50% repeat fixed;
+}
+
+```
+
+## Font
+
+La fonte s'hérite
+
+font: font-style font-variant font-weight font-family
+
+le style est : normal, italic, oblique
+la variant est : normal, small-caps
+le weight est : [100-900], normal (=400), bold, bolder, lighter
+
+
+## Le box model CSS
+
+Padding, margin, inline or not
+
+
+
