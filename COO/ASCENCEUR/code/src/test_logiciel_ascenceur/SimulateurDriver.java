@@ -55,9 +55,10 @@ public class SimulateurDriver {
         //suite
         CabinMock c = driverFactory.getCabins().get(0);
         c.setSelection(numBouton);
-        for(int i=1; i<numBouton;i++){
+        for(int i=1; i<=numBouton;i++){
             c.notifyNewStage(i);
         }
+
         Display.print("\n**********\nretour au rdc");
         int newSelection =0;
         c.setSelection(newSelection);//retour au rdc
