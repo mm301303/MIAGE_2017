@@ -9,14 +9,11 @@ function debug(f){
 }
 
 function init(){
-	console.log("la page est chargee");
-	//on ne peut récupérer le dom que s'il est "ready"
+	debug("la page est chargee");
+	//est-il possible d'utiliser le meme canvas pour un objet autre sans que l'anim du premier ne l'écrase  ? 
 	canvas1 = document.querySelector("#canvas1");
 	canvas2 = document.querySelector("#canvas2");
 
-	//on recupere le contexte graphique$
-	//il a des methodes pour dessiner
-	//voir cours
 	context = canvas1.getContext("2d");
 	context2 = canvas2.getContext("2d");
 
@@ -26,10 +23,12 @@ function init(){
 	animeBonhomme1();
 	animeBonhomme2();
 
-	console.log("end init");
+	debug("end init");
 
 
 }
+
+//comment ne pas faire de redondance ici ?
 function animeBonhomme1(timeElapsed){
 		debug("animeBonhomme");
 	 	bonhomme1.contexte.clearRect(0, 0, bonhomme1.canvas.width, bonhomme1.canvas.height);
@@ -69,6 +68,7 @@ function animeBonhomme2(timeElapsed){
 // c'est une convention
 class Bonhomme{ //en ES6
 //function Bonhomme((x, y, canvas, contexte)){
+   	
    	constructor(x, y, canvas, contexte, value){
    		debug("Un bonhomme se cree");
 	   	this.Langle=0, this.Rangle=0;
@@ -82,7 +82,8 @@ class Bonhomme{ //en ES6
 		this.drawBonhomme();
 		debug("Just nod if you can hear me");
 	}
-
+	
+	//for lisibility
 	beforeFunc(){
 		this.contexte.save();
 	}
@@ -91,10 +92,10 @@ class Bonhomme{ //en ES6
 		this.contexte.restore();
 	}
 
-   	
+   	//Head
 	drawCasquette(){
 		//la casquette
-		console.log("drawCasquette");
+		debug("drawCasquette");
 		this.beforeFunc();
 		this.contexte.beginPath();
 		this.contexte.fillStyle = "blue";
@@ -108,7 +109,6 @@ class Bonhomme{ //en ES6
 		this.afterFonc();
 		
 	}
-
 	drawPonpon(){
 		//le ponpon
 		this.beforeFunc();
@@ -116,8 +116,7 @@ class Bonhomme{ //en ES6
 		this.contexte.fillRect(this.xBonhomme, this.yBonhomme -25  +this.value*5, 3, 5);
 		this.afterFonc();
 	}
-
-	 drawHead(){
+	drawHead(){
 		this.beforeFunc();
 		this.contexte.fillStyle = "purple";
 		this.contexte.beginPath();
@@ -135,7 +134,6 @@ class Bonhomme{ //en ES6
 		this.contexte.fill();
 		this.afterFonc();
 	}
-
 	drawREye(){
 		this.beforeFunc();
 		this.contexte.fillStyle = (this.value>0)?"white":"red";
@@ -144,7 +142,6 @@ class Bonhomme{ //en ES6
 		this.contexte.fill();
 		this.afterFonc();
 	}
-
 	drawSmile(){
 		this.beforeFunc();
 		this.contexte.fillStyle = "white";
@@ -154,7 +151,7 @@ class Bonhomme{ //en ES6
 		this.afterFonc();
 	}
 
-
+	//Body
 	drawLowerBody(){
 		this.beforeFunc();
 		this.contexte.fillStyle = "blue";
@@ -163,7 +160,6 @@ class Bonhomme{ //en ES6
 		this.contexte.fill();
 		this.afterFonc();
 	}
-
 	drawBody(){
 		this.beforeFunc();
 		this.contexte.fillStyle = (this.value>0)?"orange":"lightgreen";
@@ -173,10 +169,6 @@ class Bonhomme{ //en ES6
 		this.afterFonc();
 	}
 
-	
-
-	
-	
 	//Arms
 	drawRArm(){
 		this.beforeFunc();
@@ -186,7 +178,6 @@ class Bonhomme{ //en ES6
 		this.contexte.fillRect(0,0,10,50);
 		this.afterFonc();
 	}
-
 	drawLArm(){
 		debug("drawLArm");
 		this.beforeFunc();
@@ -198,7 +189,7 @@ class Bonhomme{ //en ES6
 		this.afterFonc();
 	}
 
-
+	//Legs
 	drawLLeg(){
 		this.beforeFunc();
 		this.contexte.translate(this.xBonhomme-15,this.yBonhomme+80);
@@ -207,7 +198,6 @@ class Bonhomme{ //en ES6
 		this.contexte.fillRect(0,0,10,50);
 		this.afterFonc();
 	}
-
 	drawRLeg(){
 		this.beforeFunc();
 		this.contexte.translate(this.xBonhomme+12,this.yBonhomme+80);
@@ -217,6 +207,7 @@ class Bonhomme{ //en ES6
 		this.afterFonc();
 	}
 
+	//point d'entree 
 	drawBonhomme(){
 		debug("drawBonhomme");
 		this.drawHead();
