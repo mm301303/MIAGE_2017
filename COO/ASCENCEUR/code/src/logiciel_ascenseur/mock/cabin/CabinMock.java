@@ -31,38 +31,33 @@ public class CabinMock {
     }
 
     public void setDescendingState() {
-        state = CabinState.EN_DESCENTE;
-        engine.isGoingDown();
-
+        engine.goDown();
     }
 
     public void setRisingState() {
-        state = CabinState.EN_MONTEE;
-        engine.isGoingUp();
-
+        engine.goUp();
     }
 
     public void setStoppedState() {
-        this.state = CabinState.ARRET_OUVERT;
         engine.stop();
+        state = CabinState.ARRET_OUVERT;
     }
 
     public void notifyNewStage(int i){
         this.setStage(i);
-        if(!state.equals(CabinState.ARRET_OUVERT)){
+
+        if(stage==stageSelector.getUserSelection()){
+            setStoppedState();
+        }else{
             //engine is moving
             if(engine.isGoingUp){
                 setRisingState();
             }
             if(engine.isGoingDown){
                 setDescendingState();
-
             }
+            state = engine.getState();
         }
-        if(stage==stageSelector.getUserSelection()){
-            setStoppedState();
-        }
-
         Display.print("\n--------\ncurrent stage" + stage);
         Display.print("current state" + state);
     }
