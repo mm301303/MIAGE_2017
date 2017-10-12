@@ -119,16 +119,16 @@ class Bonhomme{ //en ES6
 
 	 drawHead(){
 		this.beforeFunc();
-		this.contexte.fillStyle = "red";
+		this.contexte.fillStyle = "purple";
 		this.contexte.beginPath();
-		this.contexte.arc(this.xBonhomme, this.yBonhomme+10, 20, 0, 2*Math.PI, false);
+		this.contexte.arc(this.xBonhomme, this.yBonhomme+8, 20, 0, 2*Math.PI, false);
 		this.contexte.fill();
 		this.afterFonc();		
 	}
 
 	drawLEye(){
 		this.beforeFunc();
-		this.contexte.fillStyle = "white";
+		this.contexte.fillStyle = (this.value>0)?"white":"red";
 		this.contexte.beginPath();
 		this.contexte.arc(this.xBonhomme - 10 +this.value*5, this.yBonhomme+7, 3, 0, 2*Math.PI, false);	
 		//value changes sign
@@ -138,7 +138,7 @@ class Bonhomme{ //en ES6
 
 	drawREye(){
 		this.beforeFunc();
-		this.contexte.fillStyle = "white";
+		this.contexte.fillStyle = (this.value>0)?"white":"red";
 		this.contexte.beginPath();
 		this.contexte.arc(this.xBonhomme  + 10 +this.value*5, this.yBonhomme+7, 3, 0, 2*Math.PI, false);	
 		this.contexte.fill();
@@ -166,7 +166,7 @@ class Bonhomme{ //en ES6
 
 	drawBody(){
 		this.beforeFunc();
-		this.contexte.fillStyle = "orange";
+		this.contexte.fillStyle = (this.value>0)?"orange":"lightgreen";
 		this.contexte.beginPath();
 		this.contexte.arc(this.xBonhomme, this.yBonhomme+60, 30, Math.PI, 2*Math.PI, false);
 		this.contexte.fill();
@@ -180,7 +180,7 @@ class Bonhomme{ //en ES6
 	//Arms
 	drawRArm(){
 		this.beforeFunc();
-		this.contexte.fillStyle = "orange";
+		this.contexte.fillStyle = (this.value>0)?"orange":"lightgreen";;
 		this.contexte.translate(this.xBonhomme+15,this.yBonhomme+35);
 		this.contexte.rotate(this.Rangle-Math.PI/6);
 		this.contexte.fillRect(0,0,10,50);
@@ -192,7 +192,7 @@ class Bonhomme{ //en ES6
 		this.beforeFunc();
 		//on dessine en x,y, on veut un repere relatif
 		this.contexte.translate(this.xBonhomme-15,this.yBonhomme+30);
-		this.contexte.fillStyle = "orange";
+		this.contexte.fillStyle = (this.value>0)?"orange":"lightgreen";;
 		this.contexte.rotate(this.Rangle+Math.PI/6);
 		this.contexte.fillRect(0,0,10,50);
 		this.afterFonc();
