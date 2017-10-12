@@ -13,7 +13,7 @@ public class CabinMock {
         this.innerDoor = innerDoor;
         this.stage = stage;
         this.stageSelector = new StageSelectorMock();
-        this.state = CabinState.ARRET_OUVERT;//ready
+        this.state = CabinState.ARRET_OUVERT;//ready, doors opened
         //this is awful
         this.engine = engine; //we cannot have several cabins...
     }
