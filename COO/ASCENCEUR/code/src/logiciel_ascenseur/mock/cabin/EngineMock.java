@@ -52,4 +52,10 @@ public class EngineMock {
         setStopped();
     }
 
+    public CabinState getState() {
+        if(isStopped) return CabinState.ARRET_FERME;
+        if(isGoingUp) return CabinState.EN_MONTEE;
+        if(isGoingDown) return CabinState.EN_DESCENTE;
+        return CabinState.ARRET_OUVERT;//should never happen but make the compiler happy
+    }
 }

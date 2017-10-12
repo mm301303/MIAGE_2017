@@ -103,6 +103,7 @@ public class PhysicalMockFactory {
         }else if(currentCabinStage>numStage){
            descend(indiceCabine);
         }else{
+        //TODO ban john
             System.out.println("It is in front of you, John");
             System.out.println("John, please enter the elevator");
             System.out.println("John, do you speak english ?");
