@@ -1,6 +1,9 @@
 
-//Un fonction appelée quand la page est chargée
-//declarations:
+
+
+//TODO still.... Utiliser au moins 3 ou 4 elements input de HTML5 (color, range, number par exemple) pour paramétrer votre jeu (vitesse, taille, nombre, couleur etc)
+
+
 window.onload=init;
 let canvas1, context, bonhomme1, bonhomme2;
 
@@ -33,10 +36,10 @@ function animeBonhomme1(timeElapsed){
 		debug("animeBonhomme");
 	 	bonhomme1.contexte.clearRect(0, 0, bonhomme1.canvas.width, bonhomme1.canvas.height);
 	 	bonhomme1.drawBonhomme();
-	 	 bonhomme1.Rangle += bonhomme1.value/3;
-		 bonhomme1.Langle += bonhomme1.value/3;
+	 	 bonhomme1.Rangle += bonhomme1.value;
+		 bonhomme1.Langle += bonhomme1.value;
 
-		  if(bonhomme1.Rangle>Math.PI/4||bonhomme1.Rangle<-Math.PI/4) {
+		  if(bonhomme1.Rangle>Math.PI/4||bonhomme1.Rangle<-Math.PI/4) {//shorter angle... not 100% duplicated lol
 		  	bonhomme1.value = -bonhomme1.value;
 	 	 	bonhomme1.xSmile = -bonhomme1.xSmile;
 	 	 }
@@ -55,8 +58,6 @@ function animeBonhomme2(timeElapsed){
 	 	 }
 	requestAnimationFrame(animeBonhomme2);
 };
-
-
 
 // Classes
 
