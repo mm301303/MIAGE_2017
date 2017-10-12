@@ -25,16 +25,14 @@ public class Rectangle {
         if(instances==null){
             instances=new Rectangle[max_number];
             indiceInstance=0;
-            this.l = Math.abs(l);
-            this.L = Math.abs(L);
-            this.S = computeS();
         }
         else if(indiceInstance<max_number-1) {
-            indiceInstance++;
-            this.l = Math.abs(l);
-            this.L = Math.abs(L);
-            this.S = computeS();
+            indiceInstance++;   
         }
+        this.l = Math.abs(l);
+        this.L = Math.abs(L);
+        this.S = computeS();
+        
         this.name = "R" + indiceInstance;
         instances[indiceInstance]=this;
 
