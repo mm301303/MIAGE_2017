@@ -6,7 +6,7 @@
 
 window.onload=init;
 let canvas1, context, bonhomme1, bonhomme2;
-
+var color1;
 function debug(f){
 	console.log("debug : "+f);
 }
@@ -27,8 +27,10 @@ function init(){
 	animeBonhomme2();
 
 	debug("end init");
+}
 
-
+function changeColor(bonhommeNumber, color){
+	//pas parameters
 }
 
 //comment ne pas faire de redondance ici ?
@@ -99,13 +101,13 @@ class Bonhomme{ //en ES6
 		debug("drawCasquette");
 		this.beforeFunc();
 		this.contexte.beginPath();
-		this.contexte.fillStyle = "blue";
+		this.contexte.fillStyle = color1;
 		this.contexte.arc(this.xBonhomme, this.yBonhomme+2+this.value*5, 23, Math.PI, 2*Math.PI, false);
 		this.contexte.fill();
 		this.afterFonc();
 		//la visiere
 		this.beforeFunc();
-		this.contexte.fillStyle = "blue";
+		this.contexte.fillStyle = color1;
 		this.contexte.fillRect(this.xBonhomme - 40, this.yBonhomme -4  +this.value*5, 40, 5);
 		this.afterFonc();
 		
@@ -155,7 +157,7 @@ class Bonhomme{ //en ES6
 	//Body
 	drawLowerBody(){
 		this.beforeFunc();
-		this.contexte.fillStyle = "blue";
+		this.contexte.fillStyle = color1;
 		this.contexte.beginPath();
 		this.contexte.arc(this.xBonhomme, this.yBonhomme+60, 30, 0, Math.PI, false);
 		this.contexte.fill();
@@ -194,7 +196,7 @@ class Bonhomme{ //en ES6
 	drawLLeg(){
 		this.beforeFunc();
 		this.contexte.translate(this.xBonhomme-15,this.yBonhomme+80);
-		this.contexte.fillStyle = "blue";
+		this.contexte.fillStyle = color1;
 		this.contexte.rotate(this.Langle);
 		this.contexte.fillRect(0,0,10,50);
 		this.afterFonc();
@@ -202,7 +204,7 @@ class Bonhomme{ //en ES6
 	drawRLeg(){
 		this.beforeFunc();
 		this.contexte.translate(this.xBonhomme+12,this.yBonhomme+80);
-		this.contexte.fillStyle = "blue";
+		this.contexte.fillStyle = color1;
 		this.contexte.rotate(this.Langle);
 		this.contexte.fillRect(0,0,10,50);
 		this.afterFonc();

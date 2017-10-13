@@ -7,10 +7,19 @@
   <title>bonhomme</title>
 </head>
 <body>
-
-<canvas height=300 width=150 id="canvas1"></canvas>
-<canvas height=300 width=150 id="canvas2"></canvas>
-
+<div id="bonhomme1">
+	<canvas height=300 width=150 id="canvas1"></canvas>
+	<form action="changeColor" data-bonhomme="1">
+	  color  = <input type="text" name="fname"><br>
+	  <input type="submit" value="Submit">
+</div>
+<div id="bonhomme2">
+	<canvas height=300 width=150 id="canvas2"></canvas>
+	<form action="changeColor" data-bonhomme="2">
+	  color  = <input type="text" name="fname"><br>
+	  <input type="submit" value="Submit">
+</form>
+</div>
        
 </body>
 </html>
