@@ -37,3 +37,14 @@ J'aime quand le travail est organisé et les tâches bien définies. A l'écoute
 J'utilise l'UML comme support de discussion en équipe sur le code, et je favorise l'écrit à l'oral au maximum pour garder des traces de tout travail ayant de la valeur. Ainsi j'utilise des plateformes dédiées pour chaque projet.
 Mon projet professionnel à long terme est de travailler en bureau d'étude en tant qu'analyste concepteur, car j'aime décomposer les problèmes et avoir une relation avec les clients.
 J'ai eu deux principales expériences professionnelles : un stage de 4 mois dans une agence Web (CKC-net à sophia), un stage d'administration système (déploiement d'un serveur GLPI) dans une agence de dépannage informatique (clic ordi à peymeinade)
+
+
+FORMATION COURANTE
+IUT
+PASSION+COMPETENCES techniques
+QUALITES TECH (orga, analyse) -> legitimité pour la coo + QUALITE HUMAINES (socio, écoute)
+COMPETENCES ALTERNATIVES (UML, écrit+qu'oral)
+STAGES
+PROJET PRO 1
+PROJET PRO 2
+
