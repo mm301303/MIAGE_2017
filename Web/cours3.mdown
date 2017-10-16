@@ -1,0 +1,3 @@
+# Et avant PHP
+
+Rappel sur les CGI-bin, une requete pointant sur un exe renvoie le resultat de l'executable
