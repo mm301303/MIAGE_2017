@@ -56,7 +56,12 @@ function animeBonhomme1(timeElapsed){
 	 	 }
 	requestAnimationFrame(animeBonhomme1);
 };
-
+function accelerate_b1(){
+	bonhomme1.accelerate();
+}
+function decelerate_b1(){
+	bonhomme1.decelerate();
+}
 
 // Classes
 
@@ -91,9 +96,9 @@ class Bonhomme{ //en ES6
 		this.drawREye();
 		this.drawSmile();
 		this.drawLowerBody(color1);
-		this.drawBody(color1,color3);
-		this.drawRArm(color1,color3);
-		this.drawLArm(color1,color3);
+		this.drawBody(color2);
+		this.drawRArm(color1,color2);
+		this.drawLArm(color1,color2);
 		this.drawLLeg(color1);
 		this.drawRLeg(color1);
 
@@ -106,6 +111,14 @@ class Bonhomme{ //en ES6
 	
 	afterFonc(){
 		this.contexte.restore();
+	}
+
+	//time
+	accelerate(){
+		this.value+=0.1;
+	}
+	decelerate(){
+		this.value-=0.1;
 	}
 
    	//Head
@@ -175,9 +188,9 @@ class Bonhomme{ //en ES6
 		this.contexte.fill();
 		this.afterFonc();
 	}
-	drawBody(color1,color3){
+	drawBody(color1){
 		this.beforeFunc();
-		this.contexte.fillStyle = (this.value>0)?color1:color3;
+		this.contexte.fillStyle = color1;
 		this.contexte.beginPath();
 		this.contexte.arc(this.xBonhomme, this.yBonhomme+60, 30, Math.PI, 2*Math.PI, false);
 		this.contexte.fill();
@@ -185,19 +198,19 @@ class Bonhomme{ //en ES6
 	}
 
 	//Arms
-	drawRArm(color1,color3){
+	drawRArm(color1,color2){
 		this.beforeFunc();
-		this.contexte.fillStyle = (this.value>0)?color1:color3;
+		this.contexte.fillStyle = (this.value>0)?color1:color2;
 		this.contexte.translate(this.xBonhomme+15,this.yBonhomme+35);
 		this.contexte.rotate(this.Rangle-Math.PI/6);
 		this.contexte.fillRect(0,0,10,50);
 		this.afterFonc();
 	}
-	drawLArm(color1,color3){
+	drawLArm(color1,color2){
 		this.beforeFunc();
 		//on dessine en x,y, on veut un repere relatif
 		this.contexte.translate(this.xBonhomme-15,this.yBonhomme+30);
-		this.contexte.fillStyle = (this.value>0)?color1:color3;
+		this.contexte.fillStyle = (this.value>0)?color1:color2;
 		this.contexte.rotate(this.Rangle+Math.PI/6);
 		this.contexte.fillRect(0,0,10,50);
 		this.afterFonc();
