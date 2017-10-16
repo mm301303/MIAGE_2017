@@ -1,3 +1,13 @@
 # Et avant PHP
 
 Rappel sur les CGI-bin, une requete pointant sur un exe renvoie le resultat de l'executable
+
+Utilisation de stdin et stdout
+
+# PHP
+
+Sert à générer des pages HTML, créé en 94.
+
+#balise
+
+<?php echo 'salut' ?>
