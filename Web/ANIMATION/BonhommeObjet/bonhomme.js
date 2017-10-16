@@ -1,171 +1,238 @@
 
-//Un fonction appelée quand la page est chargée
-//declarations:
+
+
+//TODO still.... Utiliser au moins 3 ou 4 elements input de HTML5 (color, range, number par exemple) pour paramétrer votre jeu (vitesse, taille, nombre, couleur etc)
+
+
 window.onload=init;
-let canvas1, context, bonhomme;
+let canvas1, context, bonhomme1;
+var color1_b1 ;
+var color2_b1 ;
+var color3_b1 ;
 
 function debug(f){
 	console.log("debug : "+f);
 }
-
-function init(){
-	console.log("la page est chargee");
-	//on ne peut récupérer le dom que s'il est "ready"
-	canvas1 = document.querySelector("#canvas1");
-	//on recupere le contexte graphique$
-	//il a des methodes pour dessiner
-	//voir cours
-	context = canvas1.getContext("2d");
-	bonhomme = new Bonhomme(50,50,canvas1,context);
-
-	animeBonhomme(bonhomme);
-	console.log("end init");
-
-
+//inputs
+function change_color1_b1(){
+	color1_b1 = document.getElementById("color1_b1").value;
+}
+function change_color2_b1(){
+	color2_b1 = document.getElementById("color2_b1").value;
+}
+function change_color3_b1_1(){
+	color3_b1 = document.getElementById("color3_b1_1").value;
+}
+function change_color3_b1_2(){
+	color3_b1 = document.getElementById("color3_b1_2").value;
 }
 
-function animeBonhomme(timmeElapsed){
-		debug("animeBonhomme");
-	  	// 1 - on efface le canvas
+function init(){
+	debug("la page est chargee");
+	//est-il possible d'utiliser le meme canvas pour un objet autre sans que l'anim du premier ne l'écrase  ? 
+	canvas1 = document.querySelector("#canvas1");
 
-	  	console.log('merde', bonhomme);
-	 	
-	 	bonhomme.contexte.clearRect(0, 0, bonhomme.canvas.width, bonhomme.canvas.height);
-	  
-	  	// 2 - on dessine dans le canvas
-	 	 bonhomme.drawBonhomme();
-	  
-	 	 // 3 - on met à jour les objets à dessiner
-	 	 bonhomme.Rangle += bonhomme.value;
-		 bonhomme.Langle += bonhomme.value;
+	context = canvas1.getContext("2d");
 
-		  if(bonhomme.Rangle>Math.PI/4||bonhomme.Rangle<-Math.PI/4) {
-		  	bonhomme.value = -bonhomme.value;
-	 	 	bonhomme.xSmile = -bonhomme.xSmile;
+	bonhomme1 = new Bonhomme(100,100,canvas1,context, 0.01, color1_b1, color2_b1, color3_b1);
+	//bonhomme2 = new Bonhomme(100,100,canvas2,context2, 0.3, color1_b2, color2_b2, color3_b2);
+
+	animeBonhomme1();
+
+	debug("end init");
+}
+
+
+//comment ne pas faire de redondance ici ?
+function animeBonhomme1(timeElapsed){
+	 	bonhomme1.contexte.clearRect(0, 0, bonhomme1.canvas.width, bonhomme1.canvas.height);
+	 	bonhomme1.drawBonhomme(color1_b1, color2_b1, color3_b1);
+	 	 bonhomme1.Rangle += bonhomme1.value;
+		 bonhomme1.Langle += bonhomme1.value;
+
+		  if(bonhomme1.Rangle>Math.PI/4||bonhomme1.Rangle<-Math.PI/4) {//shorter angle... not 100% duplicated lol
+		  	bonhomme1.value = -bonhomme1.value;
+	 	 	bonhomme1.xSmile = -bonhomme1.xSmile;
 	 	 }
-	requestAnimationFrame(animeBonhomme);
+	requestAnimationFrame(animeBonhomme1);
 };
+function accelerate_b1(){
+	bonhomme1.accelerate();
+}
+function decelerate_b1(){
+	bonhomme1.decelerate();
+}
 
-class Bonhomme{
+// Classes
 
-   	constructor(x, y, canvas, contexte){
+// Avec ES5 / Javascript 5: on utilise des
+// "fonction constructeur", plus puissant que les
+// classes ES6 (pour faire des APIs)
+
+// On nomme la fonction/classe avec une MAJUSCULE
+// c'est une convention
+class Bonhomme{ //en ES6
+//function Bonhomme((x, y, canvas, contexte)){
+   	
+   	constructor(x, y, canvas, contexte, value, color1, color2, color3){
    		debug("Un bonhomme se cree");
 	   	this.Langle=0, this.Rangle=0;
 		this.xBonhomme=x;
 		this.yBonhomme=y;
 		this.xSmile= 25-x;
-		this.value = 0.2;
+		this.value = value;
 		this.canvas = canvas;
 		this.contexte = contexte;
-		debug("is there anybody in there ?");
-		this.drawBonhomme();
-		debug("Just nod if you can hear me");
-	};
+		debug("new bonhomme "+this+" colors : "+ color1+";"+color2+";"+color3+";");
+		this.drawBonhomme(color1, color2, color3);
+	}
+	
+	//point d'entree 
+	drawBonhomme(color1, color2, color3){
+		this.drawHead(color3);
+		this.drawCasquette(color1);	
+		this.drawPonpon(color2);
+		this.drawLEye();
+		this.drawREye();
+		this.drawSmile();
+		this.drawLowerBody(color1);
+		this.drawBody(color2);
+		this.drawRArm(color1,color2);
+		this.drawLArm(color1,color2);
+		this.drawLLeg(color1);
+		this.drawRLeg(color1);
 
+	}
+
+	//for lisibility
 	beforeFunc(){
 		this.contexte.save();
-		this.contexte.translate(this.xBonhomme,this.yBonhomme);
-	};
+	}
 	
 	afterFonc(){
 		this.contexte.restore();
-	};
+	}
 
-    drawHead(){
+	//time
+	accelerate(){
+		this.value+=0.1;
+	}
+	decelerate(){
+		this.value-=0.1;
+	}
+
+   	//Head
+	drawCasquette(color1){
+		//la casquette
 		this.beforeFunc();
-		this.contexte.fillStyle = "red";
 		this.contexte.beginPath();
-		this.contexte.arc(this.yBonhomme, this.yBonhomme+10, 20, 0, 2*Math.PI, false);
+		this.contexte.fillStyle = color1;
+		this.contexte.arc(this.xBonhomme, this.yBonhomme+2+this.value*5, 23, Math.PI, 2*Math.PI, false);
 		this.contexte.fill();
 		this.afterFonc();
+		//la visiere
+		this.beforeFunc();
+		this.contexte.fillStyle = color1;
+		this.contexte.fillRect(this.xBonhomme - 40, this.yBonhomme -4  +this.value*5, 40, 5);
+		this.afterFonc();
 		
-	};
+	}
+	drawPonpon(color2){
+		//le ponpon
+		this.beforeFunc();
+		this.contexte.fillStyle = color2;
+		this.contexte.fillRect(this.xBonhomme, this.yBonhomme -25  +this.value*5, 3, 5);
+		this.afterFonc();
+	}
+	drawHead(color3){
+		this.beforeFunc();
+		this.contexte.fillStyle = color3;
+		this.contexte.beginPath();
+		this.contexte.arc(this.xBonhomme, this.yBonhomme+8, 20, 0, 2*Math.PI, false);
+		this.contexte.fill();
+		this.afterFonc();		
+	}
 
 	drawLEye(){
 		this.beforeFunc();
 		this.contexte.fillStyle = "white";
 		this.contexte.beginPath();
-		this.contexte.arc(-8+(this.xSmile/2), 0, 5+(this.xSmile/2), 0, 2*Math.PI, false);	
+		this.contexte.arc(this.xBonhomme - 10 +this.value*5, this.yBonhomme+7, 3, 0, 2*Math.PI, false);	
+		//value changes sign
 		this.contexte.fill();
 		this.afterFonc();
-	};
-
+	}
 	drawREye(){
 		this.beforeFunc();
+		this.contexte.fillStyle = "white";
 		this.contexte.beginPath();
-		this.contexte.arc(8+(this.xSmile/2), 0, 4+(this.xSmile/2), 0, 2*Math.PI, false);	
+		this.contexte.arc(this.xBonhomme  + 10 +this.value*5, this.yBonhomme+7, 3, 0, 2*Math.PI, false);	
 		this.contexte.fill();
 		this.afterFonc();
-	};
-
+	}
 	drawSmile(){
 		this.beforeFunc();
 		this.contexte.fillStyle = "white";
-		this.contexte.fillRect(-7,0,15,6+this.xSmile);
-		this.contexte.fill();
-		this.afterFonc();
-	};
-
-	drawBody(){
-		this.beforeFunc();
-		this.contexte.fillStyle = "white";
 		this.contexte.beginPath();
-		this.contexte.arc(this.xBonhomme, this.yBonhomme+60, 30, 0, 2*Math.PI, false);
-		this.contexte.lineTo(0, 50);
+		this.contexte.arc(this.xBonhomme , this.yBonhomme+15, 10-this.value*5, 0, Math.PI, false);	
 		this.contexte.fill();
 		this.afterFonc();
-	};
-	drawRArm(){
+	}
+
+	//Body
+	drawLowerBody(color1){
 		this.beforeFunc();
-		this.contexte.fillStyle = "orange";
+		this.contexte.fillStyle = color1;
+		this.contexte.beginPath();
+		this.contexte.arc(this.xBonhomme, this.yBonhomme+60, 30, 0, Math.PI, false);
+		this.contexte.fill();
+		this.afterFonc();
+	}
+	drawBody(color1){
+		this.beforeFunc();
+		this.contexte.fillStyle = color1;
+		this.contexte.beginPath();
+		this.contexte.arc(this.xBonhomme, this.yBonhomme+60, 30, Math.PI, 2*Math.PI, false);
+		this.contexte.fill();
+		this.afterFonc();
+	}
+
+	//Arms
+	drawRArm(color1,color2){
+		this.beforeFunc();
+		this.contexte.fillStyle = (this.value>0)?color1:color2;
 		this.contexte.translate(this.xBonhomme+15,this.yBonhomme+35);
 		this.contexte.rotate(this.Rangle-Math.PI/6);
 		this.contexte.fillRect(0,0,10,50);
 		this.afterFonc();
-	};
-
-	drawLArm(){
-		debug("drawLArm");
+	}
+	drawLArm(color1,color2){
 		this.beforeFunc();
 		//on dessine en x,y, on veut un repere relatif
-		this.contexte.fillStyle = "orange";
 		this.contexte.translate(this.xBonhomme-15,this.yBonhomme+30);
+		this.contexte.fillStyle = (this.value>0)?color1:color2;
 		this.contexte.rotate(this.Rangle+Math.PI/6);
 		this.contexte.fillRect(0,0,10,50);
 		this.afterFonc();
-	};
+	}
 
-
-	drawLLeg(){
+	//Legs
+	drawLLeg(color1){
 		this.beforeFunc();
 		this.contexte.translate(this.xBonhomme-15,this.yBonhomme+80);
-		this.contexte.fillStyle = "green";
+		this.contexte.fillStyle = color1;
 		this.contexte.rotate(this.Langle);
 		this.contexte.fillRect(0,0,10,50);
 		this.afterFonc();
-	};
-
-	drawRLeg(){
+	}
+	drawRLeg(color1){
 		this.beforeFunc();
-		this.contexte.fillStyle = "white";
-		this.contexte.fillStyle = "green";
 		this.contexte.translate(this.xBonhomme+12,this.yBonhomme+80);
+		this.contexte.fillStyle = color1;
 		this.contexte.rotate(this.Langle);
 		this.contexte.fillRect(0,0,10,50);
-		this.contexte.fill();
 		this.afterFonc();
-	};
+	}
+	
 
-	drawBonhomme(){
-		debug("drawBonhomme");
-		this.drawHead();
-		this.drawLArm();
-		this.drawRArm();
-		this.drawBody();	
-		this.drawLLeg();
-		this.drawRLeg();
-		this.drawLEye();
-		this.drawREye();
-		this.drawSmile();
-	};
 }
