@@ -25,3 +25,10 @@ input{
 	border: none;
 	box-shadow: 0.5em -0.5em lightgreen;
 }
+button{
+	background-color: blue;
+	border: none;
+	box-shadow: 0.5em -0.5em green;
+	color: white;
+	padding: 0.3em;
+}

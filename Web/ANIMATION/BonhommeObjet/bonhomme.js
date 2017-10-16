@@ -56,7 +56,12 @@ function animeBonhomme1(timeElapsed){
 	 	 }
 	requestAnimationFrame(animeBonhomme1);
 };
-
+function accelerate_b1(){
+	bonhomme1.accelerate();
+}
+function decelerate_b1(){
+	bonhomme1.decelerate();
+}
 
 // Classes
 
