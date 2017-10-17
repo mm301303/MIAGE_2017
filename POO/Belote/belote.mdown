@@ -1,0 +1,14 @@
+La belote
+
+Implanter une classe Carte qui représente une carte pour le jeu de belote:
+
+    Les couleurs sont TREFLE, PIQUE, CARREAU, COEUR
+    Les valeurs sont 7, 8, 9, 10, VALET, DAME, ROI, AS
+
+On implantera seulement la version vue en cours qui utilise le mot clé enum.
+
+On veut:
+
+    connaître la valeur d'une carte selon qu'elle soit à l'atout ou non;
+    étant données quatre cartes, on veut savoir quelle est la carte la plus forte?
+    étant données quatre cartes, on veut savoir quelle est la carte la plus forte, en fonction de l'atout?
