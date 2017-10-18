@@ -6,8 +6,8 @@ public class CardImplementation implements CardInterface {
     private CardColor color;
 
     public CardImplementation(CardColor c, CardValue v) {
-        this.value = value;
-        this.color = color;
+        this.value = v;
+        this.color = c;
     }
 
     @Override
@@ -22,7 +22,7 @@ public class CardImplementation implements CardInterface {
 
     @Override
     public int getValue(CardColor atout) {
-        if(color.toString().equals(atout.toString()))//meme instance
+        if(color.equals(atout))//meme instance
         {//atout
             return CardValue.atoutValues[value.ordinal()];
 
