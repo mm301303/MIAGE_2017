@@ -50,7 +50,7 @@ public class SimulateurDriver {
         System.out.println("etat de la cabine: " + driverFactory.getEtatCabine(0).toString());
         System.out.println("etage courant de la cabine: " + driverFactory.getNumEtageCourant(0));
         System.out.println("");
-
+        /*
         Display.print("1 - 3");
         //suite
         CabinMock c = driverFactory.getCabins().get(0);
@@ -65,6 +65,6 @@ public class SimulateurDriver {
         for(int j=3; j>=newSelection;j--){
             c.notifyNewStage(j);
         }
-
+    */
     }
 }
