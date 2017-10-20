@@ -65,7 +65,7 @@ public class PhysicalMockFactory {
     }
 
     public void creerEtage(int numEtage, int numBouton, int numPorte) {
-        if(numEtage>0&&buttons.get(numBouton)!=null&&doorManager.isOuterDoorAt(numPorte)){
+        if(numEtage>=0&&buttons.get(numBouton)!=null&&doorManager.isOuterDoorAt(numPorte)){
             ArrayList<StageMock> copy = new ArrayList<>(stages);
             copy.add(new StageMock(numEtage,numBouton,numPorte));
             copy.sort(Comparator.comparing(StageMock::getEtage));
