@@ -2,10 +2,10 @@ package logiciel_ascenseur.mock.cabin;
 
 public enum CabinState {
 
-    ARRET_OUVERT ("ARRETE_OUVERT"),
-    ARRET_FERME ("ARRETE_FERME"),
-    EN_MONTEE ("ENMONTEE_FERME"),
-    EN_DESCENTE ("ENDESCENTE_FERME");
+    ARRET_OUVERT ("Arretée, portes ouvertes"),
+    ARRET_FERME ("Arretée, portes fermées"),
+    EN_MONTEE ("En montée, portes fermées"),
+    EN_DESCENTE ("En descente, portes fermées");
 
     private String value;
 

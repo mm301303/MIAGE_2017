@@ -13,7 +13,7 @@ public class CabinMock {
         this.innerDoor = innerDoor;
         this.stage = stage;
         this.stageSelector = new StageSelectorMock();
-        this.state = CabinState.ARRET_OUVERT;//ready, doors opened
+        this.state = CabinState.ARRET_FERME;//ready, doors opened
         //this is awful
         this.engine = engine; //we cannot have several cabins...
     }
@@ -58,8 +58,10 @@ public class CabinMock {
             }
             state = engine.getState();
         }
-        Display.print("\n--------\ncurrent stage" + stage);
-        Display.print("current state" + state);
+        Display.print("--------\nCurrent stage : " + stage);
+        Display.print("Current state : " + state);
+        Display.print("--------");
+
     }
 
     public StageSelectorMock getStageSelector() {
