@@ -1,0 +1,123 @@
+# Différents types de marketing
+
+* Le marketing de masse 
+	* C'est l'apparition de la production de masse (taylorisme/fordisme), baisse des prixs
+
+* Le marketing de segmentation 
+	* Combination de plusieurs phénomènes, les 30 glorieuses qui amènenet le consammateur à chercher plus de variété, le fait que l'entreprise ne connait plus ses clients, les marchés deviennent internationaux 
+	* Apparition des outils de marketing (mix marketing)
+
+* Le marketing relationnel 
+	* L'entreprise aquiert des informations sur sesclients, ce marketing s'intéresse a la relation cient su rle long terme, il vise la fidélisation client
+
+* Le marketing one to one 
+On cherche à retrouver la proximité avec le client que l'on avait à la phase initiale, mais cette fois à l'aide des technos modernes
+
+# Marketing : Qu'est-ce ?
+
+On utilise les exemples de la ford t (production de masse), la clio (segmentation de marché), l'iphone (innovation)
+
+## 1920s
+
+Version unique (économie d'échelle) : standardisation et économie d'échelle (tout le monde aura une voiture de la même couleur)
+
+## 1980s
+
+Micro-segmentation : on fait le plus grand nombre de versions possible
+
+## 1990s
+
+Innovation : on fait peu de versions, on cherche la rupture 
+
+### Exemple Apple Iphone : Rupture, innovation, adaptation d'offre
+
+L'objectif est de rechercher un smartphone simple qui tire parti des innovations tech du moment : on cherche a définir un concept radical alliant design, psychologie, technologie. Il y a une étude marketing derrière tout buisness.
+
+On cherche l'approbation du public à l'aide de sondage, on propose plusieurs modèles a un échantillon, on garde le préféré. 
+
+Le nom est également soigneusement choisi par une société d'étude en fonction de la cible (ici : mondial : en anglais, peu de syllabes, court, symbolique &rarr; la pomme)
+
+On a également un service de presse qui gère les retombées de la présentation du produit &rarr; en quelques jours, 13 millions de ventes d'iPhones.
+
+# Définitions
+
+Le marketing est l'ensemble des méthodes dont dispose l'entreprise
+
+* Pour adapter son offre en fonction 
+
+	* de la demande
+	* de la concurrence
+	* des moyens
+
+* Pour construire une enveloppe symbolique autour d'un produit, une partie psychologique
+
+* Pour encourager des comportements favorables à la réalisation de ses objectifs auprès de publics variés visés : les clients mais aussi banques et les pouvoirs publiques 
+
+note à part : 
+* La situation politique d'un emplacement géographique influence grandement les opportunités de buisness.
+* Le salarié est le premier ambassadeur de l'entreprise
+
+Le marketing repose sur un processus d'innovation constant, qui peut porter sur les caractéristiques fonctionnelles et symboliques d'un produit. L'innovation se rapporte aux produits, mais également aux services.
+
+# Besoin et bénéfice
+
+## Le concept de besoin 
+
+Le marketing consiste à répondre aux besoins des consommateurs B2B ou B2C.
+
+On se base sur la ***pyramide des besoins de Maslow*** (Psycholoque américain des années 50s)
+
+Réalisation de soi (culture, liberté) < Estime des autres < Appartenance (sociale, familialle) < Sécurité (abris, protection) < Besoin physiologiques (faim soif)
+
+Le besoin vient de la nature ou de la société. On ne peut prétendre répondre a un besoin si un besoin plus fondamental d'une couche inférieure n'est pas satisfaite.
+
+## Le concept de bénéfice 
+
+Rencontre d'un besoin et d'un produit : le consammateur recherche le bénéfice qu'il retire de la consommation/utilisation.
+
+Le bénéfice est réél ou perçu, fonctionnel ou imaginaire
+
+Exemple :
+La présence de bois sur un tableau de bord &rarr; exprimer l'aisance sociale
+Les 3 lames gillette &rarr; permettre d'éviter plus de coupures
+
+# Objectif du marketing 
+
+On veut faire correspondre les ***besoins*** aux ***caractéristiques*** d'un produit, pour permettre un ***bénéfice*** pour le client/consommateur.
+
+C'est le **bénéfice*** qui est vendu, et non les caractéristiques. La vente/séduction dans la cadre du marketing revient à faire miroiter au client un bénéfice.
+
+# Marketing &ne; vente
+
+//pas eu le temps :(
+
+# Rôle du marketing selon la nature de la demande.
+
+Le marché est le lieu de la rencontre de l'offre et de la demande.
+
+* La demande négative 
+
+Identifier les freins, mettre en place un marketing de conviction en démontrant les bénéfices d'un produit
+
+* La demande naissante &oast;
+
+Le cas de la e-santé, des produits connectés et de la domotique, on doit mettre en avant les avantages et mettre en place un marketing de stimulation : cad mettre en place des moyens de facilitation du lanceent du produit
+
+* La demande irrégulière
+
+C'est le cas des marchés saisonniers, on doit mettre en place un marketing de régulation (stimuler les périodes creuses et parfois réduire la conso aux heures de pointes &rarr; exemple d'edf et des modulations tarifaires)
+
+* La demande déclinante 
+
+Exemple du courrier traditonnel : on doit trouver de nouveaux arguments.
+
+* La demande indésirable 
+
+On doit décourager la demande
+
+&oast; LA VENTE DE DROGUE
+
+
+
+
+remarque hors sujet : La psychologie des êtres artificiels ça existe déjà !
