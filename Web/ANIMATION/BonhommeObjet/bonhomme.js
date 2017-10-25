@@ -9,9 +9,14 @@ let canvas1, context, bonhomme1;
 var color1_b1 ;
 var color2_b1 ;
 var color3_b1 ;
+var infinite_suffering_for_a_designer_s_eyes =1;
 
 function debug(f){
 	console.log("debug : "+f);
+}
+function debug2(bonhomme, col1, col2, col3 ){
+	var val=bonhomme.getValue();
+	debug("Bonhomme "+";val = "+ val+";Cols =["+col1+";"+col2+";"+col3+"]"+ "[ Rangle="+bonhomme.Rangle+";Langle="+bonhomme.Langle+"]");
 }
 //inputs
 function change_color1_b1(){
@@ -22,13 +27,14 @@ function change_color2_b1(){
 }
 function change_color3_b1_1(){
 	color3_b1 = document.getElementById("color3_b1_1").value;
+	debug("radio checked"+color3_b1 );
 }
 function change_color3_b1_2(){
 	color3_b1 = document.getElementById("color3_b1_2").value;
+	debug("radio checked"+color3_b1 );
 }
 
 function init(){
-	debug("la page est chargee");
 	//est-il possible d'utiliser le meme canvas pour un objet autre sans que l'anim du premier ne l'écrase  ? 
 	canvas1 = document.querySelector("#canvas1");
 
@@ -39,22 +45,36 @@ function init(){
 
 	animeBonhomme1();
 
-	debug("end init");
 }
 
 
 //comment ne pas faire de redondance ici ?
 function animeBonhomme1(timeElapsed){
 	 	bonhomme1.contexte.clearRect(0, 0, bonhomme1.canvas.width, bonhomme1.canvas.height);
+	
 	 	bonhomme1.drawBonhomme(color1_b1, color2_b1, color3_b1);
-	 	 bonhomme1.Rangle += bonhomme1.value;
-		 bonhomme1.Langle += bonhomme1.value;
 
-		  if(bonhomme1.Rangle>Math.PI/4||bonhomme1.Rangle<-Math.PI/4) {//shorter angle... not 100% duplicated lol
-		  	bonhomme1.value = -bonhomme1.value;
-	 	 	bonhomme1.xSmile = -bonhomme1.xSmile;
+	 	if(bonhomme1.Rangle>Math.PI/4||bonhomme1.Rangle<-Math.PI/4) {//shorter angle... not 100% duplicated lol
+		  	bonhomme1.invert_values();
 	 	 }
-	requestAnimationFrame(animeBonhomme1);
+
+	 	bonhomme1.Rangle = eval(bonhomme1.Rangle+bonhomme1.getValue());
+		bonhomme1.Langle = eval(bonhomme1.Langle+bonhomme1.getValue());
+		
+		//a nice "club effect" to the whole scene
+		infinite_suffering_for_a_designer_s_eyes=infinite_suffering_for_a_designer_s_eyes+1;
+		debug("getRandomColor");
+		if(infinite_suffering_for_a_designer_s_eyes>15){
+			document.getElementById("bonhomme1").style.backgroundColor = getRandomColor();
+			infinite_suffering_for_a_designer_s_eyes=0;//and again
+			//and again
+		}
+		//sorry for that 
+
+
+		requestAnimationFrame(animeBonhomme1);
+
+		//debug2(bonhomme1, color1_b1,color2_b1,color3_b1);
 };
 function accelerate_b1(){
 	bonhomme1.accelerate();
@@ -62,7 +82,14 @@ function accelerate_b1(){
 function decelerate_b1(){
 	bonhomme1.decelerate();
 }
-
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
 // Classes
 
 // Avec ES5 / Javascript 5: on utilise des
@@ -75,15 +102,16 @@ class Bonhomme{ //en ES6
 //function Bonhomme((x, y, canvas, contexte)){
    	
    	constructor(x, y, canvas, contexte, value, color1, color2, color3){
-   		debug("Un bonhomme se cree");
 	   	this.Langle=0, this.Rangle=0;
 		this.xBonhomme=x;
 		this.yBonhomme=y;
+		this.sign = "+";
 		this.xSmile= 25-x;
 		this.value = value;
 		this.canvas = canvas;
 		this.contexte = contexte;
-		debug("new bonhomme "+this+" colors : "+ color1+";"+color2+";"+color3+";");
+		this.Rangle = this.value;
+		this.Langle = this.value;
 		this.drawBonhomme(color1, color2, color3);
 	}
 	
@@ -112,13 +140,23 @@ class Bonhomme{ //en ES6
 	afterFonc(){
 		this.contexte.restore();
 	}
-
+	invert_values(){
+		debug("invert_values");
+		this.sign = (this.sign=="+")?"-":"+";
+		debug(this.sign);
+	}
 	//time
 	accelerate(){
 		this.value+=0.1;
 	}
 	decelerate(){
-		this.value-=0.1;
+		if(this.value>0.1)
+			this.value-=0.1;
+	}
+	getValue(){
+		debug("getValue");
+		var str = ""+this.sign+this.value;
+		return str;
 	}
 
    	//Head
@@ -127,13 +165,13 @@ class Bonhomme{ //en ES6
 		this.beforeFunc();
 		this.contexte.beginPath();
 		this.contexte.fillStyle = color1;
-		this.contexte.arc(this.xBonhomme, this.yBonhomme+2+this.value*5, 23, Math.PI, 2*Math.PI, false);
+		this.contexte.arc(this.xBonhomme, this.yBonhomme+2+this.getValue()*5, 23, Math.PI, 2*Math.PI, false);
 		this.contexte.fill();
 		this.afterFonc();
 		//la visiere
 		this.beforeFunc();
 		this.contexte.fillStyle = color1;
-		this.contexte.fillRect(this.xBonhomme - 40, this.yBonhomme -4  +this.value*5, 40, 5);
+		this.contexte.fillRect(this.xBonhomme - 40, this.yBonhomme -4  +this.getValue()*5, 40, 5);
 		this.afterFonc();
 		
 	}
@@ -141,7 +179,7 @@ class Bonhomme{ //en ES6
 		//le ponpon
 		this.beforeFunc();
 		this.contexte.fillStyle = color2;
-		this.contexte.fillRect(this.xBonhomme, this.yBonhomme -25  +this.value*5, 3, 5);
+		this.contexte.fillRect(this.xBonhomme, this.yBonhomme -25  +this.getValue()*5, 3, 5);
 		this.afterFonc();
 	}
 	drawHead(color3){
@@ -157,7 +195,7 @@ class Bonhomme{ //en ES6
 		this.beforeFunc();
 		this.contexte.fillStyle = "white";
 		this.contexte.beginPath();
-		this.contexte.arc(this.xBonhomme - 10 +this.value*5, this.yBonhomme+7, 3, 0, 2*Math.PI, false);	
+		this.contexte.arc(this.xBonhomme - 10 +this.getValue()*5, this.yBonhomme+7, 3, 0, 2*Math.PI, false);	
 		//value changes sign
 		this.contexte.fill();
 		this.afterFonc();
@@ -166,7 +204,7 @@ class Bonhomme{ //en ES6
 		this.beforeFunc();
 		this.contexte.fillStyle = "white";
 		this.contexte.beginPath();
-		this.contexte.arc(this.xBonhomme  + 10 +this.value*5, this.yBonhomme+7, 3, 0, 2*Math.PI, false);	
+		this.contexte.arc(this.xBonhomme  + 10 +this.getValue()*5, this.yBonhomme+7, 3, 0, 2*Math.PI, false);	
 		this.contexte.fill();
 		this.afterFonc();
 	}
@@ -174,7 +212,7 @@ class Bonhomme{ //en ES6
 		this.beforeFunc();
 		this.contexte.fillStyle = "white";
 		this.contexte.beginPath();
-		this.contexte.arc(this.xBonhomme , this.yBonhomme+15, 10-this.value*5, 0, Math.PI, false);	
+		this.contexte.arc(this.xBonhomme , this.yBonhomme+15, 10-this.getValue()*5, 0, Math.PI, false);	
 		this.contexte.fill();
 		this.afterFonc();
 	}
