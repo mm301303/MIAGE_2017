@@ -1,0 +1,49 @@
+# Syntaxe de base 
+
+<?php
+class SimpleClass implements SimpleInterface, UneAutreInterface
+{
+    // déclaration d'une propriété
+    public $var = 'une valeur par défaut';
+
+    // déclaration des méthodes
+    public function displayVar() {
+        echo $this->var;
+    }
+}
+
+interface SimpleInterface
+{
+    public function displayVar();
+
+}
+?>
+
+extend marche aussi, pas d'héritage multiple comme en java
+
+# Contructeur
+
+__construct() ou NomDeLaClasse()
+parent::__construct() pour appeler le constructeur de la superclasse
+
+# opérateur ::
+
+Appel statique à une classe
+
+Classe::const
+Classe::$static_var
+Classe::method()
+
+
+# Tchou tchou
+
+           _D _|  |_______/        \__I_I_____===__|_________|
+            |(_)---  |   H\________/ |   |        =|___ ___|      _________________
+            /     |  |   H  |  |     |   |         ||_| |_||     _|                \_____A
+           |      |  |   H  |__--------------------| [___] |   =|                        |
+           | ________|___H__/__|_____/[][]~\_______|       |   -|                        |
+           |/ |   |-----------I_____I [][] []  D   |=======|____|________________________|_
+         __/ =| o |=-O=====O=====O=====O \ ____Y___________|__|__________________________|_
+          |/-=|___|=    ||    ||    ||    |_____/~\___/          |_D__D__D_|  |_D__D__D_|
+           \_/      \__/  \__/  \__/  \__/      \_/               \_/   \_/    \_/   \_/
+
