@@ -20,8 +20,19 @@
 	<div class="form-container">
 		<form name="b1"  onchange="change_color1_b1()" method="post">
 			<h3>
-				Enter a color 1 : <input type="text" id="color1_b1">
+				Enter a color 1 : 
+				
 			</h3>
+			<select id="color1_b1">
+				<option value="red">red</option>
+				<option value="blue">blue</option>
+				<option value="grey">grey</option>
+				<option value="pink">pink</option>
+				<option value="darkSlateGrey">darkSlateGrey</option>
+				<option value="brown">brown</option>
+				<option value="purple">purple</option>
+				<option value="darkBlue">darkBlue</option>
+			</select>
 			<h3>
 				Choose a color 2 : <input type="color" id="color2_b1" onchange="change_color2_b1()">
 			</h3>
@@ -29,11 +40,11 @@
 				Choose a color 3 :
 			</h3>
 			  <div>
-			    <input type="radio" id="color3_b1_1" name="color3_b1" value="green" onclick="change_color3_b1_1()">
-			    <label for="colorChoice1">Green</label>
+			    <input type="radio" id="color3_b1_1" name="color3_b1" value="green" checked="true" onchange="change_color3_b1_1()">
+			    <label>Green</label>
 
-			    <input type="radio" id="color3_b1_2" name="color3_b1" value="blue" onclick="change_color3_b1_2()">
-			    <label for="colorChoice2">blue</label>
+			    <input type="radio" id="color3_b1_2" name="color3_b1" value="blue" checked="false" onchange="change_color3_b1_2()">
+			    <label>blue</label>
 			 </div>
 		</form>
 	</div>
