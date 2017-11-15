@@ -66,7 +66,7 @@ De par la nature de la solution de chatbot, il serait ergonomiquement viable et 
 
 Les deux applications ont été en quasi totalité représentées sous proto.io (un excellent logiciel de prototypage) afin de servir de support éventuel à la présentation.
 
-Le développement de l'application en NodeJS à été entamé, la base de donnée est encore absente, mais le serveur fonctionne même s'il ne contient pour l'intant que des routes et pas de fonctionnel. L'objectif de prototyper les deux applications sur le site n'a pas été atteint u fait du manque de connaissance préalable sur NodeJS, le développement est disponible en l'état (il était question d'être capable d'externaliser des routes, la solution à ce problème nous était inconnue à l'époque, il s'agit de créer un middleware routeur) à ce lien https://github.com/mmoineaudev/waitcine .
+Le développement de l'application en NodeJS à été entamé, la base de donnée est encore absente, mais le serveur fonctionne même s'il ne contient pour l'intant que des routes et pas de fonctionnel. Un début de développement du chatbot à été entamé mais n'est pas disponible sur github. L'objectif de prototyper les deux applications sur le site n'a pas été atteint du fait du manque de connaissance préalable sur NodeJS, le développement est disponible en l'état (il était question d'être capable d'externaliser des routes, la solution à ce problème nous était inconnue à l'époque, il s'agit de créer un middleware routeur) à ce lien https://github.com/mmoineaudev/waitcine .
 
 Les maquettes vous sont disponibles dans ce dossier github.
 
@@ -78,5 +78,5 @@ La présentation a été sur la forme beaucoup travaillé par les commerciaux qu
 
 # Bilan de l'équipe 
 
-En conclusion de ses trois jours forts en expériences sociales et pédagogiques, nous avons progressé en équipe vers l'accomplissement d'un projet, en en partageant les tâches et les responsabilités. A l'unanimité même parmis les extérieurs, la plusvalue pédagogique d'un tel évenement est réelle et clairement plus importante que lors d'un cours classique.
+En conclusion de ses trois jours forts en expériences sociales et pédagogiques, nous avons progressé en équipe vers l'accomplissement d'un projet, en en partageant les tâches et les responsabilités. A l'unanimité même parmis les extérieurs, la plus-value pédagogique d'un tel évenement est réelle et clairement plus importante que lors d'un cours classique.
 Nous sommes fiers du travail fournis et des acquis réalisés, en comptabilisant les acquis de gestion de projets, les acquis en culture informatiques sur les technologies employées, les acquis de culture du monde de la santé, et nous avons fortement apprécié l'opportunité de participer à un tel événement, et nous le referions avec plaisir (et sans doute avec des oreillers, une machine à gauffre et des chaises de camping). 
