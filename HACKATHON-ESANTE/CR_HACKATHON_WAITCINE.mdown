@@ -19,7 +19,7 @@ Maxime MOINEAU
 
 ## Le projet
 
-<img src="">
+<img src="https://github.com/mmoineaudev/MIAGE_2017/blob/master/HACKATHON-ESANTE/prototypage_design_general/logo.png">
 
 Le projet WAITCINE a été apporté par Lucas KACEM avant le début du Hackathon, ainsi nous avions une équipe préformée avant même le début de l'évènement. Le recrutement a été scrupuleusement assuré par Lucas et Nikita.
 
