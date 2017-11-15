@@ -4,11 +4,11 @@ Homework
 
 Without any doubt, my favourite number is 113 divided by 355. It is simple, it takes around 4 bytes to be stored, it is composed only by fibonacci's numbers. 
 That is what I call an elegant number. The fact is it represents something so complicated that explaining why fibonaccis numbers are linked to that 113 divided by 355 requires a lot more reflexion than just understanding what what it represents means.
-This numer is everywhere in nature, it is a foundation of the most perfected works of human being as some artists and mathematicians thought it was a work of god as a rule to create the world.
-This number is found in the most perfect geometric form you could find : a circle of raduis 1.
+This number could be found everywhere in nature, it is a foundation of the most perfected works of human being as some artists and mathematicians thought it was a work of god as a rule to create the world.
+This number is found in the most perfect geometric form you could find : a circle of radius 1.
 113 divided by 355 is the best approximation of PI regarding the size of the terms and the precision : accurate to 6 decimal places.
 
-As a student in IT, this is in fact quite useless in modern languages, in which PI exists most of the time as a constant (-it is even quicker for a machine to access a constant than calculating a division of two variables-). But, in the case someone has to code in a primitive or low level language an algorithm using PI, assuming she/he doesn't need a lot of precision, using this operation is a good way to ensure precision/space needed ratio.
+As a student in IT, this is in fact quite useless in modern languages, in which PI exists most of the time as a constant (-it is even quicker for a machine to access a constant than calculating a division of two variables-). But, in the case someone has to code in a primitive or low level language an algorithm using PI, assuming she/he doesn't need a lot of precision, then using this operation is a good way to ensure accuracy/space needed ratio. But I wouldn't advise using it in the onboard computer of a rocket if you hope to get it on the moon, otherwise you'll end up loosing the moon or the rocket depending if you are from an onboard point of view or not.
 
 As someone curious by nature, I've always been curious of "mathematical phenomenons" having applications in physics : I always found amazing the fact something as abstract as number or operators can, if handled by a good hand (-I mean, suposedlynot mine-), end up to mean something as real as the course of the stars, or something as weird as the conditions to gather to be able to keep water in its three states at the time.
 
