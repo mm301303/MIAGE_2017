@@ -26,7 +26,7 @@ hello I am a file
 
 ```
 
-Exercice 1 : Donner la différence entre cat et touch 
+### Exercice 1 : Donner la différence entre cat et touch 
 la commande touch change la date de modification d'un fichier, alors que la commande cat écrit ce qu'on lui donne en entier.
 On se sert de touch pour créer le fchier et de cat pour le remplir.
 
@@ -37,7 +37,7 @@ ls -a
 
 ```
 
-Exercice 2 A quoi servent ces fichiers ?
+### Exercice 2 A quoi servent ces fichiers ?
 
 Revenez à TP_Unix_1, et sortez-en le fichier unfichier.txt (commande mv), remettez-le dedans mais sous un autre nom, puis sortez de votre répertoire et effacez le fichier puis le répertoire (rm et rmdir). Essayez enfin de voir comment faire pour effacer en une seule fois un répertoire et les fichiers qu’il contient
 (c’est une option de rm).
@@ -58,7 +58,7 @@ max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau$ rm -rf TP_Unix_1/
 
 ```
 
-Exercice 3 Créez dans un répertoire annee des fichiers janvier.dat, fevrier.dat...etc, et cherchez à effacer en une seule commande les 4 derniers mois.
+### Exercice 3 Créez dans un répertoire annee des fichiers janvier.dat, fevrier.dat...etc, et cherchez à effacer en une seule commande les 4 derniers mois.
 
 ```
 max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau$ mkdir annees;cd annees/; touch janvier.dat fevrier.dat mars.dat avril.dat mai.dat juin.dat juillet.dat aout.dat septembre.dat octobre.dat novembre.dat decembre.dat;cd ..; tree; rm annees/*bre.dat;tree;
@@ -95,15 +95,15 @@ max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau$ mkdir annees;cd ann
 
 ```
 
-Exercice 4 : voir exo4.sh 
+### Exercice 4 : voir exo4.sh 
 
-Exercice 5 : Listez dans un répertoire les fichiers qui utilisent le mot ”système”
+### Exercice 5 : Listez dans un répertoire les fichiers qui utilisent le mot ”système”
  voir exo4.sh
 
 ## Les droits de vos fichiers
 
 
-Exercice 6 Créez un répertoire ”dépot” où on peut vous laisser des documents, mais jamais voir ce qu’il contient.
+### Exercice 6 Créez un répertoire ”dépot” où on peut vous laisser des documents, mais jamais voir ce qu’il contient.
 
 ```
 mkdir depot;
@@ -144,7 +144,7 @@ d-wx-wx--x  2 max max 4096 nov.  16 09:22 depot
 
 ```
 
-Exercice 7 Créez une zone d’arborescence ”secrète” mais dans laquelle n’importe qui capable d’y accéder peut faire ce qu’il veut, par exemple un répertoire avec un nom compliqué que vous ne communiquez qu’à certaines personnes, et qui ne peut être décelé.
+### Exercice 7 Créez une zone d’arborescence ”secrète” mais dans laquelle n’importe qui capable d’y accéder peut faire ce qu’il veut, par exemple un répertoire avec un nom compliqué que vous ne communiquez qu’à certaines personnes, et qui ne peut être décelé.
 
 ```
 /depot$ mkdir reposecret;
@@ -156,13 +156,13 @@ max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/depot/reposecret$
 chmod +rwx . # on peut tout faire mais pas voir de l'extérieur
 ```
 
-Exercice 8 Un changement d’umask est-il perçu par les shell extérieurs ?
+### Exercice 8 Un changement d’umask est-il perçu par les shell extérieurs ?
 
 Le umask est le masque de permission par défaut du shell courant, il est remis aux valeurs définies dans les variables d'environnement du système à la fin de l'exécution. 
 Umask concerne les permissions par défaut des futurs repertoires et des fichiers.
 
 ## Dire bonjour, tourner en rond
-Exercice 9 Une fois que c’est bon, écrivez un script qui affiche ”boucle” en
+### Exercice 9 Une fois que c’est bon, écrivez un script qui affiche ”boucle” en
 boucle infinie.
 Lancez ce script, interrompez-le, reprennez son exécution, interrompez-le à
 nouveau et tuez-le pour de bon.
@@ -178,7 +178,7 @@ max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/TP1$ kill -15 17908
 
 ```
 
-Exercice 10 Modifiez le script pour qu’il fasse simplement une boucle infinie
+### Exercice 10 Modifiez le script pour qu’il fasse simplement une boucle infinie
 et n’affiche rien, ce sera plus commode.
 
 Lancez-le en tâche de fond, puis appellez la commande top, et observez que
@@ -198,7 +198,7 @@ max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/TP1$ kill -9 18136
 
 ## L’environnement, c’est important
 
-Exercice 11 Expérimentez avec un script qui, à la commande ./solde 3,
+### Exercice 11 Expérimentez avec un script qui, à la commande ./solde 3,
 répond votre solde est de 3 $.
 
 ```
@@ -228,7 +228,7 @@ bonjour
 
 ```
 
-Exercice 12 et 13: 
+### Exercice 12 et 13: 
 present dans ./codeC
 
 ```
@@ -243,7 +243,7 @@ arg 5 lul
 
 ## Entrée et sortie standard
 
-Exercice 14 Ecrivez un programme qui demande un nom, un sexe et une date de naissance, puis affiche un message en fonction, tel que ”Bonjour mon-sieur Gödel, vous faites plus vieux que vos 100 ans.” ou ”Bonjour Madame Lovelace, vous faites plus jeune que vos 191 ans.” (vous choisirez une règle de politesse pour le plus vieux/jeune qui dépend de l’age et du sexe).
+### Exercice 14 Ecrivez un programme qui demande un nom, un sexe et une date de naissance, puis affiche un message en fonction, tel que ”Bonjour mon-sieur Gödel, vous faites plus vieux que vos 100 ans.” ou ”Bonjour Madame Lovelace, vous faites plus jeune que vos 191 ans.” (vous choisirez une règle de politesse pour le plus vieux/jeune qui dépend de l’age et du sexe).
 
 toujours dans bonjour.c
 
