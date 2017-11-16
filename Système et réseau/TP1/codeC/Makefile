@@ -12,9 +12,7 @@ bonjour: $(OBJ) bonjour_lib.o
 
 %.o: %.c
 	$(CC) -o $@ -c $< $(CFLAGS)
-
-.PHONY: clean mrproper
-
+	
 clean:
 	rm -rf *.o
 
