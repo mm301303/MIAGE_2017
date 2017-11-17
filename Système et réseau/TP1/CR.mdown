@@ -204,7 +204,7 @@ répond votre solde est de 3 $.
 ```
 max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/TP1$ ./exo11.sh Salut
 hello
-je suis ./exo11.sh j'ai 0 arguments
+je suis ./exo11.sh j'ai 1 arguments
 mon premier est Salut
 
 ```
