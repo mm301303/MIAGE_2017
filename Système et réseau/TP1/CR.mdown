@@ -1,0 +1,261 @@
+# Liens
+
+http://jalon.unice.fr/cours/raparicio/Cours-raparicio-20171107114243
+
+# CR 
+
+## Fichiers réguliers et répertoires
+
+```
+max@max-K55VD:~$ whoami;pwd;#ls;
+max
+/home/max
+
+```
+
+Créez votre premier répertoire TP_Unix_1, entrez-y et mettez-y votre premier fichier unfichier.txt - vous pourrez utiliser les commandes mkdir, cd, et touch (ou cat pour y écrire quelque chose).
+
+```
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau$ mkdir TP_Unix_1;cd TP_Unix_1;touch unfichier.txt; cat > unfichier.txt
+hello I am a file 
+^C
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/TP_Unix_1$ ls
+unfichier.txt
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/TP_Unix_1$ cat unfichier.txt 
+hello I am a file
+
+```
+
+### Exercice 1 : Donner la différence entre cat et touch 
+la commande touch change la date de modification d'un fichier, alors que la commande cat écrit ce qu'on lui donne en entier.
+On se sert de touch pour créer le fchier et de cat pour le remplir.
+
+
+```
+ls -a 
+.  ..  unfichier.txt
+
+```
+
+### Exercice 2 A quoi servent ces fichiers ?
+
+Revenez à TP_Unix_1, et sortez-en le fichier unfichier.txt (commande mv), remettez-le dedans mais sous un autre nom, puis sortez de votre répertoire et effacez le fichier puis le répertoire (rm et rmdir). Essayez enfin de voir comment faire pour effacer en une seule fois un répertoire et les fichiers qu’il contient
+(c’est une option de rm).
+Enfin, notons que vous aurez parfois à sélectionner certains fichiers automatiquement pour leur faire subir un traitement. (Indication : regarder les commandes wc et grep...).
+
+```
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau$ mv TP_Unix_1/unfichier.txt ./unfichier.txt; cat unfichier.txt; mv unfichier.txt TP_Unix_1/unfichierBis.txt;cat TP_Unix_1/unfichierBis.txt;
+hello I am a file 
+hello I am a file 
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau$ tree
+.
+├── CR.mdown
+└── TP_Unix_1
+    └── unfichierBis.txt
+
+
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau$ rm -rf TP_Unix_1/
+
+```
+
+### Exercice 3 Créez dans un répertoire annee des fichiers janvier.dat, fevrier.dat...etc, et cherchez à effacer en une seule commande les 4 derniers mois.
+
+```
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau$ mkdir annees;cd annees/; touch janvier.dat fevrier.dat mars.dat avril.dat mai.dat juin.dat juillet.dat aout.dat septembre.dat octobre.dat novembre.dat decembre.dat;cd ..; tree; rm annees/*bre.dat;tree;
+.
+├── annees
+│   ├── aout.dat
+│   ├── avril.dat
+│   ├── decembre.dat
+│   ├── fevrier.dat
+│   ├── janvier.dat
+│   ├── juillet.dat
+│   ├── juin.dat
+│   ├── mai.dat
+│   ├── mars.dat
+│   ├── novembre.dat
+│   ├── octobre.dat
+│   └── septembre.dat
+└── CR.mdown
+
+1 directory, 13 files
+.
+├── annees
+│   ├── aout.dat
+│   ├── avril.dat
+│   ├── fevrier.dat
+│   ├── janvier.dat
+│   ├── juillet.dat
+│   ├── juin.dat
+│   ├── mai.dat
+│   └── mars.dat
+└── CR.mdown
+
+1 directory, 9 files
+
+```
+
+### Exercice 4 : voir exo4.sh 
+
+### Exercice 5 : Listez dans un répertoire les fichiers qui utilisent le mot ”système”
+ voir exo4.sh
+
+## Les droits de vos fichiers
+
+
+### Exercice 6 Créez un répertoire ”dépot” où on peut vous laisser des documents, mais jamais voir ce qu’il contient.
+
+```
+mkdir depot;
+chmod +w-r depot;
+touch depot/unfichier.txt
+tree;
+
+.
+├── annees
+│   ├── aout.dat
+│   ├── avril.dat
+│   ├── fevrier.dat
+│   ├── janvier.dat
+│   ├── juillet.dat
+│   ├── juin.dat
+│   ├── mai.dat
+│   └── mars.dat
+├── CR.mdown
+├── depot [error opening dir] # no reading access given
+├── exo4.sh
+├── exo5.sh
+├── Poesie
+│   ├── fichier0
+│   ├── fichier1
+│   ├── fichier2
+│   ├── fichier3
+│   └── fichier4
+└── Sys
+    ├── fichier0
+    ├── fichier1
+    ├── fichier2
+    ├── fichier3
+    └── fichier4
+
+
+ls -la 
+d-wx-wx--x  2 max max 4096 nov.  16 09:22 depot
+
+```
+
+### Exercice 7 Créez une zone d’arborescence ”secrète” mais dans laquelle n’importe qui capable d’y accéder peut faire ce qu’il veut, par exemple un répertoire avec un nom compliqué que vous ne communiquez qu’à certaines personnes, et qui ne peut être décelé.
+
+```
+/depot$ mkdir reposecret;
+cd ..
+ls depot/
+ls: impossible d'ouvrir le répertoire 'depot/': Permission non accordée
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau$ cd depot/reposecret
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/depot/reposecret$ 
+chmod +rwx . # on peut tout faire mais pas voir de l'extérieur
+```
+
+### Exercice 8 Un changement d’umask est-il perçu par les shell extérieurs ?
+
+Le umask est le masque de permission par défaut du shell courant, il est remis aux valeurs définies dans les variables d'environnement du système à la fin de l'exécution. 
+Umask concerne les permissions par défaut des futurs repertoires et des fichiers.
+
+## Dire bonjour, tourner en rond
+### Exercice 9 Une fois que c’est bon, écrivez un script qui affiche ”boucle” en
+boucle infinie.
+Lancez ce script, interrompez-le, reprennez son exécution, interrompez-le à
+nouveau et tuez-le pour de bon.
+
+```
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/TP1$ ./exo9.sh > newFile &
+[1] 17908
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/TP1$ kill -SIGSTOP 17908
+
+[1]+  Arrêté                ./exo9.sh > newFile
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/TP1$ kill -SIGCONT 17908
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/TP1$ kill -15 17908 
+
+```
+
+### Exercice 10 Modifiez le script pour qu’il fasse simplement une boucle infinie
+et n’affiche rien, ce sera plus commode.
+
+Lancez-le en tâche de fond, puis appellez la commande top, et observez que
+votre boucle infinie fait travailler le cpu. Tapez ”q” pour quitter top, et tuez la
+boucle infinie.
+
+```
+./exo10 &
+top 
+
+
+18136 max       20   0   12536   1016    908 R  99,7  0,0   0:37.63 exo10.sh    
+
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/TP1$ kill -9 18136
+
+```
+
+## L’environnement, c’est important
+
+### Exercice 11 Expérimentez avec un script qui, à la commande ./solde 3,
+répond votre solde est de 3 $.
+
+```
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/TP1$ ./exo11.sh Salut
+hello
+je suis ./exo11.sh j'ai 1 arguments
+mon premier est Salut
+
+```
+
+
+## Premiers pas en C
+```
+gcc -o bonjour.o -c bonjour.c -W -Wall
+bonjour.c: In function ‘main’:
+bonjour.c:7:14: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main(int argc, char *argv[]){
+              ^~~~
+bonjour.c:7:26: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main(int argc, char *argv[]){
+                          ^~~~
+gcc -o bonjour bonjour.o 
+
+
+./bonjour 
+bonjour
+
+```
+
+### Exercice 12 et 13: 
+present dans ./codeC
+
+```
+./bonjour lol lel lil lal lul
+bonjour
+arg 1 lol
+arg 2 lel
+arg 3 lil
+arg 4 lal
+arg 5 lul
+```
+
+## Entrée et sortie standard
+
+### Exercice 14 Ecrivez un programme qui demande un nom, un sexe et une date de naissance, puis affiche un message en fonction, tel que ”Bonjour mon-sieur Gödel, vous faites plus vieux que vos 100 ans.” ou ”Bonjour Madame Lovelace, vous faites plus jeune que vos 191 ans.” (vous choisirez une règle de politesse pour le plus vieux/jeune qui dépend de l’age et du sexe).
+
+toujours dans bonjour.c
+
+```
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/TP1/codeC$ ./bonjour
+bonjour
+Quel est votre nom, Kevin ?
+Jean
+Ca vous dérange que je vous appelle Kevin, Jean ?
+Quel est votre sexe, Kevin ? (homme/femme)
+femme
+Quel est votre annee de naissance, Kevin ?
+2000
+bonjour Madame Jean, vous paraissez plus vieux que vos 17 ans !
+```
