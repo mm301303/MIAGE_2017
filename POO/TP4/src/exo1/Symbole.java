@@ -1,6 +1,6 @@
 package exo1;
 
-public class Symbole extends DrawerAbstract{
+public class Symbole {
     private Epaisseur weight;
     private Nature type;
 
