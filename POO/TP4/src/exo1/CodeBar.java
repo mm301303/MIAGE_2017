@@ -19,7 +19,8 @@ public class CodeBar extends Applet{
         word="unknown";
         if(sc.hasNextLine()) word = sc.nextLine();
         else this.init();
-
+        word = word.substring(word.indexOf('*')+1, word.lastIndexOf('*'));
+        System.out.println("word to translate : "+word);
         cursor_value=0;
     }
 

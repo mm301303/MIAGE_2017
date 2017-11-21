@@ -52,6 +52,7 @@ public class Code39Word {
         map.put('.', "110000100");
         map.put('/', "010100010");
         map.put('+', "010001010");
+        map.put('*', "010010100");
 
     }
 
