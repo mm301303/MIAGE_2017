@@ -19,7 +19,7 @@ public class CodeBar extends Applet{
         word="unknown";
         if(sc.hasNextLine()) word = sc.nextLine();
         else this.init();
-        word = word.substring(word.indexOf('*')+1, word.lastIndexOf('*'));
+        //word = word.substring(word.indexOf('*')+1, word.lastIndexOf('*'));//wut am i am supposed to do with * ?
         System.out.println("word to translate : "+word);
         cursor_value=0;
     }
@@ -35,8 +35,15 @@ public class CodeBar extends Applet{
     }
 
     private void drawWord(Graphics g) {
+        Code39Word etoile = new Code39Word("*");
+        for(Code39Part i : etoile.getParts()){
+            drawPart(g, i);
+        }
         for(Code39Part c : this.code39Word.getParts()   ){
            drawPart(g, c);
+        }
+        for(Code39Part j : etoile.getParts()){
+            drawPart(g, j);
         }
     }
 
