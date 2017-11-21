@@ -8,8 +8,7 @@ import java.util.Scanner;
 public class CodeBar extends Applet{
     private Code39Word code39Word;
     private String word;
-    private static final int HEIGHT = 50;
-    private static final int WIDTH = 200;
+    private static final int HEIGHT = 100;
     private int cursor_value;
 
     @Override
@@ -26,7 +25,6 @@ public class CodeBar extends Applet{
 
     public void paint (Graphics g) {
         g.drawString(word,10,10);
-        g.drawRect (0, 20, WIDTH, HEIGHT);
         fillCode39WordList();
         drawWord(g);
     }
@@ -36,24 +34,19 @@ public class CodeBar extends Applet{
     }
 
     private void drawWord(Graphics g) {
-        for(Code39Part c : this.code39Word.getParts()){
-            for(int i=0; i<9; i++){
-                drawPart(g, c.getParts().get(i));
-            }
+        for(Code39Part c : this.code39Word.getParts()   ){
+           drawPart(g, c);
         }
     }
 
     private void drawPart(Graphics g, Code39Part code39Part) {
         Color color = Color.white;
-        int width = Integer.parseInt(Epaisseur.ETROIT.toString());//tres tres laid =(
-
-        if(code39Part.getNature()==Nature.BARRE) color= Color.black;
-        if(code39Part.getEpaisseur()==Epaisseur.LARGE) width=Integer.parseInt(Epaisseur.LARGE.toString());
-
-
-        cursor_value+=width;//the next will be drawn just after
+        int width = Epaisseur.ETROIT;//tres tres laid =(
+        if(code39Part.getNature() == Nature.BARRE) color= Color.black;
+        if(code39Part.getEpaisseur() == Epaisseur.LARGE) width= Epaisseur.LARGE;
         g.setColor(color);
         g.fillRect(cursor_value,20,width, HEIGHT);
+        cursor_value+=width;//the next will be drawn just after
 
     }
 

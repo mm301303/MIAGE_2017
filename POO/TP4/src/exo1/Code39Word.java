@@ -58,10 +58,14 @@ public class Code39Word {
     public Code39Word(String code39Word) {
         letters=new ArrayList<>();
         for(Character c : code39Word.toCharArray()){
-           for(int i=0; i<9; i++){
-               Code39Part cp = new Code39Part(new Integer(translate(c)), i);
-               letters.add(cp);
-           }
+
+               String valCode39 = map.get(Character.toUpperCase(c));
+               int val =-1;
+               for(int i=0; i<9;i++) {
+                   val = Integer.parseInt(""+valCode39.charAt(i));
+                   Code39Part cp = new Code39Part(val, i);
+                   letters.add(cp);
+               }
         }
     }
 
@@ -71,8 +75,7 @@ public class Code39Word {
 
 
     public static String translate(char c) {
-        Character aChar = new Character(c);
-        if(!map.containsKey(aChar)) return "000000000";//cas d'erreur
-        return map.get(aChar);
+        if(!map.containsKey(Character.toUpperCase(c))) return "111111111";//cas d'erreur
+        return map.get(c);
     }
 }

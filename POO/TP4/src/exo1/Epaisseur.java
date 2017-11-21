@@ -1,12 +1,7 @@
 package exo1;
 
-public enum Epaisseur {
-    LARGE("3"),
-    ETROIT("1");
+public class Epaisseur {
+    public static final int LARGE = 4;
+    public static final int ETROIT = 2;
 
-    private String value;
-
-    private Epaisseur(String value){
-        this.value = value;
-    }
 }
