@@ -1,8 +1,8 @@
 package exo1;
 
 public enum Epaisseur {
-    LARGE("30px"),
-    ETROIT("10px");
+    LARGE("3"),
+    ETROIT("1");
 
     private String value;
 

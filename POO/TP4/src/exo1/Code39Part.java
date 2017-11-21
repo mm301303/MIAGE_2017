@@ -24,4 +24,6 @@ public class Code39Part {
     public Epaisseur getEpaisseur() {
         return epaisseur;
     }
+
+
 }
