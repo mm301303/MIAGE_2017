@@ -1,0 +1,55 @@
+# Pourquoi git ? 
+
+On va faire un très bref explicatif de la raison de l'existence de git avant de rentre plus particulièrement dans comment ça fonctionne.
+
+Tout d'abord le nom, ça veut dire plus ou moins "connard" en anglais, et c'est un qualificatif qu'on utilisera assez souvent dans la pratique pour désigner les noms d'utilisateurs qui sortent quand on fait un git blame. Mais ça aussi, on verra les commandes après.
+
+Git a été créé par Linus Torvals, le créateur de linux entre autres, avec l'objectif de créer un gestionnaire de version de fichier pour soutenir le projet linux, ce qui est le cas depuis 2005.
+Le but d'un gestionnaire de version de fichier est de conserver différentes versions du code source d'un projet ainsi que les différences entre ces versions.
+
+# Comment ça marche ?
+Très généralement : 
+
+Il faut concevoir un projet dans le système de fichier comme un arbre. Cet arbre contient l'arborescence du projet et les différents fichiers à un instant donné. On peut choisir à tout moment de prendre un instantané de cet abre, et de le stocker dans un historique sur la machine locale : c'est l'action de commit. le commit est un objet qui est lié au commit parent, ce qui crée une arborescence. Le commit porte une version pour chacun des fichiers par l'intermédiaire d'une somme de contrôle : un nombre qui varie à chaque modification.
+
+Il est alors possible de revenir à la version sauvegardée, mais cette version de l'arbre n'est pas accessible aux autres développeurs sur le projet. 
+On peut alors push ses commits : c'est l'action de les envoyer sur le serveur distant, qui mettra à jour les fichiers impactés par les changemements, soit qui ont une somme de controle différente.
+Un autre développeur du projet pourra alors pull les modifications pour voir la version modifiée apparaitre dans son arborescence locale.
+
+A partir d'ici, il est facile d'imaginer que le deuxieme développeur ait modifié le même fichier au même endroit que le premier développeur : s'il commit ses changements, il devra faire la mise à jour du fichier à la main, c'est ce qu'on appelle un conflit, et c'est l'action de merge à la main. Le merge est normalement assuré automatiquement par got si personne n'a modifié au même moment les mêmes parties de code.
+
+Pour faciliter le travail en groupe, il existe une notion de branche qui permet "d'isoler" le travail des différents acteurs sur les différentes fonctionnalités.
+Ces branches portent chacune un historique parallèle les unes aux autres, peuvent être crées "sur" un commit, peuvent être lergées entre elles.
+On utilise généralement une branche nommée master (la branche par défaut) ou release pour porter la version fonctionnelle d'un projet, cad qu'on y mettra que du code fonctionnel à destination de la production/client/prof.
+
+# Partie technique
+
+Il n'est pas nécessaire pour travailler sur git de se servir couramment chaque commande et option de l'outil, mais seulement d'en connaitre le fonctionnement des principales.
+
+Dans l'ordre d'utilisation (autant que possible), voici les commandes suffisantes pour se servir des fonctionnalités principales de l'outil :
+
+git init 	-> cree le dossier caché .git qui contient l'historique des versions
+git clone	-> permet de copier un répertoire git sur une machine locale (ainsi que l'adresse du serveur distant)
+git remote 	-> permet de connaitre et de set l'adresse du serveur distant
+git fetch	-> permet de charger l'état du serveur distant sur l'arbre local : c'est le git pull des branches
+git status	-> permet de connaitre l'état des fichiers par rapport au dernier commit en local (modification, addition, suggestion de fichier à suivre)
+git add		-> permet d'ajouter un fichier à l'arbre local (lequel ne contient que les fichiers ajoutés de cette manière)
+git remove	-> supprime le fichier des arbres distant et local. Ne supprime pas le fichier dans l'arborescence
+git commit 	-> enregistre l'état des fichiers ajoutés dans l'arbre local
+git push 	-> permet d'envoyer un commit sur une branche de l'arbre distant
+git checkout 	-> permet de créer une branche, ou de charger l'abre de la branche existante (locale ou distante) sur l'abre local.
+[Moins essentiel
+git revert 	-> permet de commit les changements inverses d'un commit précédent
+git diff 	-> affiche les modifications induites par un commit
+git blame 	-> permet de lister les auteurs de modifications sur un fichier]
+
+Dans la pratique :
+
+## Les commandes console 
+ il est souvent plus efficace d'utiliser une interface graphique pour manipuler git sans erreur, laquelle permet de connaitre de maniere instantanée et dynamique les résultats des commandes git status et git fetch, soit l'état de l'abre local et de l'abre distant sous forme graphique et non textuelle. De plus, ça permet de naviguer plus facilement dans les branches et les différences entre les commits. 
+
+## Les conflits
+Les conflits sur git, c'est pas une fatalité, c'est une perte de temps liée a une mauvaise utilisation du logiciel. Ca arrive quand on merge une branche sur une autre branche qui porte un élément modifié sur chacune des deux antre temps. La réponse la plus simple, mais pas forcément la meilleure c'est : on pull avant de push, du coup le premier a push est le moins embêté. C'est vrai, mais ça pose deux problèmes, le plus rapide n'a pas nécessairement le meilleur code, et une personne a bossé pour rien. Une bonne réaction est de créer des branches "fonctionnelles", qui correspondent chacune à une fonctionnalité métier, et de se les répartir afin d'éviter les conflits de fichiers dans la majorité des cas. 
+
+# Pourquoi c'est bien
+
