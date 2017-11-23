@@ -28,20 +28,34 @@ Il n'est pas nécessaire pour travailler sur git de se servir couramment chaque 
 
 Dans l'ordre d'utilisation (autant que possible), voici les commandes suffisantes pour se servir des fonctionnalités principales de l'outil :
 
+```
 git init 	-> cree le dossier caché .git qui contient l'historique des versions
+
 git clone	-> permet de copier un répertoire git sur une machine locale (ainsi que l'adresse du serveur distant)
+
 git remote 	-> permet de connaitre et de set l'adresse du serveur distant
 git fetch	-> permet de charger l'état du serveur distant sur l'arbre local : c'est le git pull des branches
+
 git status	-> permet de connaitre l'état des fichiers par rapport au dernier commit en local (modification, addition, suggestion de fichier à suivre)
+
 git add		-> permet d'ajouter un fichier à l'arbre local (lequel ne contient que les fichiers ajoutés de cette manière)
+
 git remove	-> supprime le fichier des arbres distant et local. Ne supprime pas le fichier dans l'arborescence
+
 git commit 	-> enregistre l'état des fichiers ajoutés dans l'arbre local
+
 git push 	-> permet d'envoyer un commit sur une branche de l'arbre distant
+
 git checkout 	-> permet de créer une branche, ou de charger l'abre de la branche existante (locale ou distante) sur l'abre local.
 [Moins essentiel
+
 git revert 	-> permet de commit les changements inverses d'un commit précédent
+
 git diff 	-> affiche les modifications induites par un commit
+
 git blame 	-> permet de lister les auteurs de modifications sur un fichier]
+
+```
 
 Dans la pratique :
 
