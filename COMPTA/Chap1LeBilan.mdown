@@ -1,0 +1,86 @@
+# calendrier
+
+Avant les partiels on aura des séancesde révisions
+
+(partiels prévu en janvier)
+
+# 9 règles : voir polycopié
+
+# Tenir une comptabilité se fait au moyen de comptes (issus du pan comptable)
+
+# Documents
+
+Le bilan
+Le livre journal dans lequel on saisit les écritures à la volée.
+Le compte de résultat
+
+# Aproche économique : les fluxs
+
+Les opérations effectuées par une sciété font diminuer son patrimoine.
+La comptabilité a pour objet d'enregistrer les mouvements de valeur affectant l'activité économique de l'entreprise.
+
+## Fluxs réels
+
+Objets
+
+## Fluxs monétaires
+
+Les paiements
+
+## Flux externes
+
+Quand je paie un pc cest un flux externe, on change l'objet de patrimoine.
+
+## Flux internes
+
+Un fluc interne est un flux qui ne change pas la valeur du patrimoine
+
+
+# Ressource et emploi
+
+La ressource est la destination du flux, c'est
+L'emploi est la consommation d'unflux.
+
+
+# BILAN : un snapshot du patrimoine
+
+```
+
+emploi _|_ ressource
+actif   | passif:
+banque	| Capital, profit, dettes
+```
+
+actif = passif a la fin du bilan.
+
+si on a moins d'actif que de passif et pas de dette, le  résultat est équillibré avec un bénéfice 
+
+l'actif rentre dans le patrimoine, mais le passif n'en fait pas partie. 
+Les ressources sont dans la colonne passif, elles correspondent au moyen de financement des emplois.
+
+Intéressant : on note toujours dans l'ordre du plan contable dans le bilan, à noter que les rubriques sont classées par durabillité décroissante (1XX dure plus longtemps qu 5XX)
+
+Le capital est une dette qui doit etre remboursée aux associés
+
+# Le capital est une ressource durable : a vocation à être en haut dans la fortet
+
+# Le patrimoine
+ 
+ C'est le receuil des droits et des obligations de toute personne juridique
+## Droits 
+Reels : sur des objets
+Personnels : obligations mises à la charge des tiers
+
+# Moyens
+
+On parle de 
+
+Moyens d'investissement;
+Moyens d'exploitations;
+Moyens de trésorerie
+
+# Capitaux propres
+
+C'est les apports des associés (fixé, il ne bouge jamais) + les profits de l'entreprise
+
+Les fonds propres augmentent en cas de profits et diminuent en cas de perte
