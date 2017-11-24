@@ -60,10 +60,29 @@ git blame 	-> permet de lister les auteurs de modifications sur un fichier]
 Dans la pratique :
 
 ## Les commandes console 
+
  il est souvent plus efficace d'utiliser une interface graphique pour manipuler git sans erreur, laquelle permet de connaitre de maniere instantanée et dynamique les résultats des commandes git status et git fetch, soit l'état de l'abre local et de l'abre distant sous forme graphique et non textuelle. De plus, ça permet de naviguer plus facilement dans les branches et les différences entre les commits. 
 
 ## Les conflits
+
 Les conflits sur git, c'est pas une fatalité, c'est une perte de temps liée a une mauvaise utilisation du logiciel. Ca arrive quand on merge une branche sur une autre branche qui porte un élément modifié sur chacune des deux antre temps. La réponse la plus simple, mais pas forcément la meilleure c'est : on pull avant de push, du coup le premier a push est le moins embêté. C'est vrai, mais ça pose deux problèmes, le plus rapide n'a pas nécessairement le meilleur code, et une personne a bossé pour rien. Une bonne réaction est de créer des branches "fonctionnelles", qui correspondent chacune à une fonctionnalité métier, et de se les répartir afin d'éviter les conflits de fichiers dans la majorité des cas. 
+Le meilleur moyen d'éviter les conflits et de communiquer régulièrement avec son équipe afin d'être conscient de qui travaille sur quelle fonctionnalité et quelle branche.
+
+## La qualité et les pull requests
+
+Git est un outil de gestion de version décentralisé, et donc par nature collaboratif. Il offre une fonctionnalité qui complète à mon sens très bien les notions que l'on vient d'aborder.
+Quand un développeur, sur sa branche, vient de finir une fonctionnalité, que tout est parfait pour lui, il a des tests, de la doc etc, il peut alors faire une pull request depuis le site web de son hébergeur git. 
+Une pull request c'est un mail qui part chez tous les collaborateurs, et un lien qui leur permet de lire les modifications de tous les commits sur la branche. Ainsi, on diminue énormément les chances de faire passer une erreur, une incompréhension sur la branche master, et ainsi on économise de précieuses heures de débug tout en mettant au courant l'équipe de son avancement.
+La pull request est validée, ou commentée et invalidée par chaque collaborateur, et sera mergée sur la branche principale après l'approbation de tous.
 
 # Pourquoi c'est bien
 
+L'emploi
+Le travail en groupe est inalienable a la condition de développeur si on est pas freelance
+Automatisation des tests
+Open source
+rapport humains -> ca évite de s'engueuler ( git commit -m "allez vous faire foutre"; git push -u -f origin master ) 
+
+# Conclusion
+
+En conclusion je dirai simplement que je n'ai fait aucune mention de quelconques reset -f (ni de -f tout court), c'est pour deux bonnes raisons : car à part situation très particulières on peut faire toute opération pour récupérer des changements préalables avec les commandes citées précedemment, et car git est un gestionnaire de version, on a a priori pas de raison d'en supprimer du contenu, et toute action destructive peut comprommettre l'accés à certaines versions. 
