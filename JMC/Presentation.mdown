@@ -1,16 +1,19 @@
 # Pourquoi git ? 
 
-On va faire un très bref explicatif de la raison de l'existence de git avant de rentre plus particulièrement dans comment ça fonctionne.
+On va faire un très bref explicatif de la raison de l'existence de git avant de rentrer plus particulièrement dans comment ça fonctionne.
 
 Tout d'abord le nom, ça veut dire plus ou moins "connard" en anglais, et c'est un qualificatif qu'on utilisera assez souvent dans la pratique pour désigner les noms d'utilisateurs qui sortent quand on fait un git blame. Mais ça aussi, on verra les commandes après.
 
-Git a été créé par Linus Torvals, le créateur de linux entre autres, avec l'objectif de créer un gestionnaire de version de fichier pour soutenir le projet linux, ce qui est le cas depuis 2005.
+Git et un logiciel assez simple dans son fonctionnement, il a été créé par Linus Torvals, le créateur de linux entre autres, avec l'objectif de créer un gestionnaire de version de fichier pour soutenir le projet linux, ce qui est le cas depuis 2005.
 Le but d'un gestionnaire de version de fichier est de conserver différentes versions du code source d'un projet ainsi que les différences entre ces versions.
 
 # Comment ça marche ?
-Très généralement : 
 
-Il faut concevoir un projet dans le système de fichier comme un arbre. Cet arbre contient l'arborescence du projet et les différents fichiers à un instant donné. On peut choisir à tout moment de prendre un instantané de cet abre, et de le stocker dans un historique sur la machine locale : c'est l'action de commit. le commit est un objet qui est lié au commit parent, ce qui crée une arborescence. Le commit porte une version pour chacun des fichiers par l'intermédiaire d'une somme de contrôle : un nombre qui varie à chaque modification.
+Je vais essayer de décrire très généralement mais assez précisement pour entrer dans ma pratique le principe de fonctionnement de git en tant que gestionnaire de version décentralisé : 
+
+Il faut concevoir un projet dans le système de fichier comme un arbre. 
+Cet arbre contient l'arborescence du projet et les différents fichiers à un instant donné. 
+On peut choisir à tout moment de prendre un instantané de cet arbre, et de le stocker dans un historique sur la machine locale : c'est l'action de commit. le commit est un objet qui est lié au commit parent, ce qui crée une arborescence chronologique pour chaque fichier. Le commit porte une version pour chacun des fichiers par l'intermédiaire d'une somme de contrôle : un nombre qui varie à chaque modification. Git n'intégrera a un commit que les fichiers dont ce nombre a varé depuis ce dernier commit. 
 
 Il est alors possible de revenir à la version sauvegardée, mais cette version de l'arbre n'est pas accessible aux autres développeurs sur le projet. 
 On peut alors push ses commits : c'est l'action de les envoyer sur le serveur distant, qui mettra à jour les fichiers impactés par les changemements, soit qui ont une somme de controle différente.
@@ -22,42 +25,40 @@ Pour faciliter le travail en groupe, il existe une notion de branche qui permet 
 Ces branches portent chacune un historique parallèle les unes aux autres, peuvent être crées "sur" un commit, peuvent être lergées entre elles.
 On utilise généralement une branche nommée master (la branche par défaut) ou release pour porter la version fonctionnelle d'un projet, cad qu'on y mettra que du code fonctionnel à destination de la production/client/prof.
 
-# Partie technique
-
+# Partie technique : la théorie
+ 
 Il n'est pas nécessaire pour travailler sur git de se servir couramment chaque commande et option de l'outil, mais seulement d'en connaitre le fonctionnement des principales.
 
 Dans l'ordre d'utilisation (autant que possible), voici les commandes suffisantes pour se servir des fonctionnalités principales de l'outil :
 
-```
-git init 	-> cree le dossier caché .git qui contient l'historique des versions
+***git init*** : cree le dossier caché .git qui contient l'historique des versions
 
-git clone	-> permet de copier un répertoire git sur une machine locale (ainsi que l'adresse du serveur distant)
+***git clone*** :  permet de copier un répertoire git sur une machine locale (ainsi que l'adresse du serveur distant)
 
-git remote 	-> permet de connaitre et de set l'adresse du serveur distant
-git fetch	-> permet de charger l'état du serveur distant sur l'arbre local : c'est le git pull des branches
+***git remote*** :  permet de connaitre et de set l'adresse du serveur distant
 
-git status	-> permet de connaitre l'état des fichiers par rapport au dernier commit en local (modification, addition, suggestion de fichier à suivre)
+***git fetch*** : permet de charger l'état du serveur distant sur l'arbre local : c'est le git pull des branches
 
-git add		-> permet d'ajouter un fichier à l'arbre local (lequel ne contient que les fichiers ajoutés de cette manière)
+***git status*** :  permet de connaitre l'état des fichiers par rapport au dernier commit en local (modification, addition, suggestion de fichier à suivre)
 
-git remove	-> supprime le fichier des arbres distant et local. Ne supprime pas le fichier dans l'arborescence
+***git add*** : permet d'ajouter un fichier à l'arbre local (lequel ne contient que les fichiers ajoutés de cette manière)
 
-git commit 	-> enregistre l'état des fichiers ajoutés dans l'arbre local
+***git remov*** : supprime le fichier des arbres distant et local. Ne supprime pas le fichier dans l'arborescence
 
-git push 	-> permet d'envoyer un commit sur une branche de l'arbre distant
+***git commit*** : enregistre l'état des fichiers ajoutés dans l'arbre local
 
-git checkout 	-> permet de créer une branche, ou de charger l'abre de la branche existante (locale ou distante) sur l'abre local.
+***git push*** : permet d'envoyer un commit sur une branche de l'arbre distant
+
+***git checkout*** : permet de créer une branche, ou de charger l'abre de la branche existante (locale ou distante) sur l'abre local.
 [Moins essentiel
 
-git revert 	-> permet de commit les changements inverses d'un commit précédent
+***git revert*** : permet de commit les changements inverses d'un commit précédent
 
-git diff 	-> affiche les modifications induites par un commit
+***git diff*** : affiche les modifications induites par un commit
 
-git blame 	-> permet de lister les auteurs de modifications sur un fichier]
+***git blame*** : permet de lister les auteurs de modifications sur un fichier
 
-```
-
-Dans la pratique :
+# Partie technique : la pratique
 
 ## Les commandes console 
 
@@ -65,8 +66,21 @@ Dans la pratique :
 
 ## Les conflits
 
-Les conflits sur git, c'est pas une fatalité, c'est une perte de temps liée a une mauvaise utilisation du logiciel. Ca arrive quand on merge une branche sur une autre branche qui porte un élément modifié sur chacune des deux antre temps. La réponse la plus simple, mais pas forcément la meilleure c'est : on pull avant de push, du coup le premier a push est le moins embêté. C'est vrai, mais ça pose deux problèmes, le plus rapide n'a pas nécessairement le meilleur code, et une personne a bossé pour rien. Une bonne réaction est de créer des branches "fonctionnelles", qui correspondent chacune à une fonctionnalité métier, et de se les répartir afin d'éviter les conflits de fichiers dans la majorité des cas. 
-Le meilleur moyen d'éviter les conflits et de communiquer régulièrement avec son équipe afin d'être conscient de qui travaille sur quelle fonctionnalité et quelle branche.
+Les conflits sur git, c'est pas une fatalité, c'est une perte de temps liée a une mauvaise utilisation du logiciel.
+Ca arrive quand on merge une branche sur une autre branche qui porte un élément modifié sur chacune des deux entre temps. 
+La réponse la plus simple, mais pas forcément la meilleure c'est : 
+
+```
+
+on pull avant de push, du coup le premier a push est le moins embêté. 
+
+```
+
+C'est vrai, mais ça pose deux problèmes, le plus rapide n'a pas nécessairement le meilleur code, et une personne a bossé pour rien. 
+Une bonne réaction est de créer des branches "fonctionnelles", qui correspondent chacune à une fonctionnalité métier, et de se les répartir afin d'éviter les conflits de fichiers dans la majorité des cas. 
+
+Le meilleur moyen d'éviter les conflits et de communiquer régulièrement avec son équipe afin d'être conscient de qui travaille sur quelle fonctionnalité et quelle branche. Ainsi vous pourrez trouver un propre petit coin calme ou personne ne vient écraser votre code et ou vous n'écrasez le code de personne : 
+vous pouvez travailler sans vous soucier des conflits éventuels.
 
 ## La qualité et les pull requests
 
@@ -77,11 +91,14 @@ La pull request est validée, ou commentée et invalidée par chaque collaborate
 
 # Pourquoi c'est bien
 
-L'emploi
-Le travail en groupe est inalienable a la condition de développeur si on est pas freelance
-Automatisation des tests
-Open source
-rapport humains -> ca évite de s'engueuler ( git commit -m "allez vous faire foutre"; git push -u -f origin master ) 
+Pour l'emploi : Mettez vous à la place d'un employeur, vous avez deux candidats potentiels avec les mêmes capacités techniques a priori dans 3 techno utilisées dans votre entreprise. L'un a un git avec 5 projets utilisants les technlogies en question, l'autre un CV. Dans un cas, l'évaluation du niveau du candidat est fiable est disponible dans un cas, subjective dans l'autre. 
+
+Le travail en groupe est inalienable a la condition de développeur si on est pas freelance : Actuellement, git est extrèmement utilisé du fait de sa gratuité, de son efficacité et de sa simlicité relative d'utilisation relativement aux deux points précédents. 
+
+Automatisation des tests : dans les grosses structures et pour les projets bien mis en place, on retrouve fréquemment es mécanismes d'intégration continue, en particulier dans l'open source et les projets de grande envergure, par exemple linux ou mozilla. L'automatisation de test à chaque merge et l'utilisation de pull request permet d'intégrer uniquement le code validé par les tests en provenance de tout contributeur.
+
+Efficacité du travail de groupe : Dans un système d'information, la rapidité de transmission de l'information est directement proportionnelle à l'efficacité du de ce système d'information.
+En vérité une équipe c'est un système d'information, et git est un outil qui permet de transmettre instantanément des fichiers cohérents à une ou plusieurs personne et réciproquement, et donc une forte plusvalue dans l'efficacité d'un groupe.
 
 # Conclusion
 
