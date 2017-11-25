@@ -25,17 +25,32 @@ Pour faciliter le travail en groupe, il existe une notion de branche qui permet 
 Ces branches portent chacune un historique parallèle les unes aux autres, peuvent être crées "sur" un commit, peuvent être lergées entre elles.
 On utilise généralement une branche nommée master (la branche par défaut) ou release pour porter la version fonctionnelle d'un projet, cad qu'on y mettra que du code fonctionnel à destination de la production/client/prof.
 
-# Partie technique : la théorie
+## Gitignore
+
+Il est très probable que dans une équipe, on ait un développeur sur windows, un sur mac, et heureusement quelques-uns sous linux. 
+Ces développeurs utilisent très certainement des IDE différents. Le problème qui se pose alors est que chaque changement sur le système de fichier ayant pour racine un dossier contenant un .git est suggéré en tant qu'ajout par ***git status***, et il est assez facile de se tromper et d'ajouter des fichiers non source (générés par l'OS ou par l'IDE), qui n'ont pas de raison d'être sur le serveur distant.
+
+Pour éviter ce problème il existe l'outil gitignore, c'est un fichier texte caché qu'on nomme ".gitignore", et qui contient les noms de fichiers dans l'arborescence relative du git, et éventuellement des regex pour ignorer plusieurs fichiers.
+
+Le gitignore est un fichier, une fois commit sur le serveur distant, il gardera le répertoire propre des fichiers qu'il mentionne.
+
+Astuce sympa pour les utilisateurs Mac (et les convaincus de leur IDE)
+	git config --global core.excludesfile '~/.gitignore'
+	On peut stocker quelque part un fichier gitignore global, afin par exemple de ne plus jamais avoir à se soucier des .DS_Store...
+
+# Partie technique : la théorie 
  
 Il n'est pas nécessaire pour travailler sur git de se servir couramment chaque commande et option de l'outil, mais seulement d'en connaitre le fonctionnement des principales.
 
 Dans l'ordre d'utilisation (autant que possible), voici les commandes suffisantes pour se servir des fonctionnalités principales de l'outil :
 
+git command -h : permet d'obtenir de l'aide sur une commande
+
 ***git init*** : cree le dossier caché .git qui contient l'historique des versions
 
 ***git clone [url]*** :  permet de copier un répertoire git sur une machine locale (ainsi que l'adresse du serveur distant)
 
-***git remote*** :  permet de connaitre (-v) et de set l'adresse du serveur distant (add) 
+***git remote*** :  permet de connaitre (-v) et de set l'adresse du serveur distant (add origin [url]) 
 
 ***git fetch origin *** : permet de charger l'état du serveur distant sur l'arbre local : c'est le git pull des branches
 
@@ -49,12 +64,16 @@ Dans l'ordre d'utilisation (autant que possible), voici les commandes suffisante
 
 ***git push*** : permet d'envoyer un commit sur une branche de l'arbre distant
 
+***git pull*** : permet de merge l'arbre distant sur l'arbre local, équivalent à git fetch && git rebase
+
 ***git checkout*** : permet de créer une branche, ou de charger l'abre de la branche existante (locale ou distante) sur l'abre local.
 [Moins essentiel
 
+***git stash save/pop*** : permet de sauvegarder/restorer les changements en local sans les commit (afin d'avoir un répertoire propre avant de changer de branche par exemple)
+
 ***git revert*** : permet de commit les changements inverses d'un commit précédent
 
-***git diff*** : affiche les modifications induites par un commit
+***git diff*** : affiche les modifications induites par un ou plusieurs commit
 
 ***git blame*** : permet de lister les auteurs de modifications sur un fichier
 
@@ -62,7 +81,10 @@ Dans l'ordre d'utilisation (autant que possible), voici les commandes suffisante
 
 ## Les commandes console 
 
- il est souvent plus efficace d'utiliser une interface graphique pour manipuler git sans erreur, laquelle permet de connaitre de maniere instantanée et dynamique les résultats des commandes git status et git fetch, soit l'état de l'abre local et de l'abre distant sous forme graphique et non textuelle. De plus, ça permet de naviguer plus facilement dans les branches et les différences entre les commits. 
+Il est souvent plus efficace d'utiliser une interface graphique pour manipuler git sans erreur, laquelle permet de connaitre de maniere instantanée et dynamique les résultats des commandes git status et git fetch, soit l'état de l'abre local et de l'abre distant sous forme graphique et non textuelle. 
+En simplifié, une interface pour git aide à ne pas oublier de pull.
+De plus, ça permet de naviguer plus facilement dans les branches et les différences entre les commits. 
+
 
 ## Les conflits
 
@@ -99,6 +121,20 @@ Automatisation des tests : dans les grosses structures et pour les projets bien 
 
 Efficacité du travail de groupe : Dans un système d'information, la rapidité de transmission de l'information est directement proportionnelle à l'efficacité du de ce système d'information.
 En vérité une équipe c'est un système d'information, et git est un outil qui permet de transmettre instantanément des fichiers cohérents à une ou plusieurs personne et réciproquement, et donc une forte plusvalue dans l'efficacité d'un groupe.
+
+# Comment "bien" utiliser git 
+
+On a vu pourquoi l'outil existe, on a vu en quoi il était efficace et on a fait une petite description de comment l'utiliser, soit à peu près comment éviter les problèmes. 
+Maintenant on va se poser la question de comment retirer une plus forte valeur ajoutée de l'outil, ce qu'on pourrait dire plus simplement par comment "bien" utiliser git.
+
+Le plus simple pour aborder cet aspect est par une liste de conseils et des motivations de ces conseils.
+
+//TODO
+
+
+# Git flow ou comment forcer un git à être super propre
+
+//TODO
 
 # Conclusion
 
