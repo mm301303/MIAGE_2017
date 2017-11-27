@@ -234,7 +234,7 @@ git flow hotfix finish VERSION
 
 ## Diagramme git flow
 
-	<img src="https://danielkummer.github.io/git-flow-cheatsheet/img/git-flow-commands.png">
+<img src="https://danielkummer.github.io/git-flow-cheatsheet/img/git-flow-commands.png">
 
 # Conclusion
 
