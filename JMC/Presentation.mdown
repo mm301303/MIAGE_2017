@@ -4,7 +4,7 @@ On va faire un très bref explicatif de la raison de l'existence de git avant de
 
 Tout d'abord le nom, ça veut dire plus ou moins "connard" en anglais, et c'est un qualificatif qu'on utilisera assez souvent dans la pratique pour désigner les noms d'utilisateurs qui sortent quand on fait un git blame. Mais ça aussi, on verra les commandes après.
 
-Git et un logiciel assez simple dans son fonctionnement, il a été créé par Linus Torvals, le créateur de linux entre autres, avec l'objectif de créer un gestionnaire de version de fichier pour soutenir le projet linux, ce qui est le cas depuis 2005.
+Git est un logiciel assez simple dans son fonctionnement, il a été créé par Linus Torvals, le créateur de linux entre autres, avec l'objectif de créer un gestionnaire de version de fichier pour soutenir le projet linux, ce qui est le cas depuis 2005.
 Le but d'un gestionnaire de version de fichier est de conserver différentes versions du code source d'un projet ainsi que les différences entre ces versions.
 
 # Comment ça marche ?
