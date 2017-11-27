@@ -59,7 +59,7 @@ git command -h : permet d'obtenir de l'aide sur une commande
 
 ***git remote*** :  permet de connaitre (-v) et de set l'adresse du serveur distant (add origin [url]) 
 
-***git fetch origin *** : permet de charger l'état du serveur distant sur l'arbre local : c'est le git pull des branches
+***git fetch origin*** : permet de charger l'état du serveur distant sur l'arbre local : c'est le git pull des branches
 
 ***git status*** :  permet de connaitre l'état des fichiers par rapport au dernier commit en local (modification, addition, suggestion de fichier à suivre)
 
