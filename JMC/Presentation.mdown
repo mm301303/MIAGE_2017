@@ -44,7 +44,14 @@ Il n'est pas nécessaire pour travailler sur git de se servir couramment chaque 
 
 Dans l'ordre d'utilisation (autant que possible), voici les commandes suffisantes pour se servir des fonctionnalités principales de l'outil :
 
+Paramétrage :
+
+	git config --global user.name "jean jacques"
+	git config --global user.email jeanjacques@example.com
+	git config --list 
+
 git command -h : permet d'obtenir de l'aide sur une commande
+
 
 ***git init*** : cree le dossier caché .git qui contient l'historique des versions
 
@@ -129,12 +136,105 @@ Maintenant on va se poser la question de comment retirer une plus forte valeur a
 
 Le plus simple pour aborder cet aspect est par une liste de conseils et des motivations de ces conseils.
 
-//TODO
+* TOUJOURS renseigner ses commit avec un message court et précis pour désigner la nature des modifications, afin de permettre une recherche rapide dans les logs par la suite. Il peut-être intéressant de (re)lire le résultat de ***git diff*** pour s'aider à écrire le message le plus cohérent possible.
+
+*  Commit fréquemment et à chaque fois que ça en vaut la peine, c'est à dire quand une unité de code est terminée, aussi petite soit-elle
+
+* Se tenir à jour des évolutions du code, et du travail des autres développeurs : cela permet de minimiser la fréquence des conflits
+
+* Partager fréquemment les changements sur le serveur. Une fois avoir terminé une unité fonctionnelle cohérente (et testée), il est également intéressant pour minimiser les conflits de la partager aux autres développeurs afin qu'ils puissent se tenir à jour.
+
+* Communiquer ailleurs que sur git avec son équipe, afin de pouvoir se coordonner plus facilement et éviter de se marcher sur les branches(/pieds)
 
 
 # Git flow ou comment forcer un git à être super propre
 
-//TODO
+Git flow est une petite surcouche à git qui s'installe, et qui organise les branches d'un répertoire. On utilise uniquement git pull, push et commit en parallèle.
+
+Le fonctionnement s'exlique assez simplement :
+
+## Developper
+
+On commence sur une branche "develop"
+On peut alors s'attaquer à une fonctionnalité on tape la commande :
+
+```
+
+git flow feature start MYFEATURE
+
+```
+
+Une branche feature/MYFEATURE est alors créée. Une fois la feature terminée, codée et testée, on peut la terminer, on fait alors
+
+```
+
+git flow feature finish MYFEATURE
+
+```
+
+Ces opérations sont locales, on peut choisir de publier la fonctionnalité pour les autres développeurs
+
+```
+
+git flow feature publish MYFEATURE
+
+```
+
+qui pourront alors la pull depuis le serveur et travailler dessus 
+
+```
+
+git flow feature pull origin MYFEATURE 
+
+```
+
+
+## Livrer
+
+Une fois la fonctionnalité testée et bienavancée, on peut envisager de la livrer
+c'est l'action de créer une branche de livraison basée sur la branche de développement au moyen de la commande :
+
+```
+
+git flow release start RELEASE [BASE] 
+
+```
+Vous pouvez si besoin ajouter le paramètre [BASE], le hash d'un commit à partir duquel commencera la livraison. Ce commit doit faire partie de la branche de développement.
+
+
+On peut alors publier la livraiso avec la commande 
+
+```
+
+git flow release publish RELEASE 
+
+```
+
+
+## Déployer
+
+Pour déployer la livraison on utilise 
+
+
+```
+
+git flow release publish RELEASE 
+
+```
+
+## Réparer (vite) : Hotfix
+
+Les correctifs sont utiles quand il est nécessaire de corriger immédiatement l'état incorrect de la version en production
+
+git flow hotfix start VERSION [NomDeLaRealeaseSiPlusieurs]
+
+En terminant un hotfix, il est fusionné dans les branches 'develop' et 'master'. De plus la fusion vers 'master' est etiquetée par la version du hotfix.
+
+git flow hotfix finish VERSION 
+
+## Diagramme git flow
+
+<img src="https://danielkummer.github.io/git-flow-cheatsheet/img/git-flow-commands.png">
 
 # Conclusion
 
