@@ -26,7 +26,6 @@ public class Code11Word {
     public Code11Word(String code11Word) {
 
         String checkDigit = computeCheckDigit(code11Word);
-        System.out.println("checkDigit = " + checkDigit);
         code11Word = code11Word+checkDigit;
 
         code11Word = code11Word+checkDigit;
@@ -48,14 +47,16 @@ public class Code11Word {
     }
     //return the appropriate check digit
     private String computeCheckDigit(String code11Word) {
-        System.out.println("computeCheckDigit : "+code11Word);
+        String check = "null";
         if(code11Word.length()<12){
-            return ""+computeC(code11Word);//it is a char
+            check = computeC(code11Word);//it is a char
 
         }else{
-            return computeK(code11Word);
+            check = computeK(code11Word);
 
         }
+        System.out.println("check = " + check);
+        return check;
 
     }
 
@@ -77,10 +78,10 @@ public class Code11Word {
                     charvalue = 10;
                 }
                 realJ = (j>10)?j%10:j;
-            checkC += (realJ)*charvalue;
-        }
 
-        return ""+((int)(checkC%10));
+                checkC += ((realJ)*charvalue);
+        }
+        return ""+(checkC%11);
     }
 
     public ArrayList<Code11Part> getParts() {
