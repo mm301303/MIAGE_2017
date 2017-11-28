@@ -1,0 +1,18 @@
+12 janvier : partiel
+
+# Bilan
+
+Rappel : actif (emploi) à gauche, passif (ressource) à droite
+
+le passif permet de générer de l'actif
+
+Le capital, c'est l'argent prété par les actionnaires à l'entreprise.
+
+Le bilan des entreprises cotée en bourse a une valeur d'information, il est fait périodiquement pour informer les actionnaires sur le patrimoine de la structure.
+
+# Comptes 
+
+Le bilan représente des comptes qui s'écrivent respectivement 
+
+Debit | Crédit
+Emploi| Ressources
