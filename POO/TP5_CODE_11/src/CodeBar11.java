@@ -7,6 +7,7 @@ public class CodeBar11 extends Applet{
     private String word;
     private static final int HEIGHT = 100;
     private int cursor_value;
+    private static int PETIT_ESPACEMENT = 1;
 
     @Override
     public void init() {
@@ -48,7 +49,7 @@ public class CodeBar11 extends Applet{
         if(code39Part.getEpaisseur() == Epaisseur.LARGE) width= Epaisseur.LARGE_m;
         g.setColor(color);
         g.fillRect(cursor_value,20,width, HEIGHT);
-        cursor_value+=width;//the next will be drawn just after
+        cursor_value+=width+PETIT_ESPACEMENT;//the next will be drawn just after
 
     }
 
