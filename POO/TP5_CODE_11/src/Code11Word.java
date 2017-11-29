@@ -27,8 +27,7 @@ public class Code11Word {
 
         String checkDigit = computeCheckDigit(code11Word);
         code11Word = code11Word+checkDigit;
-
-        code11Word = code11Word+checkDigit;
+        //ok y avait pas droit de recommi après mais il y avait une faute de ctrl+d
         letters =new ArrayList<>();
 
         code11Word = 'S'+code11Word+'S'+"";
