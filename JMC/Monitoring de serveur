@@ -1,0 +1,89 @@
+# Monitoring de serveur 
+
+## Nature du rendu
+
+Le dashboard Kibana permet d'afficher des solutions préfaites et de définir des solutions custom, c'est cette deuxième partie qui nous intéressera, afin de ne pas se limiter au solutions existantes mais de créer la plus pertinente vis-à-vis du besoin du pôle SI
+
+## Hypothèses qu'on a retenu 
+
+Le serveur est un serveur web, voué à héberger des services divers pour la structure.
+
+* Pas spécialement d'échanges de fichiers lourds
+
+* Pas de contraintes de temps réel particulières
+
+* Pas 1 million d'utilisateurs
+
+Le serveur ciblé est un serveur générique, voué à s'adapter aux services qui seront installé dessus
+
+# Solution proposée 
+
+La solution proposée est pour l'instant constituée de trois vue donnant chacune des informations pertinentes vis-à-vis des hypothèses faites sur l'utilisation du serveur.
+
+Les listes d'éléments à représenter sont priorisées du plus critique au moins critique du point de vue de l'IHM.
+
+
+## Vue Hardware
+
+Cette vue est dédiée à monitorer les performances du système. Elle permettra de diagnostiquer les besoins d'évolution du serveur et éventuellement de détecter des problèmes logiciels.
+
+Cette vue contiendra notemment :
+
+* L'utilisation des éléments physiques (RAM, processeur, stockage physique)
+
+	* Global
+
+	* Par service 
+
+* L'utilisation du swap 
+
+	Afin de détecter des besoins d'évolution du serveur ou des problèmes de paramétrage des services
+
+* Le nombre de processus zombies
+
+	Afin de détecter des problèmes logiciels
+
+## Vue Activité
+
+Cette vue est dédiée à monitorer l'utilisation du serveur. Elle permettra d'avoir des informations sur l'utilisation des différents services et l'état de fonctionnement du serveur.
+
+Cette vue contiendra notemment :
+
+* Erreurs apache
+
+	* Dernières
+
+	* Les plus Récurrentes
+
+	* Un accés vers les logs 
+
+* Connexions (temps réel, au cours d'une période)
+
+* Volume du traffic réseau
+
+* Uptime 
+
+	pour pouvoir dire un jour "ça fait 4 mois qu'on a pas fail"
+
+## Vue Sécurité
+
+Cette vue est dédiée à monitorer l'évolution de la sécurité du serveur. Elle permettra d'avoir des informations sur l'activité des mécanismes en place, et éventuellements des informations permattant de détecter les tentatives de nuisance.
+
+Cette vue contiendra notemment :
+
+* Les dernières IP blacklistées 
+	
+	On souhaite visualiser également des informations disponibles sur ces adresses (localisation au minimum)et accés à la blacklist elle-même
+
+* Le nombre de connexions en fonction du temps
+
+
+# Liens vers la documentation
+
+* Dashboard 
+	https://www.elastic.co/guide/en/kibana/current/dashboard.html
+	https://www.elastic.co/guide/en/kibana/current/dashboard-getting-started.html
+
+
+* Pistes d'amélioration 
+	https://www.elastic.co/guide/en/kibana/current/timelion.html
