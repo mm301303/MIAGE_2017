@@ -104,3 +104,38 @@ the son is dead
 evaluation de |&11|10 terminee : 1
 
 ```
+
+# 4 Évaluation parallèle 2
+
+On fait executer l'oprérande droite a un fils, la gauche a un fils, et l'opérateur est porté par le père
+
+# 5 Évaluation parallèle 3
+
+Dans la version antérieure, on est plus rapide pour répondre du fait de l’as-
+pect “concurrent” de l’évaluation, mais le calcul est toujours effectué complètement.
+Du temps processeur reste donc perdu par des évaluations inutiles. Pour y
+remédier, on se propose d’élaguer dynamiquement l’arbre des processus dans
+les branches d’évaluations inutiles : si le premier fils a fourni une valeur qui per-
+met de conclure, on envoie un signal au second pour lui demander d’interrompre
+son évaluation.
+Question 4. En utilisant la fonction kill, implémentez une première solu-
+tion simple et radicale du nom evallog3.c.
+
+Aucune idée de comment on fait ça simplement, il faudrait comparer 3 éléments de la chaine dans savoir si c'est des opérateurs ou des opérandes, chacun venant d'un processus forké différent 
+
+# 6 Évaluation parallèle 4
+
+L’approche précédente a un problème. La sous-expression redondante (in-
+utile) aurait pu lancé lui-même toute une généalogie de processus qui ne sont
+ pas arrêtés automatiquement lors de sa mort. Leurs résultats ne sont pas pris en
+compte, la fonction principal donne le résultat final plus rapidement, mais, ils
+continuent à s’executer jusqu’à sa fin. Une solution pourrait être de demander
+au fils tué (la sous-expression redondante) de propager une signal “je suis mort,
+donc tu dois aussi mourir” à tous ses fils avant de mourrir.
+-> 
+Question 5. En utilisant un signal non réservé (par exemple SIGUSR1), et
+en y associant un handler approprié (à l’aide de la fonction sigaction), mettez
+en place ce mécanisme de ”ramasse-miettes” sur les processus et nommez-le
+evallog4.c.
+
+Il faudrait envoyer les pid de tous les fils au père (pipe ?) et ainsi kill(pid) tous les fils concernés

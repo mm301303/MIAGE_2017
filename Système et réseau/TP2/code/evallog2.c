@@ -38,13 +38,12 @@ int eval(char *formula ) {
 
     if(pid==0){
       int left = eval(formula_left);
+      printf("I am the father\n");
     }else{
-      printf("exiting\n");
       exit(eval(formula_right));//le fils va mourrir en renvoyant son résultat
+      printf("I am the son\n");
     }
-    int status;
-    waitpid(pid, &status);
-    int right = WEXITSTATUS(status);
+    int right = waitpid(pid);
     printf("the son is dead\n");
 
     if (operator == '|')

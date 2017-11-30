@@ -22,23 +22,22 @@ int eval(char *formula ) {
   // on commence l'Ã©valuation de la formule
 
   char *formula_left = left_subformula(formula);
-   char *formula_right = right_subformula(formula);
-   char operator = formula[0];
-   int res;
+  char *formula_right = right_subformula(formula);
+  char operator = formula[0];
+  int res;
 
 
-  if (operator == '0')    
-     res = 0;
-
-  else if (operator == '1') 
-     res = 1;
-
+  if (operator == '0'){    
+      res = 0;
+  }
+  else if (operator == '1'){ 
+       res = 1;
+  }
   else {
-     pid_t pid;
-     int status;
-
+    pid_t pid;
+    int status;
     int left;
-         int right;
+    int right;
 
     // PARTIE GAUCHE
 
@@ -57,7 +56,10 @@ int eval(char *formula ) {
            }
 
       left = WEXITSTATUS(status);
-             }
+      if(left=='1'||left=='0'){
+        
+      }
+          }
 
     // PARTIE DROITE
 
@@ -76,12 +78,16 @@ int eval(char *formula ) {
            }
 
       right = WEXITSTATUS(status);
-             }
+          }
 
     if (operator == '|')
-           res = (left || right );
+           {
+            res = (left || right );
+          }
          else if (operator == '&')
-           res = (left && right );
+          {
+            res = (left && right );
+          }
          else assert(0);
 
   }
