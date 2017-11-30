@@ -1,0 +1,18 @@
+http://fsmrel.developpez.com/basesrelationnelles/normalisation/?page=3
+# Anomalie de suppression
+
+On ne doit pas avoir deux informations sémantiques sur une seule table, car on peut alors perdre un lien dans le cas de suppression
+
+Si on a deux tournevis, un fabriqué à lyon, un a Aix, si on supprime le seul row de celui d'aix non perd l'information qu'ils sont aussi fabriqués à aix
+
+# Anomalie de mise à jour
+
+On peut perdre une info de la même manière que pour la suppression
+
+# Théorème de Delobel 
+
+Décomposition réversible  : Quand on rencontre un lien interne dans une relation, il va générer des anomalies internes de stockage : on l'isolera en deux tables
+Si on fait la jointure des deux tables : on retrouve la décomposition initiale
+
+Ces relations sont en 3NF : "Tout déterminant d'un lien N1, d'une dépendance fonctionnelle, est clé primaire"
+Si dans une relation on a un élément qui porte du sens et qui n'est pas clé primaire, on doit faire une autre classe
