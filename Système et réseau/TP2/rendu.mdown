@@ -59,6 +59,21 @@ evaluation de |&101 terminee : 1
 Question 2. Implémentez cet évaluateur parallèle avec le nom evallog1.c.
 
 ```
+  int pid = fork();
+
+    if(pid==0){
+      int left = eval(formula_left);
+      printf("I am the father\n");
+    }else{
+      exit(eval(formula_right));//le fils va mourrir en renvoyant son résultat
+      printf("I am the son\n");
+    }
+    int right = waitpid(pid);
+    printf("the son is dead\n");
+
+```
+
+```
 
 ./evallog1 
 evalue |1|&11|10 en commencant par dormir 0 secondes
@@ -87,6 +102,5 @@ evaluation de &11 terminee : 1
 I am the father
 the son is dead
 evaluation de |&11|10 terminee : 1
-
 
 ```

@@ -2,15 +2,15 @@ CC=gcc
 CFLAGS=-W -Wall
 LDFLAGS=
 EXEC= evallog1 evallog0 
-SRC= evallog1.c evallog0.c
+SRC= wildcard(*.c)
 OBJ= $(SRC:.c=.o)
 
 all: $(EXEC)
 
-evallog0: $(OBJ) formula.o evallog0.o
+evallog0: formula.o evallog0.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-evallog1: $(OBJ) formula.o evallog1.o
+evallog1: formula.o evallog1.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
 %.o: %.c
