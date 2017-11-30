@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800"
+   height="600"
+   id="svg3488"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   viewBox="0 0 800 600"
+   sodipodi:docname="template.svg">
+  <defs
+     id="defs3490" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.3"
+     inkscape:cx="-15.930418"
+     inkscape:cy="660.25121"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="719"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3493">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <rect
+       style="fill:#00d400"
+       id="rect3500"
+       width="802.56622"
+       height="116.67262"
+       x="-1.1785113"
+       y="1.3162584" />
+    <rect
+       style="fill:#8a916f"
+       id="rect3503"
+       width="183.84776"
+       height="599.86224"
+       x="-5.8925562"
+       y="80.27652"
+       ry="25.876411" />
+    <rect
+       style="fill:#8dd35f"
+       id="rect3505"
+       width="622.25403"
+       height="490.26068"
+       x="182.66927"
+       y="121.52441"
+       ry="0" />
+    <rect
+       style="fill:#8dd35f"
+       id="rect3507"
+       width="5.8925567"
+       height="3.5355339"
+       x="872.09839"
+       y="285.33749"
+       ry="1.767767" />
+    <rect
+       style="fill:#8dd35f"
+       id="rect3509"
+       width="4.714045"
+       height="14.142136"
+       x="446.65579"
+       y="233.48299" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="371.23108"
+       y="101.48972"
+       id="text3530"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3532"
+         x="371.23108"
+         y="101.48972"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50px;font-family:monospace;-inkscape-font-specification:monospace;fill:#dee3db">Pourquoi git ? </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="256.91547"
+       y="33.136063"
+       id="text3534"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3536"
+         x="256.91547"
+         y="33.136063"><tspan
+           style="fill:#d5ffe6"
+           id="tspan3538"><tspan
+             style="font-size:30px"
+             id="tspan3540"> HOW TO USE GIT</tspan></tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-7.1155409e-07"
+       y="125.05994"
+       id="text3544"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3546"
+         x="-7.1155409e-07"
+         y="125.05994"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:monospace;-inkscape-font-specification:monospace;fill:#dee3db">Pourquoi git? </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="17.67767"
+       y="74.383965"
+       id="text3548"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3550"
+         x="17.67767"
+         y="74.383965"
+         style="font-size:25px;-inkscape-font-specification:monospace;font-family:monospace;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">Sommaire : </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="41.247894"
+       y="156.87975"
+       id="text3552"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3554"
+         x="41.247894"
+         y="156.87975"></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-3.0293412"
+       y="201.90099"
+       id="text3544-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3546-2"
+         x="-3.0293412"
+         y="201.90099"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:monospace;-inkscape-font-specification:monospace;fill:#dee3db">Gitignore</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="0.50619119"
+       y="150.63576"
+       id="text3544-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="0.50619119"
+         y="150.63576"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:monospace;-inkscape-font-specification:monospace;fill:#dee3db"
+         id="tspan3582">Comment ça </tspan><tspan
+         sodipodi:role="line"
+         x="0.50619119"
+         y="178.76076"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:monospace;-inkscape-font-specification:monospace;fill:#dee3db"
+         id="tspan3586">marche ?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-3.0622723"
+       y="226.64972"
+       id="text3544-0-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3546-2-1"
+         x="-3.0622723"
+         y="226.64972"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:monospace;-inkscape-font-specification:monospace;fill:#dee3db">Partie technique : la théorie</tspan></text>
+  </g>
+</svg>
