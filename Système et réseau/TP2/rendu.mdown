@@ -107,7 +107,7 @@ evaluation de |&11|10 terminee : 1
 
 # 4 Évaluation parallèle 2
 
-On fait executer l'oprérande droite a un fils, la gauche a un fils, et l'opérateur est porté par le père
+On fait executer l'opérande droite a un fils, la gauche a un fils, et l'opérateur est porté par le père
 
 # 5 Évaluation parallèle 3
 
