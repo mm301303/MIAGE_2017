@@ -57,7 +57,9 @@ Cette vue contiendra notemment :
 
 	* Un accés vers les logs 
 
-* Connexions (temps réel, au cours d'une période)
+* Connexions (temps réel, au cours d'une période, shh)/intervenant et au site
+
+* Processus PHP en cours lancés par les intervenants
 
 * Volume du traffic réseau
 
