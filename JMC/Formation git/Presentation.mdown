@@ -5,6 +5,7 @@ On va faire un très bref explicatif de la raison de l'existence de git avant de
 Tout d'abord le nom, ça veut dire plus ou moins "connard" en anglais, et c'est un qualificatif qu'on utilisera assez souvent dans la pratique pour désigner les noms d'utilisateurs qui sortent quand on fait un git blame. Mais ça aussi, on verra les commandes après.
 
 Git est un logiciel assez simple dans son fonctionnement, il a été créé par Linus Torvals, le créateur de linux entre autres, avec l'objectif de créer un gestionnaire de version de fichier pour soutenir le projet linux, ce qui est le cas depuis 2005.
+
 Le but d'un gestionnaire de version de fichier est de conserver différentes versions du code source d'un projet ainsi que les différences entre ces versions.
 
 # Comment ça marche ?
@@ -13,17 +14,23 @@ Je vais essayer de décrire très généralement mais assez précisement pour en
 
 Il faut concevoir un projet dans le système de fichier comme un arbre. 
 Cet arbre contient l'arborescence du projet et les différents fichiers à un instant donné. 
-On peut choisir à tout moment de prendre un instantané de cet arbre, et de le stocker dans un historique sur la machine locale : c'est l'action de commit. le commit est un objet qui est lié au commit parent, ce qui crée une arborescence chronologique pour chaque fichier. Le commit porte une version pour chacun des fichiers par l'intermédiaire d'une somme de contrôle : un nombre qui varie à chaque modification. Git n'intégrera a un commit que les fichiers dont ce nombre a varé depuis ce dernier commit. 
+
+On peut choisir à tout moment de prendre un instantané de cet arbre, et de le stocker dans un historique sur la machine locale : c'est l'action de commit. 
+Le commit est un objet qui est lié au commit parent, ce qui crée une arborescence chronologique pour chaque fichier. Le commit porte une version pour chacun des fichiers par l'intermédiaire d'une somme de contrôle : un nombre qui varie à chaque modification. Git n'intégrera a un commit que les fichiers dont ce nombre a varé depuis ce dernier commit. 
 
 Il est alors possible de revenir à la version sauvegardée, mais cette version de l'arbre n'est pas accessible aux autres développeurs sur le projet. 
-On peut alors push ses commits : c'est l'action de les envoyer sur le serveur distant, qui mettra à jour les fichiers impactés par les changemements, soit qui ont une somme de controle différente.
+
+On peut pour cela push ses commits : c'est l'action de les envoyer sur le serveur distant, qui mettra à jour les fichiers impactés par les changemements, soit ceux qui ont une somme de controle différente.
 Un autre développeur du projet pourra alors pull les modifications pour voir la version modifiée apparaitre dans son arborescence locale.
 
-A partir d'ici, il est facile d'imaginer que le deuxieme développeur ait modifié le même fichier au même endroit que le premier développeur : s'il commit ses changements, il devra faire la mise à jour du fichier à la main, c'est ce qu'on appelle un conflit, et c'est l'action de merge à la main. Le merge est normalement assuré automatiquement par got si personne n'a modifié au même moment les mêmes parties de code.
+A partir d'ici, il est facile d'imaginer que le deuxième développeur ait modifié le même fichier au même endroit que le premier développeur : s'il commit ses changements, il devra faire la mise à jour du fichier à la main, c'est ce qu'on appelle un conflit, et c'est l'action de merge à la main.
+[Explications : Git va écrire les deux sections critiques dans un balisage, on doit choisir le code a conserver dans ce balisage, supprimer le code non voulu, supprimer le balisage, et commit à nouveau.]
+
+Le merge est normalement assuré automatiquement par git si personne n'a modifié au même moment les mêmes parties de code.
 
 Pour faciliter le travail en groupe, il existe une notion de branche qui permet "d'isoler" le travail des différents acteurs sur les différentes fonctionnalités.
-Ces branches portent chacune un historique parallèle les unes aux autres, peuvent être crées "sur" un commit, peuvent être lergées entre elles.
-On utilise généralement une branche nommée master (la branche par défaut) ou release pour porter la version fonctionnelle d'un projet, cad qu'on y mettra que du code fonctionnel à destination de la production/client/prof.
+Ces branches portent chacune un historique parallèle les unes aux autres, peuvent être crées "sur" un commit, peuvent être mergées entre elles.
+On utilise généralement une branche nommée master (la branche par défaut) ou release pour porter la version fonctionnelle d'un projet, cad qu'on y mettra que du code fonctionnel et testé à destination de la production/client/prof.
 
 ## Gitignore
 
@@ -35,12 +42,16 @@ Pour éviter ce problème il existe l'outil gitignore, c'est un fichier texte ca
 Le gitignore est un fichier, une fois commit sur le serveur distant, il gardera le répertoire propre des fichiers qu'il mentionne.
 
 Astuce sympa pour les utilisateurs Mac (et les convaincus de leur IDE)
+```
+
 	git config --global core.excludesfile '~/.gitignore'
-	On peut stocker quelque part un fichier gitignore global, afin par exemple de ne plus jamais avoir à se soucier des .DS_Store...
+
+```
+On peut stocker quelque part un fichier gitignore global, afin par exemple de ne plus jamais avoir à se soucier des .DS_Store (ou autres !)...
 
 # Partie technique : la théorie 
  
-Il n'est pas nécessaire pour travailler sur git de se servir couramment chaque commande et option de l'outil, mais seulement d'en connaitre le fonctionnement des principales.
+Il n'est pas nécessaire pour travailler sur git de savoir se servir couramment chaque commande et option de l'outil, mais seulement d'en connaître le fonctionnement des commandes principales.
 
 Dans l'ordre d'utilisation (autant que possible), voici les commandes suffisantes pour se servir des fonctionnalités principales de l'outil :
 
