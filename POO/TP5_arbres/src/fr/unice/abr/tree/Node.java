@@ -35,6 +35,10 @@ public class Node {
         this.nodes[count++] = node;
     }
 
+    public int getValue() {
+        return value;
+    }
+
     @Override
     public String toString(){
         String str = this.value+"\n";
@@ -51,5 +55,6 @@ public class Node {
         }
         return  str;
     }
+
 
 }

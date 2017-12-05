@@ -8,7 +8,7 @@ public class BinaryTree extends Node {
 
     public BinaryTree(int nodevalue, Node... nodes) throws InvalidPropertiesFormatException {
         super(nodevalue, nodes);
-        if(nodes.length>2) throw new InvalidPropertiesFormatException("A binary tree has only two leafs per node !");
+        if(count>2) throw new InvalidPropertiesFormatException("A binary tree has only two leafs per node !");
 
     }
 
@@ -16,12 +16,28 @@ public class BinaryTree extends Node {
         super(nodevalue, new Node[0]);
     }
 
-    public Node getLeft(){
-        return this.nodes[0];
+    @Override
+    public void addLeaf(Node n){
+        if(count<2) {
+            super.addLeaf(n);
+        }else{
+            System.out.println("cannot add more");
+        }
     }
 
-    public Node getRight(){
-        return this.nodes[1];
+    public void  addLeft(Node n){
+        nodes[0] = n;
+    }
+    public void  addRight(Node n){
+        nodes[1] = n;
+    }
+
+    public BinaryTree getLeft(){
+        return (BinaryTree)this.nodes[0];
+    }
+
+    public BinaryTree getRight(){
+        return (BinaryTree)this.nodes[1];
     }
 
 
