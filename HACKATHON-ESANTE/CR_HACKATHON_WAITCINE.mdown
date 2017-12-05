@@ -1,0 +1,82 @@
+# Compte rendu HACKATHON
+
+## L'équipe
+
+### Les extérieurs : 
+Infirmières:
+Clou Dia
+Camille Fouquet
+
+BBA EDECH:
+Thomas HONORE
+Erwan AUSTIN
+
+
+### Les MIAGES :
+Lucas KACEM
+Nikita GOUREVITCH
+Maxime MOINEAU
+
+## Le projet
+
+<img src="https://github.com/mmoineaudev/MIAGE_2017/blob/master/HACKATHON-ESANTE/prototypage_design_general/logo.png">
+
+Le projet WAITCINE a été apporté par Lucas KACEM avant le début du Hackathon, ainsi nous avions une équipe préformée avant même le début de l'évènement. Le recrutement a été scrupuleusement assuré par Lucas et Nikita.
+
+Le projet WAITCINE devait permettre, en tant que principale valeur métier, d'optimiser le rendez-vous médical : L'objectif principal était de minimiser la présence de la patientèle en salle d'attente, le secondaire d'optimiser et d'automatiser la prise de rendez-vous.
+Pour ce faire, notre solution devait permettre le suivi dynamique par le patient d'un "agenda médecin", et ainsi devait permettre au médecin de déclarer ses éventuels retards dus à l'incertitude de prédiction du temp de consultation. Notre solution devait répercuter les conséquences de ces retards dans l'agenda.
+
+Par nature de notre projet, soit une solution dynamique, devant être accessible d'une part par le médecin (sur ordinateur) et le patient (à priori sur son mobile), nous avions intuité à l'avance un choix de technologie : Une webapp Node JS pour répondre à l'aspect dynamique, utilisant le framework graphique cordova pour l'aspect multiplateforme. 
+
+## La démarche
+
+La démarche de réflexion a été tantôt efficace et tantôt tumultueuse mais nous pensons être arrivés à terme à une solution utile, réalisable et innovante.
+
+L'idée de départ définie dans la partie précédente suggérait que la solution soit capable d'emmettre des estimations de temps de consultation afin que les horaires de rendez-vous accessibles au patient soient le plus "proches" possible de la réalité.
+Cette fonctionnalité a conduit le projet vers une fonctionnalité d'apprentissage basée sur les symptômes du patient, estimés par lui même. Ainsi l'application saurait estimer le temps nécessaire au n-ième rendez-vous sur la base des symptômes, et l'horaire de ce rendez-vous par addition des durées estimées des n-1èmes rendez-vous et du retard éventuel du médecin.
+
+Sur cette base, il a fallu déterminer une solution ergonomique pour la selection des symptômes qui convienne a une patientèle de cabinet généraliste, soit a peu près à n'importe qui. La solution apportée est un chatbot donnant l'illusion de discussion dans la planification de rendez-vous. Ce chatbot devait dérouler un scénario, et proposer par un mécanisme de complétion les options de symptômes que le patient peut déclarer, et les médecins proches et/ou disponibles pour la prise de rendez-vous.
+
+En conséquence du point ci-dessus, il apparaît un besoin de stocker des données patients. La première question que nous nous sommes posée a été celle de savoir où stocker physiquement ces données.
+La réponse apportée est que ces données sont relatives au patient et au médecin, ainsi le contexte nous a poussé vers une idée de solution sur base de donnée locale : Le médecin disposerait d'un fichier de base de donnée firebase qui contiendrait une base de donnée qui porterait les symptômes gérés et les données des différents patients et l'agenda de ses consultations à venir. Le patient disposerait quant à lui  d'un fichier de base de donnée firebase contenant uniquement ses rendez-vous et ses données propres. Ces deux fichiers étant évidement cryptés intégralement sur la base d'une clé constituée respectivement d'un ID patient et d'un ID médecin pour le fichier "médecin"-side, et d'un ID patient pour le fichier "patient"-side.
+La cohérence de ces fichiers serait assurée par jointure de la base de donnée médecin sur la base de donnée patient a l'issue de chaque consultation et pour la mise à jour de l'agenda, et dans le sens inverse pour la déclaration de symptome.
+
+Chaque médecin aurait alors les données relatives à chacun de ses patients seulement. A partir de cette idée, l'écart fonctionnel avec un logiciel de gestion de cabinet médical devenait trop faible : nous avons donc décidé d'intégrer le suivi des consultations et des ordonnances dans notre solution, laquelle devient alors un logiciel de gestion de cabinet et de planification intelligent, qui fait l'intermédiaire entre le médecin et le patient. En plus de minimiser le temps de présence de la patientèle et le travail de planification du coté du cabinet, notre solution peut alors être un moyen de rapprocher médecin et patient par l'instauration d'un moyen de communication nouveau.
+La dernière fonctionnalité ajoutée au chatbot a alors été l'accés à une partie de ces données patient par le patient, ainsi que la possibilité pour celui-ci de remplir un champ de son dossier à l'attention de son médecin. Ce champ pourrait contenir des messages laissés par le patient concernant son état de santé avant et entre deux consultations, consultable et modérable par le médecin.
+
+## Le business plan
+
+Le buisness plan a été séparé en trois parties :
+
+Les six premiers mois :
+
+Le développement de la solution de prise de rendez-vous incluant le développement de la solution de chatbot
+Receuil des durées de consultations et des symptômes
+
+Les six mois suivants :
+
+Le développement de la fiche patient
+Ajout de a fonctionnalité d'estimation de durée de consultation basée sur les données receuillies lors de l'étape précédente.
+
+Par la suite :
+
+De par la nature de la solution de chatbot, il serait ergonomiquement viable et techniquement réalisable de migrer la solution multiplateforme sous Google Home afin de changer la nature de notre solution de logiciel d'assistance vers un assistant virtuel vocal proche de la fonction d'une secrétaire médicale. 
+
+## Les productions 
+
+Les deux applications ont été en quasi totalité représentées sous proto.io (un excellent logiciel de prototypage) afin de servir de support éventuel à la présentation.
+
+Le développement de l'application en NodeJS à été entamé, la base de donnée est encore absente, mais le serveur fonctionne même s'il ne contient pour l'intant que des routes et pas de fonctionnel. Un début de développement du chatbot à été entamé mais n'est pas disponible sur github. L'objectif de prototyper les deux applications sur le site n'a pas été atteint du fait du manque de connaissance préalable sur NodeJS, le développement est disponible en l'état (il était question d'être capable d'externaliser des routes, la solution à ce problème nous était inconnue à l'époque, il s'agit de créer un middleware routeur) à ce lien https://github.com/mmoineaudev/waitcine .
+
+Les maquettes vous sont disponibles dans ce dossier github.
+
+Ces productions ne reflètent pas le travail fourni durant ces trois jours et deux nuits, lequel a particulièrement avancé lors des entretiens avec les quatre coachs avec lesquels nous avons communiqué, et les documents de gestion de projet et de planification (nottemment le buisness plan) décris sur les tableaux de l'endroit, que nous n'avons pas conservé dans son état le plus détaillé.  
+
+## La présentation
+
+La présentation a été sur la forme beaucoup travaillé par les commerciaux qui ont construit un dialogue structuré permettant de promouvoir notre produit. Hélas, un manque de compréhension du projet ainsi que d'heures de sommeil ont conduit a une mauvaise expression de la réelle valeur ajoutée du produit, à savoir l'accroissemnt de la relation patient médecin, la forte ergonomie et l'économie de temps et d'ation pour nos acteurs ontété mal présentés, au profit du mécanisme d'apprentissage et du dossier patient. 
+
+# Bilan de l'équipe 
+
+En conclusion de ses trois jours forts en expériences sociales et pédagogiques, nous avons progressé en équipe vers l'accomplissement d'un projet, en en partageant les tâches et les responsabilités. A l'unanimité même parmis les extérieurs, la plus-value pédagogique d'un tel évenement est réelle et clairement plus importante que lors d'un cours classique.
+Nous sommes fiers du travail fournis et des acquis réalisés, en comptabilisant les acquis de gestion de projets, les acquis en culture informatiques sur les technologies employées, les acquis de culture du monde de la santé, et nous avons fortement apprécié l'opportunité de participer à un tel événement, et nous le referions avec plaisir (et sans doute avec des oreillers, une machine à gauffre et des chaises de camping). 

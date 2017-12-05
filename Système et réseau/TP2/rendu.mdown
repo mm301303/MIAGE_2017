@@ -1,0 +1,141 @@
+# Présentation
+
+```
+./evallog0 
+evalue |1&&11&01 en commencant par dormir 2 secondes
+evalue 1 en commencant par dormir 0 secondes
+evaluation de 1 terminee : 1
+evalue &&11&01 en commencant par dormir 0 secondes
+evalue &11 en commencant par dormir 1 secondes
+evalue 1 en commencant par dormir 0 secondes
+evaluation de 1 terminee : 1
+evalue 1 en commencant par dormir 1 secondes
+evaluation de 1 terminee : 1
+evaluation de &11 terminee : 1
+evalue &01 en commencant par dormir 0 secondes
+evalue 0 en commencant par dormir 0 secondes
+evaluation de 0 terminee : 0
+evalue 1 en commencant par dormir 1 secondes
+evaluation de 1 terminee : 1
+evaluation de &01 terminee : 0
+evaluation de &&11&01 terminee : 0
+evaluation de |1&&11&01 terminee : 1
+
+```
+
+# 2. Évaluation récursive monoprocessus
+
+Question 1. Analysez le code fourni pour bien comprendre et testez-le avec
+la chaine |&101. Combien de fois appelle-t-on au processus eval ?
+
+Réponse théorique : on a un appel par noeud de l'arbre, soit pour |&101 5 appels à eval.
+Réponse pratique : la formule est (1&0) | 1,
+	dans le code ça fait : 
+	1. call a eval, operator[0] a la valeur &
+		2.1 call a eval pour |
+			2.1.1 call a eval pour 1
+			2.1.2 call a eval pour 0
+		2.2 call a eval pour 1
+soit 5 appels.
+
+On le vérifie par le nombre d'affichage de printf("evalue %s en commencant par dormir %d secondes\n" , formula , sleeping_time);
+
+```
+evalue |&101 en commencant par dormir 0 secondes
+evalue &10 en commencant par dormir 1 secondes
+evalue 1 en commencant par dormir 2 secondes
+evaluation de 1 terminee : 1
+evalue 0 en commencant par dormir 0 secondes
+evaluation de 0 terminee : 0
+evaluation de &10 terminee : 0
+evalue 1 en commencant par dormir 1 secondes
+evaluation de 1 terminee : 1
+evaluation de |&101 terminee : 1
+
+```
+
+# 3 Évaluation parallèle 1
+
+Question 2. Implémentez cet évaluateur parallèle avec le nom evallog1.c.
+
+```
+  int pid = fork();
+
+    if(pid==0){
+      int left = eval(formula_left);
+      printf("I am the father\n");
+    }else{
+      exit(eval(formula_right));//le fils va mourrir en renvoyant son résultat
+      printf("I am the son\n");
+    }
+    int right = waitpid(pid);
+    printf("the son is dead\n");
+
+```
+
+```
+
+./evallog1 
+evalue |1|&11|10 en commencant par dormir 0 secondes
+evalue |&11|10 en commencant par dormir 1 secondes
+evalue 1 en commencant par dormir 1 secondes
+evaluation de 1 terminee : 1
+I am the father
+the son is dead
+evaluation de |1|&11|10 terminee : 1
+evalue |10 en commencant par dormir 2 secondes
+evalue &11 en commencant par dormir 2 secondes
+evalue 0 en commencant par dormir 0 secondes
+evaluation de 0 terminee : 0
+evalue 1 en commencant par dormir 0 secondes
+evaluation de 1 terminee : 1
+I am the father
+the son is dead
+evaluation de |10 terminee : 1
+evalue 1 en commencant par dormir 0 secondes
+evaluation de 1 terminee : 1
+evalue 1 en commencant par dormir 0 secondes
+evaluation de 1 terminee : 1
+I am the father
+the son is dead
+evaluation de &11 terminee : 1
+I am the father
+the son is dead
+evaluation de |&11|10 terminee : 1
+
+```
+
+# 4 Évaluation parallèle 2
+
+On fait executer l'opérande droite a un fils, la gauche a un fils, et l'opérateur est porté par le père
+
+# 5 Évaluation parallèle 3
+
+Dans la version antérieure, on est plus rapide pour répondre du fait de l’as-
+pect “concurrent” de l’évaluation, mais le calcul est toujours effectué complètement.
+Du temps processeur reste donc perdu par des évaluations inutiles. Pour y
+remédier, on se propose d’élaguer dynamiquement l’arbre des processus dans
+les branches d’évaluations inutiles : si le premier fils a fourni une valeur qui per-
+met de conclure, on envoie un signal au second pour lui demander d’interrompre
+son évaluation.
+Question 4. En utilisant la fonction kill, implémentez une première solu-
+tion simple et radicale du nom evallog3.c.
+
+Aucune idée de comment on fait ça simplement, il faudrait comparer 3 éléments de la chaine dans savoir si c'est des opérateurs ou des opérandes, chacun venant d'un processus forké différent 
+
+# 6 Évaluation parallèle 4
+
+L’approche précédente a un problème. La sous-expression redondante (in-
+utile) aurait pu lancé lui-même toute une généalogie de processus qui ne sont
+ pas arrêtés automatiquement lors de sa mort. Leurs résultats ne sont pas pris en
+compte, la fonction principal donne le résultat final plus rapidement, mais, ils
+continuent à s’executer jusqu’à sa fin. Une solution pourrait être de demander
+au fils tué (la sous-expression redondante) de propager une signal “je suis mort,
+donc tu dois aussi mourir” à tous ses fils avant de mourrir.
+-> 
+Question 5. En utilisant un signal non réservé (par exemple SIGUSR1), et
+en y associant un handler approprié (à l’aide de la fonction sigaction), mettez
+en place ce mécanisme de ”ramasse-miettes” sur les processus et nommez-le
+evallog4.c.
+
+Il faudrait envoyer les pid de tous les fils au père (pipe ?) et ainsi kill(pid) tous les fils concernés

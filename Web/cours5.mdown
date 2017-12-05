@@ -1,0 +1,12 @@
+Intro javascript ajax 
+
+# Histoire
+
+Créé en 95, a une époque ou on cherchait à dynamyser le web
+
+# JAVASCRIPT INTRO
+
+Prototypage
+
+Notion objet js
+
