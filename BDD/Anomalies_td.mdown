@@ -1,18 +1,103 @@
 http://fsmrel.developpez.com/basesrelationnelles/normalisation/?page=3
-# Anomalie de suppression
+#Anomalies
+
+## Anomalie de suppression
 
 On ne doit pas avoir deux informations sémantiques sur une seule table, car on peut alors perdre un lien dans le cas de suppression
 
 Si on a deux tournevis, un fabriqué à lyon, un a Aix, si on supprime le seul row de celui d'aix non perd l'information qu'ils sont aussi fabriqués à aix
 
-# Anomalie de mise à jour
+## Anomalie de mise à jour
 
 On peut perdre une info de la même manière que pour la suppression
 
-# Théorème de Delobel 
+## Théorème de Delobel 
 
 Décomposition réversible  : Quand on rencontre un lien interne dans une relation, il va générer des anomalies internes de stockage : on l'isolera en deux tables
 Si on fait la jointure des deux tables : on retrouve la décomposition initiale
 
 Ces relations sont en 3NF : "Tout déterminant d'un lien N1, d'une dépendance fonctionnelle, est clé primaire"
 Si dans une relation on a un élément qui porte du sens et qui n'est pas clé primaire, on doit faire une autre classe
+
+# Interférence et reprise sur panne
+
+Une transaction c'est un ensemble d'opération génériqus qui vont modifier la bdd
+
+on a READ et WRITE(UPDATE INSERT DELETE)
+
+## Principe ACID
+
+### Pannes
+	Atomicité
+
+	Cohérence
+		Pour un état cohérent i de la BDD et un état cohérent j
+		On a T = BEGIN[corps]END[COMMIT(=ok), ROLLBACK(rien)SAVEPOINT]
+### Interférence
+	Isolation
+		Probleme de ***mise a jour perdue***
+		Probleme de ***lecture non reproductible*** : si une lecture a lieu avant une ecriture d'une aure transaction, puis qu'on refait une lecture au meme endroit : on aura pas la meme valeur
+		Probleme des PHANTOM TUPLES
+	Durabilité
+
+
+Exemple :
+
+Mise a jour perdue :
+
+T1 * FROM TABLE : Avion.Cap = Avion.Cap+10
+T2 * FROM TABLE WHERE Avion.LOC='Paris' : Avion.Cap = Avion.Cap-5
+
+Avec un verrou, on peut :
+
+T1 : 
+BEGIN 
+	update TABLE Avion
+	LOCK TABLE Avion IN EXCLUSIVE MODE
+	SET Avion.Cap = Avion.Cap + 10
+	UNLOCK TABLE Avion
+END
+COMMIT
+
+Parallèlement on aurait 
+T2 : 
+BEGIN 
+	LOCK TABLE Avion IN EXCLUSIVE MODE
+	update TABLE Avion 
+	WHERE Avion.LOC = 'Paris'
+	SET Avion.Cap = Avion.Cap-5
+	UNLOCK TABLE Avion
+END 
+COMMIT
+
+
+Cas du rollback 
+
+```
+
+T1 : 
+BEGIN 
+	update TABLE Avion 
+	LOCK TABLE Avion IN EXCLUSIVE MODE
+	SET Avion.Cap = Avion.Cap + 10;
+		
+		#Une erreur est rencontrée
+	
+	ROLLBACK
+	UNLOCK TABLE Avion
+END
+COMMIT
+
+T4 : 
+BEGIN 
+	LOCK TABLE Avion IN SHARED MODE 
+	SELECT Avion.Cap
+	FROM TABLE Avion
+	UNLOCK TABLE Avion
+END
+COMMIT
+
+```
+
+Si avion.Cap = 5 avant T1, que T1 s'execute avec des erreurs et rollback,
+alors T4 est mise en attente jusqu'au rollback puis lira la valeur 5

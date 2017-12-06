@@ -16,3 +16,31 @@ Le bilan représente des comptes qui s'écrivent respectivement
 
 Debit | Crédit
 Emploi| Ressources
+
+# Le livre journal
+
+Toute entreprise réalise une activité économique, on a la nécessité d'enregistrer toutes les opérations de son activité économique.
+
+Une activité économique commence avec un bilan de départ qui représente le patrimoine.
+
+Au cours de la période d'activité on réalise des opérations commerciales qui ont un impact sur le patrimoine de l'entreprise. Il est donc obligatoire de pouvoir retracer son activité.
+
+Le livre journal est le document qui recense toutes les opérations.
+
+Le livre journal contient un tableau de type
+
+* Références comptables : 
+ [N° du compte débiteur |  N° du compte créditeur 
+* Somme débitée | Somme créditée
+* Date
+* N° et intitulé du compte débité
+* N° et intitulé du compte crédité
+* Libellé explicatif de l'opération
+
+Exemple de compréhension: 
+Quand on dépose a la banque on écrit:
+Banque au débit, le DATE, VALEUR au débit, pour RAISON
+
+On dépose de l'argent à la banque, donc on fait a utilisé VALEUR à l'actif, qui apparait en conséquence au passif. C'est un débit d'actif, c'est comme un crédit de patrimoine. 
+
+Pour vendredi : chercher un plan comptable général sur pc
