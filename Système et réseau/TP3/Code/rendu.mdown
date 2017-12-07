@@ -1,0 +1,58 @@
+# TP concurrence
+
+#Exercice 1
+
+## Question 1
+
+Fin thread 1
+Fin thread 2
+c=1101206
+Fin main.
+
+On a bien un problème de concurrence
+
+## Question 2
+
+Fin thread 1
+Fin thread 2
+c=2000000
+Fin main.
+
+
+# Exercice 2 : A table
+
+## Question 1
+
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/TP3/Code$ ./atable 
+Fin thread 1
+Fin thread 2
+c[0] = 1
+c[1] = 1
+c[2] = 1
+c[3] = 1
+c[4] = 1
+c[5] = 1
+c[6] = 1
+c[7] = 1
+c[8] = 1
+c[9] = 1
+Fin main.
+
+
+max@max-K55VD:~/Bureau/MIAGE/MIAGE_2017/Système et réseau/TP3/Code$ ./atable 
+Fin thread 2
+Fin thread 1
+c[0] = 0
+c[1] = 5
+c[2] = 8
+c[3] = 1
+c[4] = 7
+c[5] = 4
+c[6] = 3
+c[7] = 9
+c[8] = 2
+c[9] = 6
+Fin main.
+
+
+## Question 2
