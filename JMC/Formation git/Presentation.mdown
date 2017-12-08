@@ -2,17 +2,21 @@
 
 On va faire un très bref explicatif de la raison de l'existence de git avant de rentrer plus particulièrement dans comment ça fonctionne.
 
+Git est un gestionnaire de version, définition : 
+Le but d'un gestionnaire de version de fichier est de conserver différentes versions du code source d'un projet ainsi que les différences entre ces versions.
+
 Tout d'abord le nom, ça veut dire plus ou moins "connard" en anglais, et c'est un qualificatif qu'on utilisera assez souvent dans la pratique pour désigner les noms d'utilisateurs qui sortent quand on fait un git blame. Mais ça aussi, on verra les commandes après.
 
-Git est un logiciel assez simple dans son fonctionnement, il a été créé par Linus Torvals, le créateur de linux entre autres, avec l'objectif de créer un gestionnaire de version de fichier pour soutenir le projet linux, ce qui est le cas depuis 2005.
+Git est un logiciel assez simple dans son fonctionnement, il a été créé par Linus Torvals, le créateur de linux entre autres, et un pilier du logiciel libre -c'est à dire avec les sources accessibles- avec l'objectif de créer un gestionnaire de version de fichier pour soutenir le projet linux, ce qui est le cas depuis 2005.
 
-Le but d'un gestionnaire de version de fichier est de conserver différentes versions du code source d'un projet ainsi que les différences entre ces versions.
+Cet outil est étonnement puissant pour les fonctionnalité qu'il propose, on y reviendra plus en détail par la suite mais les possibilités d'automatisation d'un repo git ont permis un développement de l'open source de par la possibilité facilité d'intégrer du code d'un tès grand nombre de contributeurs.
+
 
 # Comment ça marche ?
 
 Je vais essayer de décrire très généralement mais assez précisement pour entrer dans ma pratique le principe de fonctionnement de git en tant que gestionnaire de version décentralisé : 
 
-Il faut concevoir un projet dans le système de fichier comme un arbre. 
+Il faut concevoir un projet dans le système de fichier comme un arbre, stocké dans un dossier .git.
 Cet arbre contient l'arborescence du projet et les différents fichiers à un instant donné. 
 
 On peut choisir à tout moment de prendre un instantané de cet arbre, et de le stocker dans un historique sur la machine locale : c'est l'action de commit. 
@@ -23,11 +27,13 @@ Il est alors possible de revenir à la version sauvegardée, mais cette version 
 On peut pour cela push ses commits : c'est l'action de les envoyer sur le serveur distant, qui mettra à jour les fichiers impactés par les changemements, soit ceux qui ont une somme de controle différente.
 Un autre développeur du projet pourra alors pull les modifications pour voir la version modifiée apparaitre dans son arborescence locale.
 
+Problème :
 A partir d'ici, il est facile d'imaginer que le deuxième développeur ait modifié le même fichier au même endroit que le premier développeur : s'il commit ses changements, il devra faire la mise à jour du fichier à la main, c'est ce qu'on appelle un conflit, et c'est l'action de merge à la main.
 [Explications : Git va écrire les deux sections critiques dans un balisage, on doit choisir le code a conserver dans ce balisage, supprimer le code non voulu, supprimer le balisage, et commit à nouveau.]
 
 Le merge est normalement assuré automatiquement par git si personne n'a modifié au même moment les mêmes parties de code.
 
+Solution :
 Pour faciliter le travail en groupe, il existe une notion de branche qui permet "d'isoler" le travail des différents acteurs sur les différentes fonctionnalités.
 Ces branches portent chacune un historique parallèle les unes aux autres, peuvent être crées "sur" un commit, peuvent être mergées entre elles.
 On utilise généralement une branche nommée master (la branche par défaut) ou release pour porter la version fonctionnelle d'un projet, cad qu'on y mettra que du code fonctionnel et testé à destination de la production/client/prof.
