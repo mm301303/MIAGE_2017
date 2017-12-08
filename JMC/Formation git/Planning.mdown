@@ -1,0 +1,13 @@
+CDC
+
+Tiens regarde
+https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-module-apache2.html
+Filebeat avec un plugin apache et un dashboard de demo
+okok je vais try ça
+Pour les sessions SSH et PHP va falloir gorker avec logstash maybe ouais
+Atta j'ai une idée
+Tu fais un filebeat pour envoyer auth.log ou carrément syslog dans un index puis avec Kibana tu search en lucene les session SSH et tu save une vizu avec un where
+
+
+Forma Git : tu fera la forma après les élections. Pour dimanche ton support de présentation nikel sans gros mots et pro avec le template JMC power point. Et la trame de ta présentation en texte.
+Dashboard Kibana : pour dimanche un dashboard avec apache et au mieux les sessions SSH en plus de ce que tu as déjà. Avec un accès NAT derrière une box ou des screens au pire. Et un rapport avec Valentin : problématique, solution retenu, implémentation, ouverture.
