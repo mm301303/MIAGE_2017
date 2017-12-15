@@ -87,3 +87,19 @@ On peut ajouter au sein de cette liste la conformité, la durabilité, la fiabil
 # Le design du packaging 
 
 Doit répondre à deux critères, les fonctions techniques (transport, protection...) et les fonctions de communication (impact visuel, identification)
+
+Le packaging doit correspondre aux obligations légales, c'est a dire donner les composants d'une machine ou d'un aliment
+
+# La gamme de produit
+
+On parle de profondeur et d'étendue de la gamme
+
+# Rôle d'un produit
+
+Les produits leader
+les produits d'appel,
+les produits potentiels,
+les produits régulateurs, 
+les produits techniques
+
+# Stratégie de produit sur la box 
