@@ -16,7 +16,7 @@ Lieux, alsace, ville de nice
 
 Il en existe plusieurs : les plus courantes opposent les types d'acteurs, la durabilité, la tangibilité, l'usage du produit
 
-Périssable, durable
+Périssable, durable 
 
 # Cycle de vie du produit
 
@@ -82,3 +82,8 @@ Il s'agit des performances objectivement observables apr le consemmateur lors de
 * le design du produit, il correspond à l'aspect visuel extérieur du produit
 
 On peut ajouter au sein de cette liste la conformité, la durabilité, la fiabilité, la réparabilité
+
+
+# Le design du packaging 
+
+Doit répondre à deux critères, les fonctions techniques (transport, protection...) et les fonctions de communication (impact visuel, identification)
