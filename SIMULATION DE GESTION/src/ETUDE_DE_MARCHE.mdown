@@ -73,3 +73,12 @@ Un produit peut en effet tres bien échouer sur un marché en plein développeme
 Exemple des malboro-light. 
 
 On doit mettre min 2% du benefice dans la recherche et developpement quand on est une grosse entreprise, sous peine d'être voué à disparaitre
+
+
+
+* les performances d produit 
+Il s'agit des performances objectivement observables apr le consemmateur lors de l'utilisation du produit
+
+* le design du produit, il correspond à l'aspect visuel extérieur du produit
+
+On peut ajouter au sein de cette liste la conformité, la durabilité, la fiabilité, la réparabilité
