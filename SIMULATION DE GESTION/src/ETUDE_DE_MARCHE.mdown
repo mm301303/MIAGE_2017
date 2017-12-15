@@ -83,7 +83,6 @@ Il s'agit des performances objectivement observables apr le consemmateur lors de
 
 On peut ajouter au sein de cette liste la conformité, la durabilité, la fiabilité, la réparabilité
 
-
 # Le design du packaging 
 
 Doit répondre à deux critères, les fonctions techniques (transport, protection...) et les fonctions de communication (impact visuel, identification)
@@ -115,3 +114,11 @@ Internet est américain
 ## avantages
 
 l'innovation stimule la demande, elle est source de marge supplémentaire, 
+
+3 niveau de packaging :
+* le conditionnement, 
+* l'emballage de regroupement,
+* l'emballage de manutention
+
+On peut jouer sur les 5 sens
+
