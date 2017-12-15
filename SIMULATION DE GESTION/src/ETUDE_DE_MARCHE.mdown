@@ -82,3 +82,10 @@ Il s'agit des performances objectivement observables apr le consemmateur lors de
 * le design du produit, il correspond à l'aspect visuel extérieur du produit
 
 On peut ajouter au sein de cette liste la conformité, la durabilité, la fiabilité, la réparabilité
+
+3 niveau de packaging :
+* le conditionnement, 
+* l'emballage de regroupement,
+* l'emballage de manutention
+
+On peut jouer sur les 5 sens
