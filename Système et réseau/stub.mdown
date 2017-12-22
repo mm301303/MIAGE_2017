@@ -1,0 +1,14 @@
+Un stub est un morceau de code qui masque le transfert de donnée, en bref c'est vu comme une collection de la part du client/serveur, mais c'est un "tuyau" qui débouche de l'autre coté
+On a même pas besoin de coder deux stubs communiquant dans le même langage ! 
+Marshall : sérialisation / cryptage au sein d'un stub
+
+Il faut une interface commune pur pouvoir communiquer (sinon on se comprends pas : cf. cours de japonais) :
+
+On appelle ça un IDL, c'est une interface qui précise les services disponibles sur une machine, le serveur doit publier quelque part son catalogue de service à destinaton du client
+
+
+En java ce concept est implémenté dans RMI
+
+Un registre RPC sur la machine determine les services dsponibles, il est consulté par le client soit en donnant le nom exact du service, soit la recherche est plus évoluée et permet des aides
+
+On a une commande rpcgen -c (-M pour thread safe) 
