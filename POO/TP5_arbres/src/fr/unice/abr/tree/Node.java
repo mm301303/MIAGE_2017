@@ -27,9 +27,6 @@ public class Node {
         }
     }
 
-    public Node(int nodeValue, Node node){
-        this(nodeValue, new Node[]{node});
-    }
 
     public void addLeaf(Node node){
         this.nodes[count++] = node;
@@ -41,7 +38,7 @@ public class Node {
 
     @Override
     public String toString(){
-        String str = this.value+"\n";
+        String str = this.value+"";
         int i = 0;
         if(this.count>0){
             for(Node n : nodes) {

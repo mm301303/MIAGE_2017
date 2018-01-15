@@ -14,20 +14,29 @@ public class BinarySearchTree extends BinaryTree {
     public BinarySearchTree(int nodevalue) {
         super(nodevalue);
     }
+    public BinarySearchTree(BinaryTree n){
+        super(n.getValue());
+
+        if(n.getLeft()!=null)
+            this.addLeft(n.getLeft());
+
+        if(n.getRight()!=null)
+            this.addRight(n.getRight());
+    }
 
     @Override
     public void addLeaf(Node n){
         if(n.getValue() > this.value){
            if(getRight()==null){
-               addRight(n);
+               addRight(new BinarySearchTree(n);
            }else{//Has a right leaf
-                nodes[1].addLeaf(n);
+                getRight().addLeft(n);
            }
         }else{
             if(getLeft()==null){
-                nodes[0] = n;
-            }else{//Has a left leaf
                 addLeft(n);
+            }else{//Has a left leaf
+                getLeft().addLeaf(n);
             }
         }
     }

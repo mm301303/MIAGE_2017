@@ -13,13 +13,14 @@ public class BinaryTree extends Node {
     }
 
     public BinaryTree(int nodevalue){
-        super(nodevalue, new Node[0]);
+        super(nodevalue);
     }
 
     @Override
     public void addLeaf(Node n){
-        if(count<2) {
-            super.addLeaf(n);
+        if(this.count<2) {
+           this.count++;
+           addLeaf(n);
         }else{
             System.out.println("cannot add more");
         }
