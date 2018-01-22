@@ -1,0 +1,89 @@
+# Configuration
+
+## Avant toute chose
+
+git config --global user.name "jean jacques"
+git config --global user.email jeanjacques@example.com
+
+## A chaque projet 
+
+### Gitignore 
+
+Le gitignore est un fichier, une fois commit sur le serveur distant, il gardera le répertoire propre des fichiers qu'il mentionne. 
+
+***Catalogue de gitignore préfaits***
+
+	https://github.com/github/gitignore 
+
+* Configuration globale : 
+
+git config --global core.excludesfile '~/.gitignore'
+On peut stocker quelque part ***un fichier gitignore global***, afin par exemple de ne plus jamais avoir à se soucier des .DS_Store (ou autres !)...
+
+### Interface 
+
+Choisissez si possible une interface graphique (gitkraken est gratuit pour une utilisation non commerciale)
+
+# Comment "bien" utiliser git 
+
+On a vu pourquoi l'outil existe, on a vu en quoi il était efficace et on a fait une petite description de comment l'utiliser, soit à peu près comment éviter les problèmes. 
+Maintenant on va se poser la question de comment retirer une plus forte valeur ajoutée de l'outil, ce qu'on pourrait dire plus simplement par comment "bien" utiliser git.
+
+Le plus simple pour aborder cet aspect est par une liste de conseils et des motivations de ces conseils.
+
+* ***TOUJOURS renseigner ses commit avec un message*** court et précis pour désigner la nature des modifications, afin de permettre une recherche rapide dans les logs par la suite. Il peut-être intéressant de (re)lire le résultat de ***git diff*** pour s'aider à écrire le message le plus cohérent possible.
+
+*  Commit ***fréquemment*** et à chaque fois que ça en vaut la peine, c'est à dire quand une unité de code est terminée, aussi petite soit-elle
+
+* Se tenir à jour des évolutions du code, et du travail des autres développeurs : cela permet de minimiser la fréquence des conflits
+
+* Partager fréquemment les changements sur le serveur. Une fois avoir terminé une unité fonctionnelle cohérente (et testée), il est également intéressant pour minimiser les conflits de la partager aux autres développeurs afin qu'ils puissent se tenir à jour.
+
+* ***Communiquer ailleurs que sur git*** avec son équipe, afin de pouvoir se coordonner plus facilement et éviter de se marcher sur les branches(/pieds)
+
+* 1) commit 2) pull 3) push
+
+
+# Formulaires des commandes
+
+***git command -h :*** permet d'obtenir de l'aide sur une commande
+
+***git init :*** cree le dossier caché .git qui contient l'historique des versions
+
+***git clone [url] :*** permet de copier un répertoire git sur une machine locale (ainsi que l'adresse du serveur distant)
+
+***git remote :*** permet de connaitre (-v) et de set l'adresse du serveur distant (add origin [url])
+
+***git fetch origin :*** permet de*** charger l'état du serveur distant sur l'arbre local :*** c'est le git pull des branches
+
+***git status :*** permet de connaitre l'état des fichiers par rapport au dernier commit en local (modification, addition, suggestion de fichier à suivre)
+
+***git add :*** permet d'ajouter un fichier à l'arbre local (lequel ne contient que les fichiers ajoutés de cette manière)
+
+***git remove [file1 file2...] :*** supprime le fichier des arbres distant et local. Ne supprime pas le fichier dans l'arborescence
+
+***git commit :*** enregistre l'état des fichiers ajoutés dans l'arbre local avec un message (-m)
+
+***git push :*** permet d'envoyer un commit sur une branche de l'arbre distant
+
+***git pull :*** permet de merge l'arbre distant sur l'arbre local, équivalent à git fetch && git rebase
+
+***git checkout :*** permet de créer une branche, ou de charger l'abre de la branche existante (locale ou distante) sur l'abre local. [Moins essentiel
+
+***git stash save/pop :*** permet de sauvegarder/restorer les changements en local sans les commit (afin d'avoir un répertoire propre avant de changer de branche par exemple)
+
+***git revert :*** permet de commit les changements inverses d'un commit précédent
+
+***git diff :*** affiche les modifications induites par un ou plusieurs commit
+
+***git blame :*** permet de lister les auteurs de modifications sur un fichier
+
+
+## La qualité et les pull requests
+
+
+Quand un développeur, sur sa branche, vient de finir une fonctionnalité, que tout est parfait pour lui, il a des tests, de la doc etc, il peut alors faire une ***pull request*** depuis le site web de son hébergeur git. 
+
+Une ***pull request*** c'est un mail qui part chez tous les collaborateurs, et un lien qui leur permet de lire les modifications de ***tous les commits sur la branche.***
+ Ainsi, on diminue énormément les chances de faire passer une erreur, une incompréhension sur la branche master, et ainsi ***on économise de précieuses heures de débug*** tout en mettant au courant l'équipe de son avancement.
+La pull request est validée, ou commentée et invalidée par chaque collaborateur, et sera mergée sur la branche principale après l'approbation de tous.
