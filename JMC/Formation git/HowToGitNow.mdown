@@ -19,6 +19,7 @@ Le gitignore est un fichier, une fois commit sur le serveur distant, il gardera 
 * Configuration globale : 
 
 git config --global core.excludesfile '~/.gitignore'
+
 On peut stocker quelque part ***un fichier gitignore global***, afin par exemple de ne plus jamais avoir à se soucier des .DS_Store (ou autres !)...
 
 ### Interface 
