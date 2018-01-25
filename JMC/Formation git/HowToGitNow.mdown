@@ -68,7 +68,9 @@ Le plus simple pour aborder cet aspect est par une liste de conseils et des moti
 
 ***git pull :*** permet de merge l'arbre distant sur l'arbre local, équivalent à git fetch && git rebase
 
-***git checkout :*** permet de créer une branche, ou de charger l'abre de la branche existante (locale ou distante) sur l'abre local. [Moins essentiel
+***git checkout :*** permet de créer une branche, ou de charger l'abre de la branche existante (locale ou distante) sur l'abre local. 
+
+[Moins essentielles :
 
 ***git stash save/pop :*** permet de sauvegarder/restorer les changements en local sans les commit (afin d'avoir un répertoire propre avant de changer de branche par exemple)
 
@@ -77,7 +79,7 @@ Le plus simple pour aborder cet aspect est par une liste de conseils et des moti
 ***git diff :*** affiche les modifications induites par un ou plusieurs commit
 
 ***git blame :*** permet de lister les auteurs de modifications sur un fichier
-
+]
 
 ## La qualité et les pull requests
 
