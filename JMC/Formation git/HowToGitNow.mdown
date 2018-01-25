@@ -43,7 +43,7 @@ Le plus simple pour aborder cet aspect est par une liste de conseils et des moti
 
 * ***Communiquer ailleurs que sur git*** avec son équipe, afin de pouvoir se coordonner plus facilement et éviter de se marcher sur les branches(/pieds)
 
-* 1) commit 2) pull 3) push
+***1) commit 2) pull 3) push***
 
 
 # Formulaires des commandes
