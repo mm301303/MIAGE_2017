@@ -3,6 +3,7 @@
 ## Avant toute chose
 
 git config --global user.name "jean jacques"
+
 git config --global user.email jeanjacques@example.com
 
 ## A chaque projet 
