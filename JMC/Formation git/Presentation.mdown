@@ -246,7 +246,7 @@ git flow hotfix finish VERSION
 
 # Pourquoi c'est bien
 
-***Pour l'emploi*** : Mettez vous à la place d'un employeur, vous avez deux candidats potentiels avec les mêmes capacités techniques a priori dans 3 techno utilisées dans votre entreprise. L'un a un git avec 5 projets utilisants les technlogies en question, l'autre un CV. Dans un cas, l'évaluation du niveau du candidat est fiable est disponible dans un cas, subjective dans l'autre. 
+***Pour l'emploi*** : Mettez vous à la place d'un employeur, vous avez deux candidats potentiels avec les mêmes capacités techniques a priori dans 3 techno utilisées dans votre entreprise. L'un a un git avec 5 projets utilisants les technlogies en question, l'autre un CV. Dans un cas, l'évaluation du niveau du candidat est fiable est disponible, subjective dans l'autre. 
 
 ***Efficacité du travail de groupe*** : Dans un système d'information, la ***rapidité de transmission de l'information*** est directement proportionnelle à l'efficacité du de ce système d'information.
 En vérité une équipe c'est un système d'information, et git est un outil qui permet de transmettre instantanément des fichiers cohérents à une ou plusieurs personne et réciproquement, et donc une forte plusvalue dans l'efficacité d'un groupe. ***Le travail en groupe est inalienable a la condition de développeur*** si on est pas freelance : Actuellement, git est extrèmement utilisé du fait de sa gratuité, de son efficacité et de sa simlicité relative d'utilisation relativement aux deux points précédents. 
