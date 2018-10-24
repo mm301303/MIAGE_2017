@@ -101,6 +101,16 @@ git command -h : permet d'obtenir de l'aide sur une commande
 
 ***git blame*** : permet de lister les auteurs de modifications sur un fichier
 
+***L'astuce à 2 centimes : faites un alias pour pull --all***
+
+	Si vous n'avez qu'une remote sur un projet, ça ne changera rien, mais ça fonctionnera si vous en avez plus d'une.
+
+	Dans votre .gitconfig :
+
+```
+g = pull --all
+p = push
+```
 # Partie technique : la pratique
 
 ## Les commandes console 
